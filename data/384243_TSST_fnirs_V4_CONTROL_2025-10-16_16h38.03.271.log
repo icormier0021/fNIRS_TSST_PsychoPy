@@ -1,0 +1,25 @@
+1.3834 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice'] (in that order).
+11.4585 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.0021 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+17.0347 	WARNING 	Import Error: dlopen(/opt/miniconda3/envs/psychopy_py310/lib/python3.10/site-packages/psychtoolbox/PsychHID.cpython-310-darwin.so, 0x0002): symbol not found in flat namespace '_libusb_bulk_transfer'. Using event module for keyboard component.
+18.9707 	INFO 	Loaded monitor calibration from ['2025_10_16 07:47']
+19.0901 	INFO 	Using renderer 'Apple M1' for graphics
+19.0901 	INFO 	OpenGL version supported by driver is 2..
+19.1092 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x160b7e9b0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x160b7e950>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x160bfb490>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+19.1093 	EXP 	window1: backgroundImage = ''
+19.1093 	EXP 	window1: backgroundFit = 'none'
+19.3172 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+19.3172 	EXP 	window1: recordFrameIntervals = False
+19.5837 	EXP 	window1: recordFrameIntervals = True
+19.9085 	WARNING 	t of last frame was 28.93ms (=1/34)
+19.9293 	WARNING 	t of last frame was 20.84ms (=1/47)
+20.4701 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+20.6654 	INFO 	keyboard.Keyboard is using event backend.
+20.6654 	EXP 	TSST_fnirs_V4_CONTROL: status = STARTED
+20.6934 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.6935 	INFO 	keyboard.Keyboard is using event backend.
+20.7100 	INFO 	saved data to /Users/Isaac/Documents/TSST/TSST_V4/data/384243_TSST_fnirs_V4_CONTROL_2025-10-16_16h38.03.271.psydat
+20.7102 	INFO 	saved data to '/Users/Isaac/Documents/TSST/TSST_V4/data/384243_TSST_fnirs_V4_CONTROL_2025-10-16_16h38.03.271.csv'

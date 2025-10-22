@@ -1,0 +1,26 @@
+1.2340 	ERROR 	Failed to load any of the audioLibs: ['pyo']. Falling back to PsychToolbox ('ptb') backend for sound. Be sure to add 'ptb' to preferences to avoid seeing this message again.
+1.2346 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['pyo'] (in that order).
+10.4120 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+10.5102 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+10.5160 	WARNING 	Import Error: No module named 'psychtoolbox'. Using event module for keyboard component.
+27.7889 	INFO 	Loaded monitor calibration from ['2025_10_16 07:47']
+27.9226 	INFO 	Using renderer 'Apple M1' for graphics
+27.9226 	INFO 	OpenGL version supported by driver is 2..
+27.9327 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x13f26d410>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x13f26ca10>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x13d88bc50>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+27.9327 	EXP 	window1: backgroundImage = ''
+27.9327 	EXP 	window1: backgroundFit = 'none'
+28.1400 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+28.1401 	EXP 	window1: recordFrameIntervals = False
+28.3998 	EXP 	window1: recordFrameIntervals = True
+28.6932 	WARNING 	t of last frame was 21.75ms (=1/45)
+29.2665 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+29.2681 	INFO 	keyboard.Keyboard is using ptb backend.
+29.2682 	EXP 	TSST_fnirs_V4_FULL: status = STARTED
+29.3251 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+29.3252 	INFO 	keyboard.Keyboard is using ptb backend.
+29.3469 	INFO 	saved data to /Users/Isaac/Documents/TSST/TSST_V4/data/901428_TSST_fnirs_V4_FULL_2025-10-16_12h17.45.939.psydat
+29.3472 	INFO 	saved data to '/Users/Isaac/Documents/TSST/TSST_V4/data/901428_TSST_fnirs_V4_FULL_2025-10-16_12h17.45.939.csv'
+29.3517 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

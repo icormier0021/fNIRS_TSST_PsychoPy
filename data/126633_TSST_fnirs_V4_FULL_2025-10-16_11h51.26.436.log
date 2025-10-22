@@ -1,0 +1,24 @@
+1.2046 	ERROR 	Failed to load any of the audioLibs: ['pyo']. Falling back to PsychToolbox ('ptb') backend for sound. Be sure to add 'ptb' to preferences to avoid seeing this message again.
+1.2065 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['pyo'] (in that order).
+10.2133 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+10.3232 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+10.4256 	WARNING 	Import Error: dlopen(/opt/miniconda3/envs/TSST_py311/lib/python3.11/site-packages/psychtoolbox/PsychHID.cpython-311-darwin.so, 0x0002): symbol not found in flat namespace '_libusb_bulk_transfer'. Using event module for keyboard component.
+12.2597 	INFO 	Loaded monitor calibration from ['2025_10_16 07:47']
+12.3695 	INFO 	Using renderer 'Apple M1' for graphics
+12.3696 	INFO 	OpenGL version supported by driver is 2..
+12.3780 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x127468510>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x127468f90>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x127676e50>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.3780 	EXP 	window1: backgroundImage = ''
+12.3780 	EXP 	window1: backgroundFit = 'none'
+12.5834 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+12.5834 	EXP 	window1: recordFrameIntervals = False
+12.8105 	EXP 	window1: recordFrameIntervals = True
+13.1339 	WARNING 	t of last frame was 23.08ms (=1/43)
+13.3441 	WARNING 	t of last frame was 21.27ms (=1/47)
+13.6839 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+13.6852 	INFO 	keyboard.Keyboard is using ptb backend.
+13.7242 	INFO 	saved data to /Users/Isaac/Documents/TSST/TSST_V4/data/126633_TSST_fnirs_V4_FULL_2025-10-16_11h51.26.436.psydat
+13.7246 	INFO 	saved data to '/Users/Isaac/Documents/TSST/TSST_V4/data/126633_TSST_fnirs_V4_FULL_2025-10-16_11h51.26.436.csv'
+13.7343 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
