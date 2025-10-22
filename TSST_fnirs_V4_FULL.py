@@ -11,10 +11,6 @@ If you publish work using this script the most relevant publication is:
 
 """
 
-import psychopy
-psychopy.useVersion('2024.1.4')
-
-
 # --- Import packages ---
 from psychopy import locale_setup
 from psychopy import prefs
