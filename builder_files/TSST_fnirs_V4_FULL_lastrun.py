@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Thu Oct 16 12:09:43 2025
+    on Tue Nov  4 14:18:42 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -146,7 +146,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/Isaac/Documents/TSST/TSST_V4/builder_files/TSST_fnirs_V4_FULL_lastrun.py',
+        originPath='/Users/Isaac/Documents/fNIRS_TSST_PsychoPy/builder_files/TSST_fnirs_V4_FULL_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1148,6 +1148,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lsl_outlet.push_sample([30]) #CTL2_TASK Block Start
         skipNextRoutine = False
         win.mouseVisible = False
+        start_tone_2.status = NOT_STARTED
         start_tone_2.setSound('800', secs=0.2, hamming=True)
         start_tone_2.setVolume(1.0, log=False)
         start_tone_2.seek(0)
@@ -1302,7 +1303,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if skipNextRoutine:
             skipNextRoutine = False
             continueRoutine = False
-        
+        start_pause_tone_2.status = NOT_STARTED
         # keep track of which components have finished
         CTL2_PAUSEComponents = [start_pause_tone_2, subtract_pausing]
         for thisComponent in CTL2_PAUSEComponents:
@@ -1666,6 +1667,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lsl_outlet.push_sample([50]) #TSST_ARITH_TASK Block Start
         skipNextRoutine = False
         win.mouseVisible = False
+        
+        start_tone_3.status = NOT_STARTED
+        
         # keep track of which components have finished
         TSST_ARITH_TASKComponents = [start_tone_3, subtract_number_TSST]
         for thisComponent in TSST_ARITH_TASKComponents:
@@ -1816,7 +1820,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if skipNextRoutine:
             skipNextRoutine = False
             continueRoutine = False
-        
+        tsst_start_pause_tone.status = NOT_STARTED
         # keep track of which components have finished
         TSST_ARITH_PAUSEComponents = [tsst_start_pause_tone, subtract_pausing_TSST]
         for thisComponent in TSST_ARITH_PAUSEComponents:

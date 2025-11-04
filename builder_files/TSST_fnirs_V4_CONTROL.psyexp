@@ -590,7 +590,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="lsl_outlet.push_sample([30]) #CTL2_TASK Block Start&amp;#10;skipNextRoutine = False&amp;#10;win.mouseVisible = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lsl_outlet.push_sample([30]) #CTL2_TASK Block Start&amp;#10;skipNextRoutine = False&amp;#10;win.mouseVisible = False&amp;#10;start_tone_2.status = NOT_STARTED" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL2_Loop.finished = True&amp;#10;    skipNextRoutine = True&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -732,7 +732,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="lsl_outlet.push_sample([40]) #CTL2_PAUSE Block Start&amp;#10;win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lsl_outlet.push_sample([40]) #CTL2_PAUSE Block Start&amp;#10;win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;start_pause_tone_2.status = NOT_STARTED" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="# hard stop at 20 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    subtract_pausing.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;    &amp;#10;&amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL2_Loop.finished = True&amp;#10;    skipNextRoutine = True &amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="# hard stop at 20 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    read_pausing.setAutoDraw(False)&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each JS Frame"/>
