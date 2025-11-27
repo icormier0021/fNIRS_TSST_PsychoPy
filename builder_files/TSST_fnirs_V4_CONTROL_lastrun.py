@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Thu Nov 27 08:42:59 2025
+    on Thu Nov 27 08:34:26 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -20,7 +20,7 @@ from psychopy import locale_setup
 from psychopy import prefs
 from psychopy import plugins
 plugins.activatePlugins()
-prefs.hardware['audioLib'] = 'pyo'
+prefs.hardware['audioLib'] = 'ptb'
 prefs.hardware['audioLatencyMode'] = '3'
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware
 from psychopy.tools import environmenttools
@@ -46,8 +46,6 @@ lsl_outlet = StreamOutlet(markers)
 modality = 'nirs'
 # Run 'Before Experiment' code from end_ctl2_instruction
 from psychopy.hardware import keyboard
-# Run 'Before Experiment' code from end_tsst_instruction
-from psychopy.hardware import keyboard
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
 deviceManager = hardware.DeviceManager()
@@ -55,7 +53,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2024.1.4'
-expName = 'TSST_fnirs_V4_FULL'  # from the Builder filename that created this script
+expName = 'TSST_fnirs_V4_CONTROL'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
@@ -146,7 +144,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/Isaac/Documents/fNIRS_TSST_PsychoPy/builder_files/TSST_fnirs_V4_FULL.py',
+        originPath='/Users/Isaac/Documents/fNIRS_TSST_PsychoPy/builder_files/TSST_fnirs_V4_CONTROL_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -375,11 +373,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import psychtoolbox as ptb
     from psychopy import sound
     
-    StartTone = sound.Sound(800, secs=0.2, hamming=True)
-    StartTone.setVolume(1.0)
+    CTLStartTone = sound.Sound(800, secs=0.2, hamming=True)
+    CTLStartTone.setVolume(1.0)
     
-    PauseTone = sound.Sound(600, secs=0.2, hamming=True)
-    PauseTone.setVolume(1.0)
+    CTLPauseTone = sound.Sound(600, secs=0.2, hamming=True)
+    CTLPauseTone.setVolume(1.0)
     
     # --- Initialize components for Routine "CTL1_TASK" ---
     # Run 'Begin Experiment' code from CTL1_number
@@ -437,44 +435,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "task_end" ---
     task_end_text = visual.TextStim(win=win, name='task_end_text',
         text='Please wait for the next task to begin..',
-        font='Arial',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
-    
-    # --- Initialize components for Routine "TSST_instruction_start" ---
-    tsst_instruction_text = visual.TextStim(win=win, name='tsst_instruction_text',
-        text='The judges will explain the task to you.\n\nPlease do not press any keys. ',
-        font='Arial',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
-    # Run 'Begin Experiment' code from end_tsst_instruction
-    kb = keyboard.Keyboard()
-    
-    # --- Initialize components for Routine "TSST_ARITH_TASK" ---
-    subtract_number_TSST = visual.TextStim(win=win, name='subtract_number_TSST',
-        text='',
-        font='Arial',
-        pos=(0, 0), height=0.07, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
-    
-    # --- Initialize components for Routine "TSST_ARITH_PAUSE" ---
-    subtract_pausing_TSST = visual.TextStim(win=win, name='subtract_pausing_TSST',
-        text='',
-        font='Arial',
-        pos=(0, 0), height=0.07, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
-    
-    # --- Initialize components for Routine "Finished" ---
-    finished_text = visual.TextStim(win=win, name='finished_text',
-        text='This part of the task is finished, please wait for further instructions.',
         font='Arial',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -641,7 +601,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         #Schedule start tone to begin on next screen flip
         nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-        StartTone.play(when=nextFlip_ptb)
+        CTLStartTone.play(when=nextFlip_ptb)
         read_number.setText(current_number)
         # keep track of which components have finished
         CTL1_TASKComponents = [read_number]
@@ -770,9 +730,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             skipNextRoutine = False
             continueRoutine = False
         else:
-            #Schedule start tone to begin on next screen flip
+            #Schedule pause tone to begin on next screen flip
             nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            PauseTone.play(when=nextFlip_ptb)
+            CTLPauseTone.play(when=nextFlip_ptb)
         # keep track of which components have finished
         CTL1_PAUSEComponents = [read_pausing]
         for thisComponent in CTL1_PAUSEComponents:
@@ -1015,7 +975,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         #Schedule start tone to begin on next screen flip
         nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-        StartTone.play(when=nextFlip_ptb)
+        CTLStartTone.play(when=nextFlip_ptb)
         subtract_number.setText(StartingNumber)
         # keep track of which components have finished
         CTL2_TASKComponents = [subtract_number]
@@ -1135,9 +1095,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         else:
             #Schedule start tone to begin on next screen flip
             nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            PauseTone.play(when=nextFlip_ptb)
+            CTLPauseTone.play(when=nextFlip_ptb)
         #start_pause_tone_2.status = NOT_STARTED
-        
         # keep track of which components have finished
         CTL2_PAUSEComponents = [subtract_pausing]
         for thisComponent in CTL2_PAUSEComponents:
@@ -1337,460 +1296,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     kb.clearEvents()
     thisExp.nextEntry()
     # the Routine "task_end" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # --- Prepare to start Routine "TSST_instruction_start" ---
-    continueRoutine = True
-    # update component parameters for each repeat
-    thisExp.addData('TSST_instruction_start.started', globalClock.getTime(format='float'))
-    # Run 'Begin Routine' code from end_tsst_instruction
-    kb.clearEvents()
-    win.mouseVisible = False
-    # keep track of which components have finished
-    TSST_instruction_startComponents = [tsst_instruction_text]
-    for thisComponent in TSST_instruction_startComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "TSST_instruction_start" ---
-    routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *tsst_instruction_text* updates
-        
-        # if tsst_instruction_text is starting this frame...
-        if tsst_instruction_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            tsst_instruction_text.frameNStart = frameN  # exact frame index
-            tsst_instruction_text.tStart = t  # local t and not account for scr refresh
-            tsst_instruction_text.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(tsst_instruction_text, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'tsst_instruction_text.started')
-            # update status
-            tsst_instruction_text.status = STARTED
-            tsst_instruction_text.setAutoDraw(True)
-        
-        # if tsst_instruction_text is active this frame...
-        if tsst_instruction_text.status == STARTED:
-            # update params
-            pass
-        # Run 'Each Frame' code from end_tsst_instruction
-        ## EACH FRAME
-        
-        continue_key = kb.getKeys(["return"], waitRelease=False, clear=True)
-        # Check if space key was pressed
-        if continue_key:
-            continueRoutine = False
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in TSST_instruction_startComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "TSST_instruction_start" ---
-    for thisComponent in TSST_instruction_startComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    thisExp.addData('TSST_instruction_start.stopped', globalClock.getTime(format='float'))
-    # Run 'End Routine' code from end_tsst_instruction
-    kb.clearEvents()
-    thisExp.nextEntry()
-    # the Routine "TSST_instruction_start" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
-    # set up handler to look after randomisation of conditions etc
-    TSST_Arith_Loop = data.TrialHandler(nReps=1.0, method='sequential', 
-        extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions("stims/TSST_arith.xlsx"),
-        seed=None, name='TSST_Arith_Loop')
-    thisExp.addLoop(TSST_Arith_Loop)  # add the loop to the experiment
-    thisTSST_Arith_Loop = TSST_Arith_Loop.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisTSST_Arith_Loop.rgb)
-    if thisTSST_Arith_Loop != None:
-        for paramName in thisTSST_Arith_Loop:
-            globals()[paramName] = thisTSST_Arith_Loop[paramName]
-    
-    for thisTSST_Arith_Loop in TSST_Arith_Loop:
-        currentLoop = TSST_Arith_Loop
-        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-        # pause experiment here if requested
-        if thisExp.status == PAUSED:
-            pauseExperiment(
-                thisExp=thisExp, 
-                win=win, 
-                timers=[routineTimer], 
-                playbackComponents=[]
-        )
-        # abbreviate parameter names if possible (e.g. rgb = thisTSST_Arith_Loop.rgb)
-        if thisTSST_Arith_Loop != None:
-            for paramName in thisTSST_Arith_Loop:
-                globals()[paramName] = thisTSST_Arith_Loop[paramName]
-        
-        # --- Prepare to start Routine "TSST_ARITH_TASK" ---
-        continueRoutine = True
-        # update component parameters for each repeat
-        thisExp.addData('TSST_ARITH_TASK.started', globalClock.getTime(format='float'))
-        subtract_number_TSST.setText(StartingNumber)
-        # Run 'Begin Routine' code from skip_TSST
-        lsl_outlet.push_sample([50]) #TSST_ARITH_TASK Block Start
-        skipNextRoutine = False
-        win.mouseVisible = False
-        
-        #start_tone_3.status = NOT_STARTED
-        #Schedule start tone to begin on next screen flip
-        nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-        StartTone.play(when=nextFlip_ptb)
-        # keep track of which components have finished
-        TSST_ARITH_TASKComponents = [subtract_number_TSST]
-        for thisComponent in TSST_ARITH_TASKComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "TSST_ARITH_TASK" ---
-        routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 40.0:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # *subtract_number_TSST* updates
-            
-            # if subtract_number_TSST is starting this frame...
-            if subtract_number_TSST.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                subtract_number_TSST.frameNStart = frameN  # exact frame index
-                subtract_number_TSST.tStart = t  # local t and not account for scr refresh
-                subtract_number_TSST.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(subtract_number_TSST, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'subtract_number_TSST.started')
-                # update status
-                subtract_number_TSST.status = STARTED
-                subtract_number_TSST.setAutoDraw(True)
-            
-            # if subtract_number_TSST is active this frame...
-            if subtract_number_TSST.status == STARTED:
-                # update params
-                pass
-            
-            # if subtract_number_TSST is stopping this frame...
-            if subtract_number_TSST.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > subtract_number_TSST.tStartRefresh + 40-frameTolerance:
-                    # keep track of stop time/frame for later
-                    subtract_number_TSST.tStop = t  # not accounting for scr refresh
-                    subtract_number_TSST.tStopRefresh = tThisFlipGlobal  # on global time
-                    subtract_number_TSST.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'subtract_number_TSST.stopped')
-                    # update status
-                    subtract_number_TSST.status = FINISHED
-                    subtract_number_TSST.setAutoDraw(False)
-            # Run 'Each Frame' code from skip_TSST
-            skip_keys = kb.getKeys(['s'], waitRelease=False, clear=True)
-            if skip_keys:
-                TSST_Arith_Loop.finished = True
-                skipNextRoutine = True 
-                continueRoutine = False
-            # Run 'Each Frame' code from check_time_2
-            # hard stop at 40 s
-            if t >= 40.0 - frameTolerance:
-                subtract_number_TSST.setAutoDraw(False)
-                continueRoutine = False
-            
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in TSST_ARITH_TASKComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "TSST_ARITH_TASK" ---
-        for thisComponent in TSST_ARITH_TASKComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        thisExp.addData('TSST_ARITH_TASK.stopped', globalClock.getTime(format='float'))
-        # Run 'End Routine' code from skip_TSST
-        lsl_outlet.push_sample([51]) #TSST_ARITH_TASK Block End
-        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-        if routineForceEnded:
-            routineTimer.reset()
-        else:
-            routineTimer.addTime(-40.000000)
-        
-        # --- Prepare to start Routine "TSST_ARITH_PAUSE" ---
-        continueRoutine = True
-        # update component parameters for each repeat
-        thisExp.addData('TSST_ARITH_PAUSE.started', globalClock.getTime(format='float'))
-        subtract_pausing_TSST.setText('PAUSE')
-        # Run 'Begin Routine' code from check_time_4
-        lsl_outlet.push_sample([60]) #TSST_ARITH_PAUSE Block Start
-        win.mouseVisible = False
-        if skipNextRoutine:
-            skipNextRoutine = False
-            continueRoutine = False
-        else:
-            #Schedule start tone to begin on next screen flip
-            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            arithTone.play(when=nextFlip_ptb)
-        #tsst_start_pause_tone.status = NOT_STARTED
-        
-        # keep track of which components have finished
-        TSST_ARITH_PAUSEComponents = [subtract_pausing_TSST]
-        for thisComponent in TSST_ARITH_PAUSEComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "TSST_ARITH_PAUSE" ---
-        routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 20.0:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # *subtract_pausing_TSST* updates
-            
-            # if subtract_pausing_TSST is starting this frame...
-            if subtract_pausing_TSST.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-                # keep track of start time/frame for later
-                subtract_pausing_TSST.frameNStart = frameN  # exact frame index
-                subtract_pausing_TSST.tStart = t  # local t and not account for scr refresh
-                subtract_pausing_TSST.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(subtract_pausing_TSST, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'subtract_pausing_TSST.started')
-                # update status
-                subtract_pausing_TSST.status = STARTED
-                subtract_pausing_TSST.setAutoDraw(True)
-            
-            # if subtract_pausing_TSST is active this frame...
-            if subtract_pausing_TSST.status == STARTED:
-                # update params
-                pass
-            
-            # if subtract_pausing_TSST is stopping this frame...
-            if subtract_pausing_TSST.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > subtract_pausing_TSST.tStartRefresh + 20-frameTolerance:
-                    # keep track of stop time/frame for later
-                    subtract_pausing_TSST.tStop = t  # not accounting for scr refresh
-                    subtract_pausing_TSST.tStopRefresh = tThisFlipGlobal  # on global time
-                    subtract_pausing_TSST.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'subtract_pausing_TSST.stopped')
-                    # update status
-                    subtract_pausing_TSST.status = FINISHED
-                    subtract_pausing_TSST.setAutoDraw(False)
-            # Run 'Each Frame' code from check_time_4
-            # hard stop at 40 s
-            if t >= 20.0 - frameTolerance:
-                subtract_pausing_TSST.setAutoDraw(False)
-                continueRoutine = False
-            
-            
-            skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
-            if skip_keys:
-                TSST_Arith_Loop.finished = True
-                skipNextRoutine = True 
-                continueRoutine = False
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in TSST_ARITH_PAUSEComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "TSST_ARITH_PAUSE" ---
-        for thisComponent in TSST_ARITH_PAUSEComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        thisExp.addData('TSST_ARITH_PAUSE.stopped', globalClock.getTime(format='float'))
-        # Run 'End Routine' code from check_time_4
-        lsl_outlet.push_sample([61]) #TSST_ARITH_PAUSE Block End
-        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-        if routineForceEnded:
-            routineTimer.reset()
-        else:
-            routineTimer.addTime(-20.000000)
-        thisExp.nextEntry()
-        
-        if thisSession is not None:
-            # if running in a Session with a Liaison client, send data up to now
-            thisSession.sendExperimentData()
-    # completed 1.0 repeats of 'TSST_Arith_Loop'
-    
-    
-    # --- Prepare to start Routine "Finished" ---
-    continueRoutine = True
-    # update component parameters for each repeat
-    thisExp.addData('Finished.started', globalClock.getTime(format='float'))
-    # Run 'Begin Routine' code from finished_code
-    kb.clearEvents()
-    win.mouseVisible = False
-    # keep track of which components have finished
-    FinishedComponents = [finished_text]
-    for thisComponent in FinishedComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "Finished" ---
-    routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *finished_text* updates
-        
-        # if finished_text is starting this frame...
-        if finished_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            finished_text.frameNStart = frameN  # exact frame index
-            finished_text.tStart = t  # local t and not account for scr refresh
-            finished_text.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(finished_text, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'finished_text.started')
-            # update status
-            finished_text.status = STARTED
-            finished_text.setAutoDraw(True)
-        
-        # if finished_text is active this frame...
-        if finished_text.status == STARTED:
-            # update params
-            pass
-        # Run 'Each Frame' code from finished_code
-        ## EACH FRAME
-        
-        task_key = kb.getKeys(["return"], waitRelease=False, clear=True)
-        # Check if space key was pressed
-        if task_key:
-            continueRoutine = False
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in FinishedComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "Finished" ---
-    for thisComponent in FinishedComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    thisExp.addData('Finished.stopped', globalClock.getTime(format='float'))
-    # Run 'End Routine' code from finished_code
-    kb.clearEvents()
-    thisExp.nextEntry()
-    # the Routine "Finished" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # mark experiment as finished
