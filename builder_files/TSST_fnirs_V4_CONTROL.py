@@ -11,8 +11,8 @@ If you publish work using this script the most relevant publication is:
 
 """
 
-import psychopy
-psychopy.useVersion('2024.1.4')
+#import psychopy
+#psychopy.useVersion('2024.1.4')
 
 
 # --- Import packages ---
@@ -198,7 +198,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=_winSize, fullscr=_fullScr, screen=2,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[-1.0000, -1.0000, -1.0000], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -257,6 +257,11 @@ def setupDevices(expInfo, thisExp, win):
         deviceManager.addDevice(
             deviceClass='keyboard', deviceName='defaultKeyboard', backend='ptb'
         )
+    deviceManager.addDevice(
+    deviceName='tone',
+    deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+    index=-1
+    )
     # return True if completed successfully
     return True
 
@@ -373,10 +378,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import psychtoolbox as ptb
     from psychopy import sound
     
-    CTLStartTone = sound.Sound(800, secs=0.2, hamming=True)
+    CTLStartTone = sound.Sound(800, secs=0.2, hamming=True, stereo=True, speaker='tone')
     CTLStartTone.setVolume(1.0)
     
-    CTLPauseTone = sound.Sound(600, secs=0.2, hamming=True)
+    CTLPauseTone = sound.Sound(600, secs=0.2, hamming=True, stereo=True, speaker='tone')
     CTLPauseTone.setVolume(1.0)
     
     # --- Initialize components for Routine "CTL1_TASK" ---

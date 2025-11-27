@@ -1,0 +1,30 @@
+5.6037 	INFO 	Loaded monitor calibration from ['2024_08_14 14:13']
+5.7872 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [3840, 2160]. Using actual size
+6.1234 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3400>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC33A0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC31F0>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000218BAFDBA30>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=2, size=array([3840, 2160]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.1234 	EXP 	window1: backgroundImage = ''
+6.1235 	EXP 	window1: backgroundFit = 'none'
+6.1237 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.1238 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.1266 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.1275 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.3151 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.3153 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.3163 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.3174 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x00000218BAEC3520>
+6.3672 	EXP 	window1: Attempting to measure frame rate of screen (2) ...
+6.3672 	EXP 	window1: recordFrameIntervals = False
+6.5234 	EXP 	window1: recordFrameIntervals = True
+6.7064 	EXP 	Screen (2) actual frame rate measured at 59.99Hz
+6.7065 	EXP 	window1: recordFrameIntervals = False
+6.7066 	EXP 	window1: mouseVisible = False
+7.6813 	INFO 	keyboard.Keyboard is using ptb backend.
+7.6814 	EXP 	TSST_fnirs_V4_CONTROL: status = STARTED
+7.6818 	EXP 	window1: mouseVisible = False
+7.7933 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.7934 	INFO 	keyboard.Keyboard is using ptb backend.
+7.7935 	EXP 	window1: mouseVisible = False
+7.9189 	EXP 	window1: mouseVisible = True
+7.9228 	INFO 	saved data to c:\Users\neuro\GitHub\fNIRS_TSST_PsychoPy\builder_files\data/916629_TSST_fnirs_V4_CONTROL_2025-11-27_10h10.32.854.psydat
+7.9239 	INFO 	saved data to 'c:\\Users\\neuro\\GitHub\\fNIRS_TSST_PsychoPy\\builder_files\\data/916629_TSST_fnirs_V4_CONTROL_2025-11-27_10h10.32.854.csv'
+7.9457 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+7.9838 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

@@ -1,0 +1,44 @@
+12.0513 	INFO 	Loaded monitor calibration from ['2024_08_14 14:13']
+12.2225 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [2160, 3840]. Using actual size
+12.5076 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC370>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC310>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC160>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001D830AD69A0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2160, 3840]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.5077 	EXP 	window1: backgroundImage = ''
+12.5077 	EXP 	window1: backgroundFit = 'none'
+12.5079 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+12.5080 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+12.5108 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+12.5118 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+12.9552 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+12.9554 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+12.9563 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+12.9571 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001D8309DC490>
+13.0709 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+13.0710 	EXP 	window1: recordFrameIntervals = False
+13.2252 	EXP 	window1: recordFrameIntervals = True
+13.4085 	EXP 	Screen (0) actual frame rate measured at 60.03Hz
+13.4086 	EXP 	window1: recordFrameIntervals = False
+13.4086 	EXP 	window1: mouseVisible = False
+14.3688 	INFO 	keyboard.Keyboard is using ptb backend.
+14.4265 	EXP 	TSST_fnirs_V4_ARITH: status = STARTED
+14.4270 	EXP 	window1: mouseVisible = False
+14.5023 	EXP 	Created tsst_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='tsst_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+14.5024 	INFO 	keyboard.Keyboard is using ptb backend.
+14.5254 	EXP 	Sound start_tone_3 set volume 1.000
+14.5256 	EXP 	window1: mouseVisible = False
+14.5272 	EXP 	Created subtract_number_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number_TSST', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.5275 	EXP 	Sound tsst_start_pause_tone set volume 1.000
+14.5276 	EXP 	window1: mouseVisible = False
+14.5285 	EXP 	Created subtract_pausing_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing_TSST', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.5286 	EXP 	window1: mouseVisible = False
+14.5464 	EXP 	Created finished_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='finished_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0588 	INFO 	Keyboard events cleared
+0.0588 	EXP 	window1: mouseVisible = False
+0.0640 	EXP 	tsst_instruction_text: autoDraw = True
+3.6180 	DATA 	Keypress: escape
+3.7290 	EXP 	TSST_fnirs_V4_ARITH: status = STOPPED
+3.7454 	EXP 	tsst_instruction_text: autoDraw = False
+3.7455 	EXP 	TSST_fnirs_V4_ARITH: status = STOPPED
+3.7517 	INFO 	saved data to 'c:\\Users\\neuro\\GitHub\\fNIRS_TSST_PsychoPy\\data/testnov12_TSST_fnirs_V4_ARITH_2025-11-13_16h06.21.003.csv'
+3.7524 	INFO 	saved data to c:\Users\neuro\GitHub\fNIRS_TSST_PsychoPy\data/testnov12_TSST_fnirs_V4_ARITH_2025-11-13_16h06.21.003.psydat
+3.8097 	EXP 	window1: mouseVisible = True
+3.8343 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+3.9076 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

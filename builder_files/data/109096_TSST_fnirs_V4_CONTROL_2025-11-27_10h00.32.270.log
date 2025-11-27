@@ -1,0 +1,35 @@
+5.3415 	INFO 	Loaded monitor calibration from ['2024_08_14 14:13']
+5.5106 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [2160, 3840]. Using actual size
+5.8185 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093340>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E40932E0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093130>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001A7E41AB970>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2160, 3840]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.8186 	EXP 	window1: backgroundImage = ''
+5.8186 	EXP 	window1: backgroundFit = 'none'
+5.8188 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+5.8190 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+5.8217 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+5.8227 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+6.2698 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+6.2699 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+6.2709 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+6.2717 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x000001A7E4093460>
+6.3903 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.3903 	EXP 	window1: recordFrameIntervals = False
+6.6724 	EXP 	window1: recordFrameIntervals = True
+6.7390 	WARNING 	t of last frame was 33.14ms (=1/30)
+6.7722 	WARNING 	t of last frame was 33.17ms (=1/30)
+6.8055 	WARNING 	t of last frame was 33.34ms (=1/29)
+6.8390 	WARNING 	t of last frame was 33.42ms (=1/29)
+6.8723 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+7.0393 	EXP 	Screen (0) actual frame rate measured at 30.02Hz
+7.0393 	EXP 	window1: recordFrameIntervals = False
+7.0394 	EXP 	window1: mouseVisible = False
+8.0049 	INFO 	keyboard.Keyboard is using ptb backend.
+8.0050 	EXP 	TSST_fnirs_V4_CONTROL: status = STARTED
+8.0055 	EXP 	window1: mouseVisible = False
+8.1477 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.1478 	INFO 	keyboard.Keyboard is using ptb backend.
+8.1479 	EXP 	window1: mouseVisible = False
+8.2666 	EXP 	window1: mouseVisible = True
+8.2706 	INFO 	saved data to c:\Users\neuro\GitHub\fNIRS_TSST_PsychoPy\builder_files\data/109096_TSST_fnirs_V4_CONTROL_2025-11-27_10h00.32.270.psydat
+8.2712 	INFO 	saved data to 'c:\\Users\\neuro\\GitHub\\fNIRS_TSST_PsychoPy\\builder_files\\data/109096_TSST_fnirs_V4_CONTROL_2025-11-27_10h00.32.270.csv'
+8.2946 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+8.3069 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
