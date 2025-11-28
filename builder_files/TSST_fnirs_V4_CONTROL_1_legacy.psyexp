@@ -46,7 +46,7 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="TSST_fnirs_V4_FULL" valType="str" updates="None" name="expName"/>
+    <Param val="TSST_fnirs_V4_CONTROL" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
     <Param val="" valType="code" updates="None" name="frameRate"/>
@@ -927,22 +927,5 @@
     <Routine name="CTL2_PAUSE"/>
     <LoopTerminator name="CTL2_Loop"/>
     <Routine name="task_end"/>
-    <Routine name="FIXATION"/>
-    <Routine name="TSST_instruction_start"/>
-    <LoopInitiator loopType="TrialHandler" name="TSST_Arith_Loop">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$&quot;stims/TSST_arith.xlsx&quot;" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="TSST_Arith_Loop" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="TSST_ARITH_TASK"/>
-    <Routine name="TSST_ARITH_PAUSE"/>
-    <LoopTerminator name="TSST_Arith_Loop"/>
-    <Routine name="Finished"/>
   </Flow>
 </PsychoPy2experiment>

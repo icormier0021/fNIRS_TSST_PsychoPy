@@ -1,0 +1,169 @@
+15.2381 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+18.5968 	INFO 	Loaded monitor calibration from ['2025_10_16 07:47']
+18.9025 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x162028b20>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x162028ac0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x1620284f0>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1633b76d0>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+18.9026 	EXP 	window1: mouseVisible = True
+18.9026 	EXP 	window1: backgroundImage = ''
+18.9027 	EXP 	window1: backgroundFit = 'none'
+18.9028 	EXP 	window1: mouseVisible = True
+18.9031 	EXP 	window1: mouseVisible = True
+18.9058 	EXP 	window1: mouseVisible = True
+18.9063 	EXP 	window1: mouseVisible = True
+18.9439 	EXP 	window1: mouseVisible = True
+18.9440 	EXP 	window1: mouseVisible = True
+18.9445 	EXP 	window1: mouseVisible = True
+18.9449 	EXP 	window1: mouseVisible = True
+18.9586 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+18.9586 	EXP 	window1: recordFrameIntervals = False
+19.2998 	EXP 	window1: recordFrameIntervals = True
+19.6057 	WARNING 	t of last frame was 44.94ms (=1/22)
+19.6279 	WARNING 	t of last frame was 22.10ms (=1/45)
+20.2010 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+20.2020 	EXP 	window1: mouseVisible = False
+22.3714 	INFO 	keyboard.Keyboard is using ptb backend.
+22.3714 	EXP 	TSST_fnirs_V4_FULL: status = STARTED
+22.3719 	EXP 	window1: mouseVisible = True
+22.4166 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+22.8805 	INFO 	keyboard.Keyboard is using ptb backend.
+22.8816 	EXP 	window1: mouseVisible = False
+23.1502 	EXP 	Sound  set volume 1.000
+23.1505 	EXP 	Sound  set volume 1.000
+23.1507 	EXP 	window1: mouseVisible = True
+23.1542 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='fixation_cross', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+23.1543 	EXP 	window1: mouseVisible = True
+23.1553 	EXP 	Created read_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_number', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.1554 	EXP 	window1: mouseVisible = True
+23.1562 	EXP 	Created read_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_pausing', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.1563 	EXP 	window1: mouseVisible = True
+23.1788 	EXP 	Created ctl2_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ctl2_instruction_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+23.1789 	EXP 	window1: mouseVisible = True
+23.1796 	EXP 	Created subtract_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.1797 	EXP 	window1: mouseVisible = True
+23.1804 	EXP 	Created subtract_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.1805 	EXP 	window1: mouseVisible = True
+23.1838 	EXP 	Created task_end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='task_end_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Please wait for the next task to begin..', units='height', win=Window(...), wrapWidth=1)
+23.1838 	EXP 	window1: mouseVisible = True
+23.1868 	EXP 	Created tsst_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='tsst_instruction_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+23.1869 	EXP 	window1: mouseVisible = True
+23.1876 	EXP 	Created subtract_number_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number_TSST', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.1876 	EXP 	window1: mouseVisible = True
+23.1883 	EXP 	Created subtract_pausing_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing_TSST', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.1884 	EXP 	window1: mouseVisible = True
+23.1913 	EXP 	Created finished_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='finished_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0106 	INFO 	Keyboard events cleared
+0.0116 	EXP 	window1: mouseVisible = False
+0.0202 	EXP 	ctl1_instruction_text: autoDraw = True
+1.6308 	INFO 	Keyboard events cleared
+1.6322 	EXP 	Created sequence: sequential, trialTypes=1, nReps=6, seed=None
+1.6324 	EXP 	New trial (rep=0, index=0): None
+1.6327 	EXP 	window1: mouseVisible = False
+1.6327 	INFO 	Keyboard events cleared
+1.6384 	DATA 	Keypress: return
+1.6429 	WARNING 	t of last frame was 272.81ms (=1/3)
+1.6429 	EXP 	ctl1_instruction_text: autoDraw = False
+1.6429 	EXP 	fixation_cross: autoDraw = True
+5.1225 	EXP 	window1: mouseVisible = False
+5.1226 	INFO 	Keyboard events cleared
+5.1228 	EXP 	Sound  started
+5.1395 	DATA 	Keypress: s
+5.1454 	WARNING 	t of last frame was 24.62ms (=1/40)
+5.1454 	EXP 	fixation_cross: autoDraw = False
+5.1454 	EXP 	read_number: height = 0.07
+5.1454 	EXP 	read_number: height = 0.07
+5.1454 	EXP 	read_number: height = 0.07
+5.1454 	EXP 	read_number: text = 1022
+5.3191 	EXP 	read_number: autoDraw = True
+10.8137 	DATA 	Keypress: space
+10.8192 	EXP 	read_number: height = 0.07
+10.8192 	EXP 	read_number: height = 0.07
+10.8192 	EXP 	read_number: height = 0.07
+10.8192 	EXP 	read_number: text = '1009'
+10.9924 	DATA 	Keypress: space
+11.0198 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+11.0198 	EXP 	read_number: height = 0.07
+11.0198 	EXP 	read_number: height = 0.07
+11.0198 	EXP 	read_number: height = 0.07
+11.0198 	EXP 	read_number: text = '996'
+11.1772 	DATA 	Keypress: space
+11.1812 	EXP 	read_number: height = 0.07
+11.1812 	EXP 	read_number: height = 0.07
+11.1812 	EXP 	read_number: height = 0.07
+11.1812 	EXP 	read_number: text = '983'
+11.3447 	DATA 	Keypress: space
+11.3491 	EXP 	read_number: height = 0.07
+11.3491 	EXP 	read_number: height = 0.07
+11.3491 	EXP 	read_number: height = 0.07
+11.3491 	EXP 	read_number: text = '970'
+11.6750 	EXP 	window1: mouseVisible = False
+11.6751 	INFO 	Keyboard events cleared
+11.6751 	EXP 	window1: mouseVisible = False
+11.6775 	DATA 	Keypress: s
+11.6824 	EXP 	read_number: autoDraw = False
+11.6824 	EXP 	read_pausing: height = 0.07
+11.6824 	EXP 	read_pausing: height = 0.07
+11.6824 	EXP 	read_pausing: height = 0.07
+11.6824 	EXP 	read_pausing: text = 'PAUSE'
+11.6824 	EXP 	read_pausing: autoDraw = False
+11.6824 	EXP 	ctl2_instruction_text: autoDraw = True
+12.5716 	INFO 	Keyboard events cleared
+12.5797 	EXP 	Imported stims/CTL2.xlsx as conditions, 6 conditions, 2 params
+12.5801 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+12.5802 	EXP 	New trial (rep=0, index=0): {'Block': 1, 'StartingNumber': 1659}
+12.5803 	EXP 	window1: mouseVisible = False
+12.5804 	EXP 	Sound  stopped
+12.5804 	EXP 	Sound  started
+12.5837 	DATA 	Keypress: return
+12.5875 	EXP 	ctl2_instruction_text: autoDraw = False
+12.5875 	EXP 	subtract_number: height = 0.07
+12.5875 	EXP 	subtract_number: height = 0.07
+12.5875 	EXP 	subtract_number: height = 0.07
+12.5875 	EXP 	subtract_number: text = 1659
+12.5875 	EXP 	subtract_number: autoDraw = True
+21.5247 	DATA 	Keypress: space
+21.6919 	DATA 	Keypress: space
+23.0795 	DATA 	Keypress: space
+23.4317 	DATA 	Keypress: space
+52.5782 	EXP 	window1: mouseVisible = False
+52.5783 	EXP 	Sound  started
+52.5860 	EXP 	subtract_number: autoDraw = False
+52.5860 	EXP 	subtract_pausing: height = 0.07
+52.5860 	EXP 	subtract_pausing: height = 0.07
+52.5860 	EXP 	subtract_pausing: height = 0.07
+52.5860 	EXP 	subtract_pausing: text = 'PAUSE'
+52.5860 	EXP 	subtract_pausing: autoDraw = True
+54.3720 	INFO 	Keyboard events cleared
+54.3722 	EXP 	window1: mouseVisible = False
+54.3747 	DATA 	Keypress: s
+54.3792 	EXP 	subtract_pausing: autoDraw = False
+54.3792 	EXP 	task_end_text: autoDraw = True
+55.5632 	INFO 	Keyboard events cleared
+55.5633 	INFO 	Keyboard events cleared
+55.5634 	EXP 	window1: mouseVisible = False
+55.5653 	DATA 	Keypress: return
+55.5697 	EXP 	task_end_text: autoDraw = False
+55.5697 	EXP 	tsst_instruction_text: autoDraw = True
+56.4553 	INFO 	Keyboard events cleared
+56.4611 	EXP 	Imported stims/TSST_arith.xlsx as conditions, 6 conditions, 2 params
+56.4616 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+56.4618 	EXP 	New trial (rep=0, index=0): {'Block': 1, 'StartingNumber': 1039}
+56.4629 	EXP 	window1: mouseVisible = False
+56.4630 	EXP 	Sound  stopped
+56.4630 	EXP 	Sound  started
+56.4647 	DATA 	Keypress: return
+56.4687 	EXP 	tsst_instruction_text: autoDraw = False
+56.4687 	EXP 	subtract_number_TSST: height = 0.07
+56.4687 	EXP 	subtract_number_TSST: height = 0.07
+56.4687 	EXP 	subtract_number_TSST: height = 0.07
+56.4687 	EXP 	subtract_number_TSST: text = 1039
+56.4687 	EXP 	subtract_number_TSST: autoDraw = True
+57.7891 	DATA 	Keypress: escape
+57.8596 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+57.8697 	EXP 	subtract_number_TSST: autoDraw = False
+57.8697 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+57.8729 	INFO 	saved data to '/Users/Isaac/Documents/fNIRS_TSST_PsychoPy/builder_files/data/172254pa_TSST_fnirs_V4_FULL_2025-11-27_19h01.08.291.csv'
+57.8758 	INFO 	saved data to /Users/Isaac/Documents/fNIRS_TSST_PsychoPy/builder_files/data/172254pa_TSST_fnirs_V4_FULL_2025-11-27_19h01.08.291.psydat
+57.8978 	EXP 	window1: mouseVisible = True
+58.1743 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+58.1744 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

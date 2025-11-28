@@ -1,0 +1,5 @@
+﻿CTL1_Loop.thisRepN,CTL1_Loop.thisTrialN,CTL1_Loop.thisN,CTL1_Loop.thisIndex,thisRow.t,notes,CTL1_instruction_start.started,ctl1_instruction_text.started,CTL1_instruction_start.stopped,FIXATION.started,fixation_cross.started,FIXATION.stopped,CTL1_TASK.started,CTL1_TASK.stopped,CTL1_PAUSE.started,CTL1_PAUSE.stopped,CTL2_instruction_start.started,ctl2_instruction_text.started,participant,session,date,expName,psychopyVersion,frameRate,expStart,
+,,,,,,0.011339374992530793,0.02116983398445882,2.9211534169735387,,,,,,,,,,210004,001,2025-11-27_20h04.53.975,TSST_fnirs_V4_FULL,2024.1.4,None,2025-11-27 20h05.25.503453 -0400,
+,,,,,,,,,2.9212544589827303,2.9418301669938955,10.30696070898557,,,,,,,210004,001,2025-11-27_20h04.53.975,TSST_fnirs_V4_FULL,2024.1.4,None,2025-11-27 20h05.25.503453 -0400,
+0,0,0,0,10.32415333398967,,,,,,,,10.312555208976846,10.31547045899788,10.315493208996486,10.317322749993764,,,210004,001,2025-11-27_20h04.53.975,TSST_fnirs_V4_FULL,2024.1.4,None,2025-11-27 20h05.25.503453 -0400,
+,,,,,,,,,,,,,,,,10.317355499981204,10.32415333398967,,,,,,,,

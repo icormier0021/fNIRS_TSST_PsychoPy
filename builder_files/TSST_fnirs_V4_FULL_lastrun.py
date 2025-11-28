@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Thu Nov 27 09:11:50 2025
+    on Thu Nov 27 20:12:42 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -381,19 +381,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     PauseTone = sound.Sound(600, secs=0.2, hamming=True)
     PauseTone.setVolume(1.0)
     
-    # --- Initialize components for Routine "fixation" ---
-    text_2 = visual.TextStim(win=win, name='text_2',
+    # --- Initialize components for Routine "FIXATION" ---
+    fixation_cross = visual.TextStim(win=win, name='fixation_cross',
         text='+',
         font='Arial',
         pos=(0, 0), height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    # Run 'Begin Experiment' code from skip_fixation
+    ## BEGIN EXPERIMENT
+    skipNextRoutine = False
     
     # --- Initialize components for Routine "CTL1_TASK" ---
     # Run 'Begin Experiment' code from CTL1_number
     ## BEGIN EXPERIMENT
-    skipNextRoutine = False
     starting_number = 1022
     current_number = starting_number
     #number_clock = core.Clock()
@@ -425,6 +427,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from end_ctl2_instruction
     kb = keyboard.Keyboard()
     
+    # --- Initialize components for Routine "FIXATION" ---
+    fixation_cross = visual.TextStim(win=win, name='fixation_cross',
+        text='+',
+        font='Arial',
+        pos=(0, 0), height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    # Run 'Begin Experiment' code from skip_fixation
+    ## BEGIN EXPERIMENT
+    skipNextRoutine = False
+    
     # --- Initialize components for Routine "CTL2_TASK" ---
     subtract_number = visual.TextStim(win=win, name='subtract_number',
         text='',
@@ -451,6 +465,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    
+    # --- Initialize components for Routine "FIXATION" ---
+    fixation_cross = visual.TextStim(win=win, name='fixation_cross',
+        text='+',
+        font='Arial',
+        pos=(0, 0), height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    # Run 'Begin Experiment' code from skip_fixation
+    ## BEGIN EXPERIMENT
+    skipNextRoutine = False
     
     # --- Initialize components for Routine "TSST_instruction_start" ---
     tsst_instruction_text = visual.TextStim(win=win, name='tsst_instruction_text',
@@ -575,6 +601,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Check if space key was pressed
         if continue_key:
             continueRoutine = False
+            
+        pause_key = kb.getKeys(["p"], waitRelease=False, clear=True)
+        # check whether to pause
+        if pause_key:
+            paused = True
+            while paused:
+                kb.clearEvents()
+                if pause_key:
+                    paused = False
+                else:
+                    # need to let the rest of system time to do stuff in this tight loop 
+                    time.sleep(0.001) # 1 ms per iteration should do
+            else:
+                # when exiting the while loop, also terminate the enclosing 500 ms
+                # for loop and go on to the next image:
+                break 
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -608,6 +650,120 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "CTL1_instruction_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
+    # --- Prepare to start Routine "FIXATION" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('FIXATION.started', globalClock.getTime(format='float'))
+    # Run 'Begin Routine' code from skip_fixation
+    ## BEGIN ROUTINE
+    #number_clock.reset()
+    lsl_outlet.push_sample([10]) #Fixation-Cross Start
+    win.mouseVisible = False
+    kb.clearEvents()
+    
+    # keep track of which components have finished
+    FIXATIONComponents = [fixation_cross]
+    for thisComponent in FIXATIONComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "FIXATION" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 30.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *fixation_cross* updates
+        
+        # if fixation_cross is starting this frame...
+        if fixation_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            fixation_cross.frameNStart = frameN  # exact frame index
+            fixation_cross.tStart = t  # local t and not account for scr refresh
+            fixation_cross.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fixation_cross, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'fixation_cross.started')
+            # update status
+            fixation_cross.status = STARTED
+            fixation_cross.setAutoDraw(True)
+        
+        # if fixation_cross is active this frame...
+        if fixation_cross.status == STARTED:
+            # update params
+            pass
+        
+        # if fixation_cross is stopping this frame...
+        if fixation_cross.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > fixation_cross.tStartRefresh + 30-frameTolerance:
+                # keep track of stop time/frame for later
+                fixation_cross.tStop = t  # not accounting for scr refresh
+                fixation_cross.tStopRefresh = tThisFlipGlobal  # on global time
+                fixation_cross.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'fixation_cross.stopped')
+                # update status
+                fixation_cross.status = FINISHED
+                fixation_cross.setAutoDraw(False)
+        # Run 'Each Frame' code from skip_fixation
+        # hard stop at 30 s
+        if t >= 30.0 - frameTolerance:
+            fixation_cross.setAutoDraw(False)
+            continueRoutine = False
+            
+        skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)
+        if skip_keys:
+            skipNextRoutine = True
+            continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in FIXATIONComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "FIXATION" ---
+    for thisComponent in FIXATIONComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('FIXATION.stopped', globalClock.getTime(format='float'))
+    # Run 'End Routine' code from skip_fixation
+    lsl_outlet.push_sample([11]) #Fixation-Cross End
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-30.000000)
+    thisExp.nextEntry()
+    
     # set up handler to look after randomisation of conditions etc
     CTL1_Loop = data.TrialHandler(nReps=6.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
@@ -636,100 +792,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisCTL1_Loop:
                 globals()[paramName] = thisCTL1_Loop[paramName]
         
-        # --- Prepare to start Routine "fixation" ---
-        continueRoutine = True
-        # update component parameters for each repeat
-        thisExp.addData('fixation.started', globalClock.getTime(format='float'))
-        # keep track of which components have finished
-        fixationComponents = [text_2]
-        for thisComponent in fixationComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "fixation" ---
-        routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 30.0:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # *text_2* updates
-            
-            # if text_2 is starting this frame...
-            if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                text_2.frameNStart = frameN  # exact frame index
-                text_2.tStart = t  # local t and not account for scr refresh
-                text_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'text_2.started')
-                # update status
-                text_2.status = STARTED
-                text_2.setAutoDraw(True)
-            
-            # if text_2 is active this frame...
-            if text_2.status == STARTED:
-                # update params
-                pass
-            
-            # if text_2 is stopping this frame...
-            if text_2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > text_2.tStartRefresh + 30-frameTolerance:
-                    # keep track of stop time/frame for later
-                    text_2.tStop = t  # not accounting for scr refresh
-                    text_2.tStopRefresh = tThisFlipGlobal  # on global time
-                    text_2.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'text_2.stopped')
-                    # update status
-                    text_2.status = FINISHED
-                    text_2.setAutoDraw(False)
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in fixationComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "fixation" ---
-        for thisComponent in fixationComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        thisExp.addData('fixation.stopped', globalClock.getTime(format='float'))
-        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-        if routineForceEnded:
-            routineTimer.reset()
-        else:
-            routineTimer.addTime(-30.000000)
-        
         # --- Prepare to start Routine "CTL1_TASK" ---
         continueRoutine = True
         # update component parameters for each repeat
@@ -737,14 +799,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from CTL1_number
         ## BEGIN EXPERIMENT
         #number_clock.reset()
-        lsl_outlet.push_sample([10]) #CTL1_TASK Block Start
+        lsl_outlet.push_sample([20]) #CTL1_TASK Block Start
         win.mouseVisible = False
         read_number.txt = str(current_number)
         kb.clearEvents()
-        
-        #Schedule start tone to begin on next screen flip
-        nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-        StartTone.play(when=nextFlip_ptb)
+        if skipNextRoutine:
+            CTL1_Loop.finished = True
+            skipNextRoutine = True
+            continueRoutine = False
+        else:
+            #Schedule start tone to begin on next screen flip
+            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
+            StartTone.play(when=nextFlip_ptb)
         read_number.setText(current_number)
         # keep track of which components have finished
         CTL1_TASKComponents = [read_number]
@@ -854,7 +920,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('CTL1_TASK.stopped', globalClock.getTime(format='float'))
         # Run 'End Routine' code from CTL1_number
-        lsl_outlet.push_sample([11]) #CTL1_TASK Block End
+        lsl_outlet.push_sample([21]) #CTL1_TASK Block End
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -867,9 +933,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         thisExp.addData('CTL1_PAUSE.started', globalClock.getTime(format='float'))
         read_pausing.setText('PAUSE')
         # Run 'Begin Routine' code from CTL1_Pause_Code
-        lsl_outlet.push_sample([20]) #CTL1_PAUSE Block Start
+        lsl_outlet.push_sample([30]) #CTL1_PAUSE Block Start
         win.mouseVisible = False
         if skipNextRoutine:
+            CTL1_Loop.finished = True
             skipNextRoutine = False
             continueRoutine = False
         else:
@@ -943,7 +1010,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
             if skip_keys:
                 CTL1_Loop.finished = True
-                skipNextRoutine = True 
+            #    skipNextRoutine = True 
                 continueRoutine = False
             
             
@@ -974,7 +1041,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('CTL1_PAUSE.stopped', globalClock.getTime(format='float'))
         # Run 'End Routine' code from CTL1_Pause_Code
-        lsl_outlet.push_sample([21]) #CTL1_PAUSE Block End
+        lsl_outlet.push_sample([31]) #CTL1_PAUSE Block End
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -1078,6 +1145,120 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "CTL2_instruction_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
+    # --- Prepare to start Routine "FIXATION" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('FIXATION.started', globalClock.getTime(format='float'))
+    # Run 'Begin Routine' code from skip_fixation
+    ## BEGIN ROUTINE
+    #number_clock.reset()
+    lsl_outlet.push_sample([10]) #Fixation-Cross Start
+    win.mouseVisible = False
+    kb.clearEvents()
+    
+    # keep track of which components have finished
+    FIXATIONComponents = [fixation_cross]
+    for thisComponent in FIXATIONComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "FIXATION" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 30.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *fixation_cross* updates
+        
+        # if fixation_cross is starting this frame...
+        if fixation_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            fixation_cross.frameNStart = frameN  # exact frame index
+            fixation_cross.tStart = t  # local t and not account for scr refresh
+            fixation_cross.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fixation_cross, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'fixation_cross.started')
+            # update status
+            fixation_cross.status = STARTED
+            fixation_cross.setAutoDraw(True)
+        
+        # if fixation_cross is active this frame...
+        if fixation_cross.status == STARTED:
+            # update params
+            pass
+        
+        # if fixation_cross is stopping this frame...
+        if fixation_cross.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > fixation_cross.tStartRefresh + 30-frameTolerance:
+                # keep track of stop time/frame for later
+                fixation_cross.tStop = t  # not accounting for scr refresh
+                fixation_cross.tStopRefresh = tThisFlipGlobal  # on global time
+                fixation_cross.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'fixation_cross.stopped')
+                # update status
+                fixation_cross.status = FINISHED
+                fixation_cross.setAutoDraw(False)
+        # Run 'Each Frame' code from skip_fixation
+        # hard stop at 30 s
+        if t >= 30.0 - frameTolerance:
+            fixation_cross.setAutoDraw(False)
+            continueRoutine = False
+            
+        skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)
+        if skip_keys:
+            skipNextRoutine = True
+            continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in FIXATIONComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "FIXATION" ---
+    for thisComponent in FIXATIONComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('FIXATION.stopped', globalClock.getTime(format='float'))
+    # Run 'End Routine' code from skip_fixation
+    lsl_outlet.push_sample([11]) #Fixation-Cross End
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-30.000000)
+    thisExp.nextEntry()
+    
     # set up handler to look after randomisation of conditions etc
     CTL2_Loop = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
@@ -1111,14 +1292,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('CTL2_TASK.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from skip_CTL2
-        lsl_outlet.push_sample([30]) #CTL2_TASK Block Start
-        skipNextRoutine = False
+        lsl_outlet.push_sample([40]) #CTL2_TASK Block Start
+        #skipNextRoutine = False
         win.mouseVisible = False
         #start_tone_2.status = NOT_STARTED
-        
-        #Schedule start tone to begin on next screen flip
-        nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-        StartTone.play(when=nextFlip_ptb)
+        if skipNextRoutine:
+            CTL2_Loop.finished = True
+            skipNextRoutine = True
+            continueRoutine = False
+        else:
+            #Schedule start tone to begin on next screen flip
+            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
+            StartTone.play(when=nextFlip_ptb)
         subtract_number.setText(StartingNumber)
         # keep track of which components have finished
         CTL2_TASKComponents = [subtract_number]
@@ -1217,7 +1402,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('CTL2_TASK.stopped', globalClock.getTime(format='float'))
         # Run 'End Routine' code from skip_CTL2
-        lsl_outlet.push_sample([31]) #CTL2_TASK Block End
+        lsl_outlet.push_sample([41]) #CTL2_TASK Block End
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -1230,17 +1415,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         thisExp.addData('CTL2_PAUSE.started', globalClock.getTime(format='float'))
         subtract_pausing.setText('PAUSE')
         # Run 'Begin Routine' code from CTL2_Pause_code
-        lsl_outlet.push_sample([40]) #CTL2_PAUSE Block Start
+        lsl_outlet.push_sample([50]) #CTL2_PAUSE Block Start
         win.mouseVisible = False
         if skipNextRoutine:
+            CTL2_Loop.finished = True
             skipNextRoutine = False
             continueRoutine = False
         else:
             #Schedule start tone to begin on next screen flip
             nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
             PauseTone.play(when=nextFlip_ptb)
-        #start_pause_tone_2.status = NOT_STARTED
-        
         # keep track of which components have finished
         CTL2_PAUSEComponents = [subtract_pausing]
         for thisComponent in CTL2_PAUSEComponents:
@@ -1308,7 +1492,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
             if skip_keys:
                 CTL2_Loop.finished = True
-                skipNextRoutine = True 
+            #    skipNextRoutine = True 
                 continueRoutine = False
             
             # check for quit (typically the Esc key)
@@ -1338,7 +1522,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('CTL2_PAUSE.stopped', globalClock.getTime(format='float'))
         # Run 'End Routine' code from CTL2_Pause_code
-        lsl_outlet.push_sample([41]) #CTL2_PAUSE Block End
+        lsl_outlet.push_sample([51]) #CTL2_PAUSE Block End
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -1442,6 +1626,120 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "task_end" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
+    # --- Prepare to start Routine "FIXATION" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('FIXATION.started', globalClock.getTime(format='float'))
+    # Run 'Begin Routine' code from skip_fixation
+    ## BEGIN ROUTINE
+    #number_clock.reset()
+    lsl_outlet.push_sample([10]) #Fixation-Cross Start
+    win.mouseVisible = False
+    kb.clearEvents()
+    
+    # keep track of which components have finished
+    FIXATIONComponents = [fixation_cross]
+    for thisComponent in FIXATIONComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "FIXATION" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 30.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *fixation_cross* updates
+        
+        # if fixation_cross is starting this frame...
+        if fixation_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            fixation_cross.frameNStart = frameN  # exact frame index
+            fixation_cross.tStart = t  # local t and not account for scr refresh
+            fixation_cross.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fixation_cross, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'fixation_cross.started')
+            # update status
+            fixation_cross.status = STARTED
+            fixation_cross.setAutoDraw(True)
+        
+        # if fixation_cross is active this frame...
+        if fixation_cross.status == STARTED:
+            # update params
+            pass
+        
+        # if fixation_cross is stopping this frame...
+        if fixation_cross.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > fixation_cross.tStartRefresh + 30-frameTolerance:
+                # keep track of stop time/frame for later
+                fixation_cross.tStop = t  # not accounting for scr refresh
+                fixation_cross.tStopRefresh = tThisFlipGlobal  # on global time
+                fixation_cross.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'fixation_cross.stopped')
+                # update status
+                fixation_cross.status = FINISHED
+                fixation_cross.setAutoDraw(False)
+        # Run 'Each Frame' code from skip_fixation
+        # hard stop at 30 s
+        if t >= 30.0 - frameTolerance:
+            fixation_cross.setAutoDraw(False)
+            continueRoutine = False
+            
+        skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)
+        if skip_keys:
+            skipNextRoutine = True
+            continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in FIXATIONComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "FIXATION" ---
+    for thisComponent in FIXATIONComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('FIXATION.stopped', globalClock.getTime(format='float'))
+    # Run 'End Routine' code from skip_fixation
+    lsl_outlet.push_sample([11]) #Fixation-Cross End
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-30.000000)
+    thisExp.nextEntry()
+    
     # --- Prepare to start Routine "TSST_instruction_start" ---
     continueRoutine = True
     # update component parameters for each repeat
@@ -1449,6 +1747,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Routine' code from end_tsst_instruction
     kb.clearEvents()
     win.mouseVisible = False
+    
+    if skipNextRoutine:
+        skipNextRoutine = True
+        continueRoutine = False
     # keep track of which components have finished
     TSST_instruction_startComponents = [tsst_instruction_text]
     for thisComponent in TSST_instruction_startComponents:
@@ -1566,14 +1868,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         thisExp.addData('TSST_ARITH_TASK.started', globalClock.getTime(format='float'))
         subtract_number_TSST.setText(StartingNumber)
         # Run 'Begin Routine' code from skip_TSST
-        lsl_outlet.push_sample([50]) #TSST_ARITH_TASK Block Start
-        skipNextRoutine = False
+        lsl_outlet.push_sample([60]) #TSST_ARITH_TASK Block Start
+        #skipNextRoutine = False
         win.mouseVisible = False
         
         #start_tone_3.status = NOT_STARTED
-        #Schedule start tone to begin on next screen flip
-        nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-        StartTone.play(when=nextFlip_ptb)
+        
+        if skipNextRoutine:
+            TSST_Arith_Loop.finished = True
+            skipNextRoutine = True
+            continueRoutine = False
+        else:
+            #Schedule start tone to begin on next screen flip
+            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
+            StartTone.play(when=nextFlip_ptb)
         # keep track of which components have finished
         TSST_ARITH_TASKComponents = [subtract_number_TSST]
         for thisComponent in TSST_ARITH_TASKComponents:
@@ -1671,7 +1979,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('TSST_ARITH_TASK.stopped', globalClock.getTime(format='float'))
         # Run 'End Routine' code from skip_TSST
-        lsl_outlet.push_sample([51]) #TSST_ARITH_TASK Block End
+        lsl_outlet.push_sample([61]) #TSST_ARITH_TASK Block End
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -1684,9 +1992,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         thisExp.addData('TSST_ARITH_PAUSE.started', globalClock.getTime(format='float'))
         subtract_pausing_TSST.setText('PAUSE')
         # Run 'Begin Routine' code from check_time_4
-        lsl_outlet.push_sample([60]) #TSST_ARITH_PAUSE Block Start
+        lsl_outlet.push_sample([70]) #TSST_ARITH_PAUSE Block Start
         win.mouseVisible = False
         if skipNextRoutine:
+            TSST_Arith_Loop.finished = True
             skipNextRoutine = False
             continueRoutine = False
         else:
@@ -1762,7 +2071,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
             if skip_keys:
                 TSST_Arith_Loop.finished = True
-                skipNextRoutine = True 
+            #    skipNextRoutine = True 
                 continueRoutine = False
             
             # check for quit (typically the Esc key)
@@ -1792,7 +2101,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('TSST_ARITH_PAUSE.stopped', globalClock.getTime(format='float'))
         # Run 'End Routine' code from check_time_4
-        lsl_outlet.push_sample([61]) #TSST_ARITH_PAUSE Block End
+        lsl_outlet.push_sample([71]) #TSST_ARITH_PAUSE Block End
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()

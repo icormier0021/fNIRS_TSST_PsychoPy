@@ -1,0 +1,716 @@
+2.5752 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+2.5752 	ERROR 	Failed to load any of the audioLibs: ['pyo']. Falling back to PsychToolbox ('ptb') backend for sound. Be sure to add 'ptb' to preferences to avoid seeing this message again.
+2.6845 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['pyo'] (in that order).
+14.8779 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+16.9555 	INFO 	Loaded monitor calibration from ['2025_10_16 07:47']
+17.2533 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x164abe890>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x164abe8f0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x164abeaa0>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x16470b940>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+17.2534 	EXP 	window1: mouseVisible = True
+17.2534 	EXP 	window1: backgroundImage = ''
+17.2534 	EXP 	window1: backgroundFit = 'none'
+17.2536 	EXP 	window1: mouseVisible = True
+17.2538 	EXP 	window1: mouseVisible = True
+17.2565 	EXP 	window1: mouseVisible = True
+17.2569 	EXP 	window1: mouseVisible = True
+17.2932 	EXP 	window1: mouseVisible = True
+17.2933 	EXP 	window1: mouseVisible = True
+17.2938 	EXP 	window1: mouseVisible = True
+17.2942 	EXP 	window1: mouseVisible = True
+17.3082 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+17.3082 	EXP 	window1: recordFrameIntervals = False
+17.6875 	EXP 	window1: recordFrameIntervals = True
+17.9498 	WARNING 	t of last frame was 36.96ms (=1/27)
+18.0128 	WARNING 	t of last frame was 28.39ms (=1/35)
+18.4139 	EXP 	Screen (0) actual frame rate measured at 120.53Hz
+18.4140 	EXP 	window1: recordFrameIntervals = False
+18.4154 	EXP 	window1: mouseVisible = False
+20.5998 	INFO 	keyboard.Keyboard is using ptb backend.
+20.5998 	EXP 	TSST_fnirs_V4_FULL: status = STARTED
+20.6003 	EXP 	window1: mouseVisible = True
+20.6448 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+21.1134 	INFO 	keyboard.Keyboard is using ptb backend.
+21.1144 	EXP 	window1: mouseVisible = False
+21.3680 	EXP 	Sound  set volume 1.000
+21.3683 	EXP 	Sound  set volume 1.000
+21.3685 	EXP 	window1: mouseVisible = True
+21.3716 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='fixation_cross', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+21.3717 	EXP 	window1: mouseVisible = True
+21.3726 	EXP 	Created read_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_number', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.3726 	EXP 	window1: mouseVisible = True
+21.3734 	EXP 	Created read_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_pausing', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.3734 	EXP 	window1: mouseVisible = True
+21.3953 	EXP 	Created ctl2_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ctl2_instruction_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+21.3954 	EXP 	window1: mouseVisible = True
+21.3972 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='fixation_cross', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+21.3974 	EXP 	window1: mouseVisible = True
+21.3981 	EXP 	Created subtract_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.3982 	EXP 	window1: mouseVisible = True
+21.3989 	EXP 	Created subtract_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.3989 	EXP 	window1: mouseVisible = True
+21.4013 	EXP 	Created task_end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='task_end_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Please wait for the next task to begin..', units='height', win=Window(...), wrapWidth=1)
+21.4013 	EXP 	window1: mouseVisible = True
+21.4052 	EXP 	Created tsst_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='tsst_instruction_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+21.4053 	EXP 	window1: mouseVisible = True
+21.4067 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='fixation_cross', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+21.4068 	EXP 	window1: mouseVisible = True
+21.4075 	EXP 	Created subtract_number_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number_TSST', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.4076 	EXP 	window1: mouseVisible = True
+21.4083 	EXP 	Created subtract_pausing_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing_TSST', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.4083 	EXP 	window1: mouseVisible = True
+21.4113 	EXP 	Created finished_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='finished_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0091 	INFO 	Keyboard events cleared
+0.0102 	EXP 	window1: mouseVisible = False
+0.0179 	EXP 	ctl1_instruction_text: autoDraw = True
+2.0689 	INFO 	Keyboard events cleared
+2.0722 	EXP 	Created sequence: sequential, trialTypes=1, nReps=6, seed=None
+2.0724 	EXP 	New trial (rep=0, index=0): None
+2.0727 	EXP 	window1: mouseVisible = False
+2.0727 	INFO 	Keyboard events cleared
+2.0852 	DATA 	Keypress: return
+2.0900 	EXP 	ctl1_instruction_text: autoDraw = False
+2.0900 	EXP 	fixation_cross: autoDraw = True
+32.0689 	EXP 	window1: mouseVisible = False
+32.0690 	INFO 	Keyboard events cleared
+32.0692 	EXP 	Sound  started
+32.0781 	EXP 	fixation_cross: autoDraw = False
+32.0781 	EXP 	fixation_cross: autoDraw = False
+32.0781 	EXP 	read_number: height = 0.07
+32.0781 	EXP 	read_number: height = 0.07
+32.0781 	EXP 	read_number: height = 0.07
+32.0781 	EXP 	read_number: text = 1022
+32.2610 	EXP 	read_number: autoDraw = True
+46.0524 	DATA 	Keypress: space
+46.0571 	EXP 	read_number: height = 0.07
+46.0571 	EXP 	read_number: height = 0.07
+46.0571 	EXP 	read_number: height = 0.07
+46.0571 	EXP 	read_number: text = '1009'
+46.2426 	DATA 	Keypress: space
+46.2472 	EXP 	read_number: height = 0.07
+46.2472 	EXP 	read_number: height = 0.07
+46.2472 	EXP 	read_number: height = 0.07
+46.2472 	EXP 	read_number: text = '996'
+46.4297 	DATA 	Keypress: space
+46.4342 	EXP 	read_number: height = 0.07
+46.4342 	EXP 	read_number: height = 0.07
+46.4342 	EXP 	read_number: height = 0.07
+46.4342 	EXP 	read_number: text = '983'
+46.6131 	DATA 	Keypress: space
+46.6253 	EXP 	read_number: height = 0.07
+46.6253 	EXP 	read_number: height = 0.07
+46.6253 	EXP 	read_number: height = 0.07
+46.6253 	EXP 	read_number: text = '970'
+46.8255 	DATA 	Keypress: space
+46.8300 	EXP 	read_number: height = 0.07
+46.8300 	EXP 	read_number: height = 0.07
+46.8300 	EXP 	read_number: height = 0.07
+46.8300 	EXP 	read_number: text = '957'
+47.0253 	DATA 	Keypress: space
+47.0375 	EXP 	read_number: height = 0.07
+47.0375 	EXP 	read_number: height = 0.07
+47.0375 	EXP 	read_number: height = 0.07
+47.0375 	EXP 	read_number: text = '944'
+47.2124 	DATA 	Keypress: space
+47.2181 	EXP 	read_number: height = 0.07
+47.2181 	EXP 	read_number: height = 0.07
+47.2181 	EXP 	read_number: height = 0.07
+47.2181 	EXP 	read_number: text = '931'
+48.5404 	DATA 	Keypress: space
+48.5447 	EXP 	read_number: height = 0.07
+48.5447 	EXP 	read_number: height = 0.07
+48.5447 	EXP 	read_number: height = 0.07
+48.5447 	EXP 	read_number: text = '918'
+48.7382 	DATA 	Keypress: space
+48.7428 	EXP 	read_number: height = 0.07
+48.7428 	EXP 	read_number: height = 0.07
+48.7428 	EXP 	read_number: height = 0.07
+48.7428 	EXP 	read_number: text = '905'
+48.9412 	DATA 	Keypress: space
+48.9454 	EXP 	read_number: height = 0.07
+48.9454 	EXP 	read_number: height = 0.07
+48.9454 	EXP 	read_number: height = 0.07
+48.9454 	EXP 	read_number: text = '892'
+49.1226 	DATA 	Keypress: space
+49.1268 	EXP 	read_number: height = 0.07
+49.1268 	EXP 	read_number: height = 0.07
+49.1268 	EXP 	read_number: height = 0.07
+49.1268 	EXP 	read_number: text = '879'
+49.2904 	DATA 	Keypress: space
+49.2952 	EXP 	read_number: height = 0.07
+49.2952 	EXP 	read_number: height = 0.07
+49.2952 	EXP 	read_number: height = 0.07
+49.2952 	EXP 	read_number: text = '866'
+49.5395 	DATA 	Keypress: space
+49.5440 	EXP 	read_number: height = 0.07
+49.5440 	EXP 	read_number: height = 0.07
+49.5440 	EXP 	read_number: height = 0.07
+49.5440 	EXP 	read_number: text = '853'
+49.7407 	DATA 	Keypress: space
+49.7454 	EXP 	read_number: height = 0.07
+49.7454 	EXP 	read_number: height = 0.07
+49.7454 	EXP 	read_number: height = 0.07
+49.7454 	EXP 	read_number: text = '840'
+49.9244 	DATA 	Keypress: space
+49.9285 	EXP 	read_number: height = 0.07
+49.9285 	EXP 	read_number: height = 0.07
+49.9285 	EXP 	read_number: height = 0.07
+49.9285 	EXP 	read_number: text = '827'
+50.1313 	DATA 	Keypress: space
+50.1514 	EXP 	read_number: height = 0.07
+50.1514 	EXP 	read_number: height = 0.07
+50.1514 	EXP 	read_number: height = 0.07
+50.1514 	EXP 	read_number: text = '814'
+50.3246 	DATA 	Keypress: space
+50.3293 	EXP 	read_number: height = 0.07
+50.3293 	EXP 	read_number: height = 0.07
+50.3293 	EXP 	read_number: height = 0.07
+50.3293 	EXP 	read_number: text = '801'
+50.5057 	DATA 	Keypress: space
+50.5097 	EXP 	read_number: height = 0.07
+50.5097 	EXP 	read_number: height = 0.07
+50.5097 	EXP 	read_number: height = 0.07
+50.5097 	EXP 	read_number: text = '788'
+50.6919 	DATA 	Keypress: space
+50.6967 	EXP 	read_number: height = 0.07
+50.6967 	EXP 	read_number: height = 0.07
+50.6967 	EXP 	read_number: height = 0.07
+50.6967 	EXP 	read_number: text = '775'
+50.8911 	DATA 	Keypress: space
+50.8955 	EXP 	read_number: height = 0.07
+50.8955 	EXP 	read_number: height = 0.07
+50.8955 	EXP 	read_number: height = 0.07
+50.8955 	EXP 	read_number: text = '762'
+51.0887 	DATA 	Keypress: space
+51.0928 	EXP 	read_number: height = 0.07
+51.0928 	EXP 	read_number: height = 0.07
+51.0928 	EXP 	read_number: height = 0.07
+51.0928 	EXP 	read_number: text = '749'
+51.2630 	DATA 	Keypress: space
+51.2671 	EXP 	read_number: height = 0.07
+51.2671 	EXP 	read_number: height = 0.07
+51.2671 	EXP 	read_number: height = 0.07
+51.2671 	EXP 	read_number: text = '736'
+51.4739 	DATA 	Keypress: space
+51.4786 	EXP 	read_number: height = 0.07
+51.4786 	EXP 	read_number: height = 0.07
+51.4786 	EXP 	read_number: height = 0.07
+51.4786 	EXP 	read_number: text = '723'
+51.6968 	DATA 	Keypress: space
+51.7076 	EXP 	read_number: height = 0.07
+51.7076 	EXP 	read_number: height = 0.07
+51.7076 	EXP 	read_number: height = 0.07
+51.7076 	EXP 	read_number: text = '710'
+51.9448 	DATA 	Keypress: space
+51.9515 	EXP 	read_number: height = 0.07
+51.9515 	EXP 	read_number: height = 0.07
+51.9515 	EXP 	read_number: height = 0.07
+51.9515 	EXP 	read_number: text = '697'
+52.1410 	DATA 	Keypress: space
+52.1458 	EXP 	read_number: height = 0.07
+52.1458 	EXP 	read_number: height = 0.07
+52.1458 	EXP 	read_number: height = 0.07
+52.1458 	EXP 	read_number: text = '684'
+52.3653 	DATA 	Keypress: space
+52.3705 	EXP 	read_number: height = 0.07
+52.3705 	EXP 	read_number: height = 0.07
+52.3705 	EXP 	read_number: height = 0.07
+52.3705 	EXP 	read_number: text = '671'
+52.5587 	DATA 	Keypress: space
+52.5634 	EXP 	read_number: height = 0.07
+52.5634 	EXP 	read_number: height = 0.07
+52.5634 	EXP 	read_number: height = 0.07
+52.5634 	EXP 	read_number: text = '658'
+52.8408 	DATA 	Keypress: space
+52.8451 	EXP 	read_number: height = 0.07
+52.8451 	EXP 	read_number: height = 0.07
+52.8451 	EXP 	read_number: height = 0.07
+52.8451 	EXP 	read_number: text = '645'
+53.1073 	DATA 	Keypress: space
+53.1120 	EXP 	read_number: height = 0.07
+53.1120 	EXP 	read_number: height = 0.07
+53.1120 	EXP 	read_number: height = 0.07
+53.1120 	EXP 	read_number: text = '632'
+53.3759 	DATA 	Keypress: space
+53.3805 	EXP 	read_number: height = 0.07
+53.3805 	EXP 	read_number: height = 0.07
+53.3805 	EXP 	read_number: height = 0.07
+53.3805 	EXP 	read_number: text = '619'
+53.6148 	DATA 	Keypress: space
+53.6207 	EXP 	read_number: height = 0.07
+53.6207 	EXP 	read_number: height = 0.07
+53.6207 	EXP 	read_number: height = 0.07
+53.6207 	EXP 	read_number: text = '606'
+53.9111 	DATA 	Keypress: space
+53.9153 	EXP 	read_number: height = 0.07
+53.9153 	EXP 	read_number: height = 0.07
+53.9153 	EXP 	read_number: height = 0.07
+53.9153 	EXP 	read_number: text = '593'
+54.1244 	DATA 	Keypress: space
+54.1286 	EXP 	read_number: height = 0.07
+54.1286 	EXP 	read_number: height = 0.07
+54.1286 	EXP 	read_number: height = 0.07
+54.1286 	EXP 	read_number: text = '580'
+54.3079 	DATA 	Keypress: space
+54.3127 	EXP 	read_number: height = 0.07
+54.3127 	EXP 	read_number: height = 0.07
+54.3127 	EXP 	read_number: height = 0.07
+54.3127 	EXP 	read_number: text = '567'
+54.4972 	DATA 	Keypress: space
+54.5083 	EXP 	read_number: height = 0.07
+54.5083 	EXP 	read_number: height = 0.07
+54.5083 	EXP 	read_number: height = 0.07
+54.5083 	EXP 	read_number: text = '554'
+54.7083 	DATA 	Keypress: space
+54.7126 	EXP 	read_number: height = 0.07
+54.7126 	EXP 	read_number: height = 0.07
+54.7126 	EXP 	read_number: height = 0.07
+54.7126 	EXP 	read_number: text = '541'
+54.8748 	DATA 	Keypress: space
+54.8789 	EXP 	read_number: height = 0.07
+54.8789 	EXP 	read_number: height = 0.07
+54.8789 	EXP 	read_number: height = 0.07
+54.8789 	EXP 	read_number: text = '528'
+55.0584 	DATA 	Keypress: space
+55.0630 	EXP 	read_number: height = 0.07
+55.0630 	EXP 	read_number: height = 0.07
+55.0630 	EXP 	read_number: height = 0.07
+55.0630 	EXP 	read_number: text = '515'
+55.2474 	DATA 	Keypress: space
+55.2586 	EXP 	read_number: height = 0.07
+55.2586 	EXP 	read_number: height = 0.07
+55.2586 	EXP 	read_number: height = 0.07
+55.2586 	EXP 	read_number: text = '502'
+55.4411 	DATA 	Keypress: space
+55.4458 	EXP 	read_number: height = 0.07
+55.4458 	EXP 	read_number: height = 0.07
+55.4458 	EXP 	read_number: height = 0.07
+55.4458 	EXP 	read_number: text = '489'
+55.6290 	DATA 	Keypress: space
+55.6348 	EXP 	read_number: height = 0.07
+55.6348 	EXP 	read_number: height = 0.07
+55.6348 	EXP 	read_number: height = 0.07
+55.6348 	EXP 	read_number: text = '476'
+55.8234 	DATA 	Keypress: space
+55.8349 	EXP 	read_number: height = 0.07
+55.8349 	EXP 	read_number: height = 0.07
+55.8349 	EXP 	read_number: height = 0.07
+55.8349 	EXP 	read_number: text = '463'
+56.0226 	DATA 	Keypress: space
+56.0344 	EXP 	read_number: height = 0.07
+56.0344 	EXP 	read_number: height = 0.07
+56.0344 	EXP 	read_number: height = 0.07
+56.0344 	EXP 	read_number: text = '450'
+56.2441 	DATA 	Keypress: space
+56.2515 	EXP 	read_number: height = 0.07
+56.2515 	EXP 	read_number: height = 0.07
+56.2515 	EXP 	read_number: height = 0.07
+56.2515 	EXP 	read_number: text = '437'
+56.4585 	DATA 	Keypress: space
+56.4632 	EXP 	read_number: height = 0.07
+56.4632 	EXP 	read_number: height = 0.07
+56.4632 	EXP 	read_number: height = 0.07
+56.4632 	EXP 	read_number: text = '424'
+56.6405 	DATA 	Keypress: space
+56.6452 	EXP 	read_number: height = 0.07
+56.6452 	EXP 	read_number: height = 0.07
+56.6452 	EXP 	read_number: height = 0.07
+56.6452 	EXP 	read_number: text = '411'
+56.8382 	DATA 	Keypress: space
+56.8427 	EXP 	read_number: height = 0.07
+56.8427 	EXP 	read_number: height = 0.07
+56.8427 	EXP 	read_number: height = 0.07
+56.8427 	EXP 	read_number: text = '398'
+57.0327 	DATA 	Keypress: space
+57.0377 	EXP 	read_number: height = 0.07
+57.0377 	EXP 	read_number: height = 0.07
+57.0377 	EXP 	read_number: height = 0.07
+57.0377 	EXP 	read_number: text = '385'
+57.2326 	DATA 	Keypress: space
+57.2377 	EXP 	read_number: height = 0.07
+57.2377 	EXP 	read_number: height = 0.07
+57.2377 	EXP 	read_number: height = 0.07
+57.2377 	EXP 	read_number: text = '372'
+57.4418 	DATA 	Keypress: space
+57.4465 	EXP 	read_number: height = 0.07
+57.4465 	EXP 	read_number: height = 0.07
+57.4465 	EXP 	read_number: height = 0.07
+57.4465 	EXP 	read_number: text = '359'
+57.6327 	DATA 	Keypress: space
+57.6375 	EXP 	read_number: height = 0.07
+57.6375 	EXP 	read_number: height = 0.07
+57.6375 	EXP 	read_number: height = 0.07
+57.6375 	EXP 	read_number: text = '346'
+58.0078 	DATA 	Keypress: space
+58.0120 	EXP 	read_number: height = 0.07
+58.0120 	EXP 	read_number: height = 0.07
+58.0120 	EXP 	read_number: height = 0.07
+58.0120 	EXP 	read_number: text = '333'
+58.1917 	DATA 	Keypress: space
+58.1964 	EXP 	read_number: height = 0.07
+58.1964 	EXP 	read_number: height = 0.07
+58.1964 	EXP 	read_number: height = 0.07
+58.1964 	EXP 	read_number: text = '320'
+58.3476 	DATA 	Keypress: space
+58.3519 	EXP 	read_number: height = 0.07
+58.3519 	EXP 	read_number: height = 0.07
+58.3519 	EXP 	read_number: height = 0.07
+58.3519 	EXP 	read_number: text = '307'
+58.4722 	DATA 	Keypress: space
+58.4847 	EXP 	read_number: height = 0.07
+58.4847 	EXP 	read_number: height = 0.07
+58.4847 	EXP 	read_number: height = 0.07
+58.4847 	EXP 	read_number: text = '294'
+58.7804 	DATA 	Keypress: space
+58.7851 	EXP 	read_number: height = 0.07
+58.7851 	EXP 	read_number: height = 0.07
+58.7851 	EXP 	read_number: height = 0.07
+58.7851 	EXP 	read_number: text = '281'
+58.9496 	DATA 	Keypress: space
+58.9546 	EXP 	read_number: height = 0.07
+58.9546 	EXP 	read_number: height = 0.07
+58.9546 	EXP 	read_number: height = 0.07
+58.9546 	EXP 	read_number: text = '268'
+59.1888 	DATA 	Keypress: space
+59.1929 	EXP 	read_number: height = 0.07
+59.1929 	EXP 	read_number: height = 0.07
+59.1929 	EXP 	read_number: height = 0.07
+59.1929 	EXP 	read_number: text = '255'
+59.3479 	DATA 	Keypress: space
+59.3680 	EXP 	read_number: height = 0.07
+59.3680 	EXP 	read_number: height = 0.07
+59.3680 	EXP 	read_number: height = 0.07
+59.3680 	EXP 	read_number: text = '242'
+59.5982 	DATA 	Keypress: space
+59.6041 	EXP 	read_number: height = 0.07
+59.6041 	EXP 	read_number: height = 0.07
+59.6041 	EXP 	read_number: height = 0.07
+59.6041 	EXP 	read_number: text = '229'
+59.7248 	DATA 	Keypress: space
+59.7289 	EXP 	read_number: height = 0.07
+59.7289 	EXP 	read_number: height = 0.07
+59.7289 	EXP 	read_number: height = 0.07
+59.7289 	EXP 	read_number: text = '216'
+59.8294 	DATA 	Keypress: space
+59.8348 	EXP 	read_number: height = 0.07
+59.8348 	EXP 	read_number: height = 0.07
+59.8348 	EXP 	read_number: height = 0.07
+59.8348 	EXP 	read_number: text = '203'
+59.9813 	DATA 	Keypress: space
+60.0014 	EXP 	read_number: height = 0.07
+60.0014 	EXP 	read_number: height = 0.07
+60.0014 	EXP 	read_number: height = 0.07
+60.0014 	EXP 	read_number: text = '190'
+60.0929 	DATA 	Keypress: space
+60.0976 	EXP 	read_number: height = 0.07
+60.0976 	EXP 	read_number: height = 0.07
+60.0976 	EXP 	read_number: height = 0.07
+60.0976 	EXP 	read_number: text = '177'
+60.2096 	DATA 	Keypress: space
+60.2141 	EXP 	read_number: height = 0.07
+60.2141 	EXP 	read_number: height = 0.07
+60.2141 	EXP 	read_number: height = 0.07
+60.2141 	EXP 	read_number: text = '164'
+60.3585 	DATA 	Keypress: space
+60.3632 	EXP 	read_number: height = 0.07
+60.3632 	EXP 	read_number: height = 0.07
+60.3632 	EXP 	read_number: height = 0.07
+60.3632 	EXP 	read_number: text = '151'
+60.4746 	DATA 	Keypress: space
+60.4789 	EXP 	read_number: height = 0.07
+60.4789 	EXP 	read_number: height = 0.07
+60.4789 	EXP 	read_number: height = 0.07
+60.4789 	EXP 	read_number: text = '138'
+60.5913 	DATA 	Keypress: space
+60.5961 	EXP 	read_number: height = 0.07
+60.5961 	EXP 	read_number: height = 0.07
+60.5961 	EXP 	read_number: height = 0.07
+60.5961 	EXP 	read_number: text = '125'
+60.7419 	DATA 	Keypress: space
+60.7465 	EXP 	read_number: height = 0.07
+60.7465 	EXP 	read_number: height = 0.07
+60.7465 	EXP 	read_number: height = 0.07
+60.7465 	EXP 	read_number: text = '112'
+60.8497 	DATA 	Keypress: space
+60.8544 	EXP 	read_number: height = 0.07
+60.8544 	EXP 	read_number: height = 0.07
+60.8544 	EXP 	read_number: height = 0.07
+60.8544 	EXP 	read_number: text = '99'
+61.0828 	DATA 	Keypress: space
+61.0886 	EXP 	read_number: height = 0.07
+61.0886 	EXP 	read_number: height = 0.07
+61.0886 	EXP 	read_number: height = 0.07
+61.0886 	EXP 	read_number: text = '86'
+61.2251 	DATA 	Keypress: space
+61.2292 	EXP 	read_number: height = 0.07
+61.2292 	EXP 	read_number: height = 0.07
+61.2292 	EXP 	read_number: height = 0.07
+61.2292 	EXP 	read_number: text = '73'
+61.5584 	DATA 	Keypress: space
+61.5628 	EXP 	read_number: height = 0.07
+61.5628 	EXP 	read_number: height = 0.07
+61.5628 	EXP 	read_number: height = 0.07
+61.5628 	EXP 	read_number: text = '60'
+61.7721 	DATA 	Keypress: space
+61.7847 	EXP 	read_number: height = 0.07
+61.7847 	EXP 	read_number: height = 0.07
+61.7847 	EXP 	read_number: height = 0.07
+61.7847 	EXP 	read_number: text = '47'
+62.0088 	DATA 	Keypress: space
+62.0145 	EXP 	read_number: height = 0.07
+62.0145 	EXP 	read_number: height = 0.07
+62.0145 	EXP 	read_number: height = 0.07
+62.0145 	EXP 	read_number: text = '34'
+62.2157 	DATA 	Keypress: space
+62.2205 	EXP 	read_number: height = 0.07
+62.2205 	EXP 	read_number: height = 0.07
+62.2205 	EXP 	read_number: height = 0.07
+62.2205 	EXP 	read_number: text = '21'
+62.4304 	DATA 	Keypress: space
+62.4416 	EXP 	read_number: height = 0.07
+62.4416 	EXP 	read_number: height = 0.07
+62.4416 	EXP 	read_number: height = 0.07
+62.4416 	EXP 	read_number: text = '8'
+62.6416 	DATA 	Keypress: space
+62.6457 	EXP 	read_number: height = 0.07
+62.6457 	EXP 	read_number: height = 0.07
+62.6457 	EXP 	read_number: height = 0.07
+62.6457 	EXP 	read_number: text = '1022'
+62.8588 	DATA 	Keypress: space
+62.8628 	EXP 	read_number: height = 0.07
+62.8628 	EXP 	read_number: height = 0.07
+62.8628 	EXP 	read_number: height = 0.07
+62.8628 	EXP 	read_number: text = '1009'
+63.0756 	DATA 	Keypress: space
+63.0797 	EXP 	read_number: height = 0.07
+63.0797 	EXP 	read_number: height = 0.07
+63.0797 	EXP 	read_number: height = 0.07
+63.0797 	EXP 	read_number: text = '996'
+63.2827 	DATA 	Keypress: space
+63.2877 	EXP 	read_number: height = 0.07
+63.2877 	EXP 	read_number: height = 0.07
+63.2877 	EXP 	read_number: height = 0.07
+63.2877 	EXP 	read_number: text = '983'
+63.4248 	DATA 	Keypress: space
+63.4289 	EXP 	read_number: height = 0.07
+63.4289 	EXP 	read_number: height = 0.07
+63.4289 	EXP 	read_number: height = 0.07
+63.4289 	EXP 	read_number: text = '970'
+63.6495 	DATA 	Keypress: space
+63.6545 	EXP 	read_number: height = 0.07
+63.6545 	EXP 	read_number: height = 0.07
+63.6545 	EXP 	read_number: height = 0.07
+63.6545 	EXP 	read_number: text = '957'
+63.8906 	DATA 	Keypress: space
+63.8953 	EXP 	read_number: height = 0.07
+63.8953 	EXP 	read_number: height = 0.07
+63.8953 	EXP 	read_number: height = 0.07
+63.8953 	EXP 	read_number: text = '944'
+64.0915 	DATA 	Keypress: space
+64.0963 	EXP 	read_number: height = 0.07
+64.0963 	EXP 	read_number: height = 0.07
+64.0963 	EXP 	read_number: height = 0.07
+64.0963 	EXP 	read_number: text = '931'
+64.3429 	DATA 	Keypress: space
+64.3516 	EXP 	read_number: height = 0.07
+64.3516 	EXP 	read_number: height = 0.07
+64.3516 	EXP 	read_number: height = 0.07
+64.3516 	EXP 	read_number: text = '918'
+64.4909 	DATA 	Keypress: space
+64.4955 	EXP 	read_number: height = 0.07
+64.4955 	EXP 	read_number: height = 0.07
+64.4955 	EXP 	read_number: height = 0.07
+64.4955 	EXP 	read_number: text = '905'
+64.7603 	DATA 	Keypress: space
+64.7647 	EXP 	read_number: height = 0.07
+64.7647 	EXP 	read_number: height = 0.07
+64.7647 	EXP 	read_number: height = 0.07
+64.7647 	EXP 	read_number: text = '892'
+65.0575 	DATA 	Keypress: space
+65.0848 	EXP 	read_number: height = 0.07
+65.0848 	EXP 	read_number: height = 0.07
+65.0848 	EXP 	read_number: height = 0.07
+65.0848 	EXP 	read_number: text = '879'
+65.3664 	DATA 	Keypress: space
+65.3714 	EXP 	read_number: height = 0.07
+65.3714 	EXP 	read_number: height = 0.07
+65.3714 	EXP 	read_number: height = 0.07
+65.3714 	EXP 	read_number: text = '866'
+65.6450 	DATA 	Keypress: space
+65.6515 	EXP 	read_number: height = 0.07
+65.6515 	EXP 	read_number: height = 0.07
+65.6515 	EXP 	read_number: height = 0.07
+65.6515 	EXP 	read_number: text = '853'
+65.9466 	DATA 	Keypress: space
+65.9509 	EXP 	read_number: height = 0.07
+65.9509 	EXP 	read_number: height = 0.07
+65.9509 	EXP 	read_number: height = 0.07
+65.9509 	EXP 	read_number: text = '840'
+66.2409 	DATA 	Keypress: space
+66.2449 	EXP 	read_number: height = 0.07
+66.2449 	EXP 	read_number: height = 0.07
+66.2449 	EXP 	read_number: height = 0.07
+66.2449 	EXP 	read_number: text = '827'
+66.4887 	DATA 	Keypress: space
+66.4927 	EXP 	read_number: height = 0.07
+66.4927 	EXP 	read_number: height = 0.07
+66.4927 	EXP 	read_number: height = 0.07
+66.4927 	EXP 	read_number: text = '814'
+66.7799 	DATA 	Keypress: space
+66.7915 	EXP 	read_number: height = 0.07
+66.7915 	EXP 	read_number: height = 0.07
+66.7915 	EXP 	read_number: height = 0.07
+66.7915 	EXP 	read_number: text = '801'
+67.0741 	DATA 	Keypress: space
+67.0782 	EXP 	read_number: height = 0.07
+67.0782 	EXP 	read_number: height = 0.07
+67.0782 	EXP 	read_number: height = 0.07
+67.0782 	EXP 	read_number: text = '788'
+67.3588 	DATA 	Keypress: space
+67.3629 	EXP 	read_number: height = 0.07
+67.3629 	EXP 	read_number: height = 0.07
+67.3629 	EXP 	read_number: height = 0.07
+67.3629 	EXP 	read_number: text = '775'
+67.5912 	DATA 	Keypress: space
+67.5966 	EXP 	read_number: height = 0.07
+67.5966 	EXP 	read_number: height = 0.07
+67.5966 	EXP 	read_number: height = 0.07
+67.5966 	EXP 	read_number: text = '762'
+67.8118 	DATA 	Keypress: space
+67.8182 	EXP 	read_number: height = 0.07
+67.8182 	EXP 	read_number: height = 0.07
+67.8182 	EXP 	read_number: height = 0.07
+67.8182 	EXP 	read_number: text = '749'
+68.0600 	DATA 	Keypress: space
+68.0643 	EXP 	read_number: height = 0.07
+68.0643 	EXP 	read_number: height = 0.07
+68.0643 	EXP 	read_number: height = 0.07
+68.0643 	EXP 	read_number: text = '736'
+68.2426 	DATA 	Keypress: space
+68.2468 	EXP 	read_number: height = 0.07
+68.2468 	EXP 	read_number: height = 0.07
+68.2468 	EXP 	read_number: height = 0.07
+68.2468 	EXP 	read_number: text = '723'
+68.4247 	DATA 	Keypress: space
+68.4290 	EXP 	read_number: height = 0.07
+68.4290 	EXP 	read_number: height = 0.07
+68.4290 	EXP 	read_number: height = 0.07
+68.4290 	EXP 	read_number: text = '710'
+68.5916 	DATA 	Keypress: space
+68.5963 	EXP 	read_number: height = 0.07
+68.5963 	EXP 	read_number: height = 0.07
+68.5963 	EXP 	read_number: height = 0.07
+68.5963 	EXP 	read_number: text = '697'
+68.7629 	DATA 	Keypress: space
+68.7674 	EXP 	read_number: height = 0.07
+68.7674 	EXP 	read_number: height = 0.07
+68.7674 	EXP 	read_number: height = 0.07
+68.7674 	EXP 	read_number: text = '684'
+68.9283 	DATA 	Keypress: space
+68.9348 	EXP 	read_number: height = 0.07
+68.9348 	EXP 	read_number: height = 0.07
+68.9348 	EXP 	read_number: height = 0.07
+68.9348 	EXP 	read_number: text = '671'
+69.0908 	DATA 	Keypress: space
+69.0950 	EXP 	read_number: height = 0.07
+69.0950 	EXP 	read_number: height = 0.07
+69.0950 	EXP 	read_number: height = 0.07
+69.0950 	EXP 	read_number: text = '658'
+69.2490 	DATA 	Keypress: space
+69.2538 	EXP 	read_number: height = 0.07
+69.2538 	EXP 	read_number: height = 0.07
+69.2538 	EXP 	read_number: height = 0.07
+69.2538 	EXP 	read_number: text = '645'
+69.4233 	DATA 	Keypress: space
+69.4346 	EXP 	read_number: height = 0.07
+69.4346 	EXP 	read_number: height = 0.07
+69.4346 	EXP 	read_number: height = 0.07
+69.4346 	EXP 	read_number: text = '632'
+69.6160 	DATA 	Keypress: space
+69.6209 	EXP 	read_number: height = 0.07
+69.6209 	EXP 	read_number: height = 0.07
+69.6209 	EXP 	read_number: height = 0.07
+69.6209 	EXP 	read_number: text = '619'
+69.7721 	DATA 	Keypress: space
+69.7761 	EXP 	read_number: height = 0.07
+69.7761 	EXP 	read_number: height = 0.07
+69.7761 	EXP 	read_number: height = 0.07
+69.7761 	EXP 	read_number: text = '606'
+69.9583 	DATA 	Keypress: space
+69.9630 	EXP 	read_number: height = 0.07
+69.9630 	EXP 	read_number: height = 0.07
+69.9630 	EXP 	read_number: height = 0.07
+69.9630 	EXP 	read_number: text = '593'
+70.1081 	DATA 	Keypress: space
+70.1128 	EXP 	read_number: height = 0.07
+70.1128 	EXP 	read_number: height = 0.07
+70.1128 	EXP 	read_number: height = 0.07
+70.1128 	EXP 	read_number: text = '580'
+70.2781 	DATA 	Keypress: space
+70.2849 	EXP 	read_number: height = 0.07
+70.2849 	EXP 	read_number: height = 0.07
+70.2849 	EXP 	read_number: height = 0.07
+70.2849 	EXP 	read_number: text = '567'
+70.5422 	DATA 	Keypress: space
+70.5520 	EXP 	read_number: height = 0.07
+70.5520 	EXP 	read_number: height = 0.07
+70.5520 	EXP 	read_number: height = 0.07
+70.5520 	EXP 	read_number: text = '554'
+70.7157 	DATA 	Keypress: space
+70.7210 	EXP 	read_number: height = 0.07
+70.7210 	EXP 	read_number: height = 0.07
+70.7210 	EXP 	read_number: height = 0.07
+70.7210 	EXP 	read_number: text = '541'
+70.8741 	DATA 	Keypress: space
+70.8787 	EXP 	read_number: height = 0.07
+70.8787 	EXP 	read_number: height = 0.07
+70.8787 	EXP 	read_number: height = 0.07
+70.8787 	EXP 	read_number: text = '528'
+71.0489 	DATA 	Keypress: space
+71.0537 	EXP 	read_number: height = 0.07
+71.0537 	EXP 	read_number: height = 0.07
+71.0537 	EXP 	read_number: height = 0.07
+71.0537 	EXP 	read_number: text = '515'
+71.2251 	DATA 	Keypress: space
+71.2294 	EXP 	read_number: height = 0.07
+71.2294 	EXP 	read_number: height = 0.07
+71.2294 	EXP 	read_number: height = 0.07
+71.2294 	EXP 	read_number: text = '502'
+71.5153 	DATA 	Keypress: space
+71.5202 	EXP 	read_number: height = 0.07
+71.5202 	EXP 	read_number: height = 0.07
+71.5202 	EXP 	read_number: height = 0.07
+71.5202 	EXP 	read_number: text = '489'
+71.7086 	DATA 	Keypress: space
+71.7127 	EXP 	read_number: height = 0.07
+71.7127 	EXP 	read_number: height = 0.07
+71.7127 	EXP 	read_number: height = 0.07
+71.7127 	EXP 	read_number: text = '476'
+71.9915 	DATA 	Keypress: space
+71.9960 	EXP 	read_number: height = 0.07
+71.9960 	EXP 	read_number: height = 0.07
+71.9960 	EXP 	read_number: height = 0.07
+71.9960 	EXP 	read_number: text = '463'
+72.0730 	EXP 	window1: mouseVisible = False
+72.0731 	EXP 	Sound  started
+72.0788 	EXP 	read_number: autoDraw = False
+72.0788 	EXP 	read_number: autoDraw = False
+72.0788 	EXP 	read_pausing: height = 0.07
+72.0788 	EXP 	read_pausing: height = 0.07
+72.0788 	EXP 	read_pausing: height = 0.07
+72.0788 	EXP 	read_pausing: text = 'PAUSE'
+72.0788 	EXP 	read_pausing: autoDraw = True
+72.1729 	DATA 	Keypress: space
+72.3306 	DATA 	Keypress: space
+92.0703 	EXP 	New trial (rep=1, index=0): None
+92.0705 	EXP 	window1: mouseVisible = False
+92.0706 	INFO 	Keyboard events cleared
+92.0770 	EXP 	read_pausing: autoDraw = False
+92.0770 	EXP 	read_pausing: autoDraw = False
+92.0770 	EXP 	fixation_cross: autoDraw = True
+93.6036 	DATA 	Keypress: escape
+93.6901 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+93.7020 	EXP 	fixation_cross: autoDraw = False
+93.7020 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+93.7095 	INFO 	saved data to '/Users/Isaac/Documents/fNIRS_TSST_PsychoPy/builder_files/data/690553_TSST_fnirs_V4_FULL_2025-11-27_19h35.29.488.csv'
+93.7115 	INFO 	saved data to /Users/Isaac/Documents/fNIRS_TSST_PsychoPy/builder_files/data/690553_TSST_fnirs_V4_FULL_2025-11-27_19h35.29.488.psydat
+93.7346 	EXP 	window1: mouseVisible = True
+93.9810 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+93.9811 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
