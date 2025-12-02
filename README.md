@@ -96,3 +96,7 @@ Version 4: 2025/10/16
 - Incorporated labstreaming layer into code for fNIRS and generated python scripts for easy use in Newman's lab.
 - Moved builder scripts to separate 'builder_files' sub-directory.
 - Created fNIRS_marker_key.json file with marker descriptions and response value assignments.
+
+Version 5: 2025/12/02
+- Removed builder components for start and stop audio tones and added code to manually create tone; should solve issue with inconsistent tones
+- Added fixation cross before each section

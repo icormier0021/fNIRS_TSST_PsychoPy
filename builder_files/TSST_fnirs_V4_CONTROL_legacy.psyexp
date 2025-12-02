@@ -2,7 +2,7 @@
 <PsychoPy2experiment encoding="utf-8" version="2024.2.4">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
-    <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
+    <Param val="pyo" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
     <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
@@ -100,17 +100,17 @@
       <CodeComponent name="CTL1_number" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="## BEGIN EXPERIMENT&amp;#10;skipNextRoutine = False&amp;#10;starting_number = 1022&amp;#10;current_number = starting_number&amp;#10;#number_clock = core.Clock()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="## BEGIN EXPERIMENT&amp;#10;starting_number = 1022&amp;#10;current_number = starting_number&amp;#10;#number_clock = core.Clock()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="block_start_time = time.time()&amp;#10;reading_phase = True&amp;#10;routineTimer.add(60.0)  # 60 seconds total per block" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="## BEGIN EXPERIMENT&amp;#10;#number_clock.reset()&amp;#10;lsl_outlet.push_sample([10]) #CTL1_TASK Block Start&amp;#10;win.mouseVisible = False&amp;#10;read_number.txt = str(current_number)&amp;#10;kb.clearEvents()&amp;#10;&amp;#10;#Schedule start tone to begin on next screen flip&amp;#10;nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;CTLStartTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="## BEGIN EXPERIMENT&amp;#10;#number_clock.reset()&amp;#10;lsl_outlet.push_sample([20]) #CTL1_TASK Block Start&amp;#10;win.mouseVisible = False&amp;#10;read_number.txt = str(current_number)&amp;#10;kb.clearEvents()&amp;#10;if skipNextRoutine:&amp;#10;    CTL1_Loop.finished = True&amp;#10;    skipNextRoutine = True&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule start tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    StartTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="## EACH FRAME&amp;#10;read_number.txt = str(current_number)&amp;#10;if t &gt; 0.2:&amp;#10;    space_keys = kb.getKeys([&quot;space&quot;], waitRelease=False, clear=True)&amp;#10;    # Check if space key was pressed&amp;#10;    if space_keys:&amp;#10;        current_number -= 13&amp;#10;        if current_number &lt; 1:&amp;#10;            current_number = starting_number&amp;#10;        read_number.text = str(current_number)&amp;#10;        &amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL1_Loop.finished = True&amp;#10;    skipNextRoutine = True &amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="elapsed_time = time.time() - block_start_time&amp;#10;&amp;#10;if elapsed_time &lt; 40:  # Reading phase (0-40 seconds)&amp;#10;    reading_phase = True&amp;#10;    if elapsed_time &gt;= 40:&amp;#10;        reading_phase = False&amp;#10;elif elapsed_time &lt; 60:  # Pause phase (40-60 seconds)&amp;#10;    reading_phase = False&amp;#10;else:&amp;#10;    continueRoutine = False  # End the routine after 60 seconds" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="lsl_outlet.push_sample([11]) #CTL1_TASK Block End" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="lsl_outlet.push_sample([11]) #CTL1_TASK Block End" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="lsl_outlet.push_sample([21]) #CTL1_TASK Block End" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="CTL1_number" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -285,7 +285,7 @@
       <CodeComponent name="createTones" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import psychtoolbox as ptb&amp;#10;from psychopy import sound&amp;#10;&amp;#10;CTLStartTone = sound.Sound(800, secs=0.2, hamming=True)&amp;#10;CTLStartTone.setVolume(1.0)&amp;#10;&amp;#10;CTLPauseTone = sound.Sound(600, secs=0.2, hamming=True)&amp;#10;CTLPauseTone.setVolume(1.0)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import psychtoolbox as ptb&amp;#10;from psychopy import sound&amp;#10;&amp;#10;StartTone = sound.Sound(800, secs=0.2, hamming=True)&amp;#10;StartTone.setVolume(1.0)&amp;#10;&amp;#10;PauseTone = sound.Sound(600, secs=0.2, hamming=True)&amp;#10;PauseTone.setVolume(1.0)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -412,7 +412,7 @@
         <Param val="kb = keyboard.Keyboard()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="kb.clearEvents()&amp;#10;win.mouseVisible = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="kb.clearEvents()&amp;#10;win.mouseVisible = False&amp;#10;&amp;#10;if skipNextRoutine:&amp;#10;    skipNextRoutine = True&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="## EACH FRAME&amp;#10;&amp;#10;continue_key = kb.getKeys([&quot;return&quot;], waitRelease=False, clear=True)&amp;#10;# Check if space key was pressed&amp;#10;if continue_key:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -536,14 +536,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="lsl_outlet.push_sample([20]) #CTL1_PAUSE Block Start&amp;#10;win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule pause tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    CTLPauseTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lsl_outlet.push_sample([30]) #CTL1_PAUSE Block Start&amp;#10;win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    CTL1_Loop.finished = True&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule start tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    PauseTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# hard stop at 20 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    read_pausing.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;    &amp;#10;    &amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL1_Loop.finished = True&amp;#10;    skipNextRoutine = True &amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# hard stop at 20 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    read_pausing.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;    &amp;#10;    &amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL1_Loop.finished = True&amp;#10;#    skipNextRoutine = True &amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="# hard stop at 40 s&amp;#10;if t &gt;= 40.0 - frameTolerance:&amp;#10;    read_number.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="lsl_outlet.push_sample([21]) #CTL1_PAUSE Block End" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="lsl_outlet.push_sample([21]) #CTL1_PAUSE Block End" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="lsl_outlet.push_sample([31]) #CTL1_PAUSE Block End" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="CTL1_Pause_Code" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -571,14 +571,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="lsl_outlet.push_sample([30]) #CTL2_TASK Block Start&amp;#10;skipNextRoutine = False&amp;#10;win.mouseVisible = False&amp;#10;#start_tone_2.status = NOT_STARTED&amp;#10;&amp;#10;#Schedule start tone to begin on next screen flip&amp;#10;nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;CTLStartTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lsl_outlet.push_sample([40]) #CTL2_TASK Block Start&amp;#10;#skipNextRoutine = False&amp;#10;win.mouseVisible = False&amp;#10;#start_tone_2.status = NOT_STARTED&amp;#10;if skipNextRoutine:&amp;#10;    CTL2_Loop.finished = True&amp;#10;    skipNextRoutine = True&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule start tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    StartTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL2_Loop.finished = True&amp;#10;    skipNextRoutine = True&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="lsl_outlet.push_sample([31]) #CTL2_TASK Block End" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="lsl_outlet.push_sample([30]) #CTL2_TASK Block Start" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="lsl_outlet.push_sample([41]) #CTL2_TASK Block End" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="skip_CTL2" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -677,14 +677,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="lsl_outlet.push_sample([40]) #CTL2_PAUSE Block Start&amp;#10;win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule start tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    CTLPauseTone.play(when=nextFlip_ptb)&amp;#10;#start_pause_tone_2.status = NOT_STARTED" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lsl_outlet.push_sample([50]) #CTL2_PAUSE Block Start&amp;#10;win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    CTL2_Loop.finished = True&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule start tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    PauseTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# hard stop at 20 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    subtract_pausing.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;    &amp;#10;&amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL2_Loop.finished = True&amp;#10;    skipNextRoutine = True &amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# hard stop at 20 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    subtract_pausing.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;    &amp;#10;&amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    CTL2_Loop.finished = True&amp;#10;#    skipNextRoutine = True &amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="# hard stop at 20 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    read_pausing.setAutoDraw(False)&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="lsl_outlet.push_sample([31]) #CTL2_TASK Block End" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="lsl_outlet.push_sample([41]) #CTL2_PAUSE Block End" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="lsl_outlet.push_sample([51]) #CTL2_PAUSE Block End" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="CTL2_Pause_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -706,24 +706,6 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <SoundComponent name="start_tone_3" plugin="None">
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="hamming"/>
-        <Param val="start_tone_3" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="800" valType="str" updates="set every repeat" name="sound"/>
-        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.2" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="1" valType="num" updates="constant" name="volume"/>
-      </SoundComponent>
       <TextComponent name="subtract_number_TSST" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -757,14 +739,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="skipNextRoutine = False&amp;#10;win.mouseVisible = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lsl_outlet.push_sample([60]) #TSST_ARITH_TASK Block Start&amp;#10;#skipNextRoutine = False&amp;#10;win.mouseVisible = False&amp;#10;&amp;#10;#start_tone_3.status = NOT_STARTED&amp;#10;&amp;#10;if skipNextRoutine:&amp;#10;    TSST_Arith_Loop.finished = True&amp;#10;    skipNextRoutine = True&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule start tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    StartTone.play(when=nextFlip_ptb)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="skip_keys = kb.getKeys(['s'], waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    TSST_Arith_Loop.finished = True&amp;#10;    skipNextRoutine = True &amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="lsl_outlet.push_sample([61]) #TSST_ARITH_TASK Block End" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="skip_TSST" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -803,24 +785,6 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <SoundComponent name="tsst_start_pause_tone" plugin="None">
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="hamming"/>
-        <Param val="tsst_start_pause_tone" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="600" valType="str" updates="set every repeat" name="sound"/>
-        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.2" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="1" valType="num" updates="constant" name="volume"/>
-      </SoundComponent>
       <TextComponent name="subtract_pausing_TSST" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -854,21 +818,84 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="lsl_outlet.push_sample([70]) #TSST_ARITH_PAUSE Block Start&amp;#10;win.mouseVisible = False&amp;#10;if skipNextRoutine:&amp;#10;    TSST_Arith_Loop.finished = True&amp;#10;    skipNextRoutine = False&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    #Schedule start tone to begin on next screen flip&amp;#10;    nextFlip_ptb = win.getFutureFlipTime(clock='ptb')&amp;#10;    arithTone.play(when=nextFlip_ptb)&amp;#10;#tsst_start_pause_tone.status = NOT_STARTED&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# hard stop at 40 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    subtract_pausing_TSST.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;&amp;#10;&amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    TSST_Arith_Loop.finished = True&amp;#10;    skipNextRoutine = True &amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# hard stop at 40 s&amp;#10;if t &gt;= 20.0 - frameTolerance:&amp;#10;    subtract_pausing_TSST.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;&amp;#10;&amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)&amp;#10;if skip_keys:&amp;#10;    TSST_Arith_Loop.finished = True&amp;#10;#    skipNextRoutine = True &amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="# hard stop at 60 s&amp;#10;if t &gt;= 60.0 - frameTolerance:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="lsl_outlet.push_sample([71]) #TSST_ARITH_PAUSE Block End" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="check_time_4" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="FIXATION">
+      <RoutineSettingsComponent name="FIXATION" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="FIXATION" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="fixation_cross" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.08" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="fixation_cross" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="30" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="+" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="skip_fixation" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="## BEGIN EXPERIMENT&amp;#10;skipNextRoutine = False" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="## BEGIN EXPERIMENT&amp;#10;#number_clock.reset()&amp;#10;lsl_outlet.push_sample([10]) #CTL1_TASK Block Start&amp;#10;win.mouseVisible = False&amp;#10;read_number.txt = str(current_number)&amp;#10;kb.clearEvents()&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="## BEGIN ROUTINE&amp;#10;#number_clock.reset()&amp;#10;lsl_outlet.push_sample([10]) #Fixation-Cross Start&amp;#10;win.mouseVisible = False&amp;#10;kb.clearEvents()&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="# hard stop at 30 s&amp;#10;if t &gt;= 30.0 - frameTolerance:&amp;#10;    fixation_cross.setAutoDraw(False)&amp;#10;    continueRoutine = False&amp;#10;    &amp;#10;skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)&amp;#10;if skip_keys:&amp;#10;    skipNextRoutine = True&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="lsl_outlet.push_sample([11]) #Fixation-Cross End" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="skip_fixation" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
   </Routines>
   <Flow>
     <Routine name="CTL1_instruction_start"/>
+    <Routine name="FIXATION"/>
     <LoopInitiator loopType="TrialHandler" name="CTL1_Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
@@ -884,6 +911,7 @@
     <Routine name="CTL1_PAUSE"/>
     <LoopTerminator name="CTL1_Loop"/>
     <Routine name="CTL2_instruction_start"/>
+    <Routine name="FIXATION"/>
     <LoopInitiator loopType="TrialHandler" name="CTL2_Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
