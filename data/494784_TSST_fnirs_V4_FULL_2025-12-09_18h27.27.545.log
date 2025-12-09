@@ -1,0 +1,69 @@
+1.5853 	ERROR 	Failed to load any of the audioLibs: ['pyo']. Falling back to PsychToolbox ('ptb') backend for sound. Be sure to add 'ptb' to preferences to avoid seeing this message again.
+1.7535 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['pyo'] (in that order).
+5.9351 	INFO 	Loaded monitor calibration from ['2024_08_14 14:13']
+6.1104 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [1920, 1080]. Using actual size
+6.3708 	INFO 	Using renderer 'NVIDIA GeForce GTX 1660/PCIe/SSE2' for graphics
+6.3708 	INFO 	OpenGL version supported by driver is 4..
+6.3895 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001515DADA1D0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001515DADA170>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001515DBBEF80>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=3, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.3896 	EXP 	window1: backgroundImage = ''
+6.3896 	EXP 	window1: backgroundFit = 'none'
+6.8014 	EXP 	window1: Attempting to measure frame rate of screen (3) ...
+6.8014 	EXP 	window1: recordFrameIntervals = False
+6.8700 	EXP 	window1: recordFrameIntervals = True
+6.9463 	EXP 	Screen (3) actual frame rate measured at 144.06Hz
+6.9464 	EXP 	window1: recordFrameIntervals = False
+8.0101 	INFO 	keyboard.Keyboard is using ptb backend.
+8.0102 	EXP 	TSST_fnirs_V4_FULL: status = STARTED
+8.0532 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.08), italic=False, languageStyle='LTR', name='fixation_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+8.0671 	INFO 	Created stream for speaker device: Headphones (X10) (11.0)
+8.0684 	EXP 	: sampleRate = 44100
+8.0684 	EXP 	: channels = None
+8.0688 	EXP 	Sound  set volume 1.000
+8.0733 	INFO 	Created stream for speaker device: Headphones (X10) (11.0)
+8.0743 	EXP 	: sampleRate = 44100
+8.0744 	EXP 	: channels = None
+8.0747 	EXP 	Sound  set volume 1.000
+8.0938 	EXP 	Created tsst_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='tsst_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.0939 	INFO 	keyboard.Keyboard is using ptb backend.
+8.0953 	EXP 	Created subtract_number_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number_TSST', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.0963 	EXP 	Created subtract_pausing_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing_TSST', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.1081 	EXP 	Created finished_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='finished_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0995 	INFO 	Keyboard events cleared
+0.1025 	EXP 	fixation_cross: autoDraw = True
+30.0048 	INFO 	Keyboard events cleared
+30.0116 	EXP 	fixation_cross: autoDraw = False
+30.0116 	EXP 	tsst_instruction_text: autoDraw = True
+32.4460 	EXP 	Device response: <KeyPress from None: t=32.436331199999586, value=return, duration=None>
+32.4462 	INFO 	Keyboard events cleared
+32.4577 	EXP 	Imported stims/TSST_arith.xlsx as conditions, 6 conditions, 2 params
+32.4582 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+32.4583 	EXP 	New trial (rep=0, index=0): {'Block': 1, 'StartingNumber': 1039}
+32.4640 	EXP 	Sound  reached end of file
+32.4640 	EXP 	Playing sound  on speaker Headphones (X10)
+32.4663 	DATA 	Keypress: return
+32.4671 	EXP 	tsst_instruction_text: autoDraw = False
+32.4671 	EXP 	subtract_number_TSST: height = np.float64(0.07)
+32.4671 	EXP 	subtract_number_TSST: height = np.float64(0.07)
+32.4671 	EXP 	subtract_number_TSST: height = np.float64(0.07)
+32.4671 	EXP 	subtract_number_TSST: text = 1039
+32.4671 	EXP 	subtract_number_TSST: autoDraw = True
+32.5046 	EXP 	Device response: <KeyPress from None: t=32.436331199999586, value=return, duration=0.06398150000040914>
+34.7824 	EXP 	Device response: <KeyPress from None: t=34.78064599999925, value=space, duration=None>
+34.7834 	DATA 	Keypress: space
+34.9838 	EXP 	Device response: <KeyPress from None: t=34.78064599999925, value=space, duration=0.20003950000045734>
+35.1019 	EXP 	Device response: <KeyPress from None: t=35.10067549999985, value=space, duration=None>
+35.1029 	DATA 	Keypress: space
+35.1713 	EXP 	Device response: <KeyPress from None: t=35.10067549999985, value=space, duration=0.06403210000007675>
+37.3587 	EXP 	Device response: <KeyPress from None: t=37.357002299999294, value=return, duration=None>
+37.3597 	DATA 	Keypress: return
+37.4213 	EXP 	Device response: <KeyPress from None: t=37.357002299999294, value=return, duration=0.06405520000043907>
+39.3588 	EXP 	Device response: <KeyPress from None: t=39.35723489999964, value=escape, duration=None>
+39.3598 	DATA 	Keypress: escape
+39.4630 	EXP 	Device response: <KeyPress from None: t=39.35723489999964, value=escape, duration=0.10399799999959214>
+39.4631 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+39.4697 	EXP 	subtract_number_TSST: autoDraw = False
+39.4698 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+39.4769 	INFO 	saved data to 'c:\\Users\\neuro\\GitHub\\fNIRS_TSST_PsychoPy\\data\\494784_TSST_fnirs_V4_FULL_2025-12-09_18h27.27.545.csv'
+39.4778 	INFO 	saved data to c:\Users\neuro\GitHub\fNIRS_TSST_PsychoPy\data\494784_TSST_fnirs_V4_FULL_2025-12-09_18h27.27.545.psydat
+39.7261 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+39.7633 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

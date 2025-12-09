@@ -11,17 +11,19 @@ If you publish work using this script the most relevant publication is:
 
 """
 
-import psychopy
-psychopy.useVersion('2024.1.4')
+#import psychopy
+#psychopy.useVersion('2024.1.4')
 
 
 # --- Import packages ---
 from psychopy import locale_setup
 from psychopy import prefs
 from psychopy import plugins
+from psychopy.tools import systemtools
 plugins.activatePlugins()
 prefs.hardware['audioLib'] = 'pyo'
 prefs.hardware['audioLatencyMode'] = '3'
+prefs.hardware['audioDevice'] = 'Headphones (X10)'
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware
 from psychopy.tools import environmenttools
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
@@ -35,6 +37,13 @@ import os  # handy system and path functions
 import sys  # to get file system encoding
 
 from psychopy.hardware import keyboard
+
+# for markers
+import socket
+from pylsl import StreamInfo, StreamOutlet
+markers = StreamInfo('fNIRSMarkerStream', 'Markers', 1, 0, 'int32', 'CPSPsychoPy')
+lsl_outlet = StreamOutlet(markers)
+modality = 'nirs'
 
 # Run 'Before Experiment' code from end_tsst_instruction
 from psychopy.hardware import keyboard
@@ -190,7 +199,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=_winSize, fullscr=_fullScr, screen=3,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[-1.0000, -1.0000, -1.0000], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
