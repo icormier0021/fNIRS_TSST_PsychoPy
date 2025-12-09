@@ -1,0 +1,71 @@
+11.4717 	INFO 	Loaded monitor calibration from ['2024_08_14 14:13']
+11.6423 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [3840, 2160]. Using actual size
+12.0052 	INFO 	Using renderer 'NVIDIA GeForce GTX 1660/PCIe/SSE2' for graphics
+12.0052 	INFO 	OpenGL version supported by driver is 4..
+12.0737 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000150F201CBB0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000150F201CB50>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000150F2101960>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=2, size=array([3840, 2160]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.0737 	EXP 	window1: backgroundImage = ''
+12.0737 	EXP 	window1: backgroundFit = 'none'
+12.6177 	EXP 	window1: Attempting to measure frame rate of screen (2) ...
+12.6177 	EXP 	window1: recordFrameIntervals = False
+12.7726 	EXP 	window1: recordFrameIntervals = True
+12.9558 	EXP 	Screen (2) actual frame rate measured at 60.05Hz
+12.9558 	EXP 	window1: recordFrameIntervals = False
+14.0613 	INFO 	keyboard.Keyboard is using ptb backend.
+14.1328 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: BenQ LCD (NVIDIA High Definition Audio)
+14.1631 	INFO 	Created stream for speaker device: BenQ LCD (NVIDIA High Definition Audio) (8.0)
+14.1647 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: BenQ LCD (NVIDIA High Definition Audio)
+14.1693 	INFO 	Created stream for speaker device: BenQ LCD (NVIDIA High Definition Audio) (8.0)
+14.1708 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: BenQ LCD (NVIDIA High Definition Audio)
+14.1755 	INFO 	Created stream for speaker device: BenQ LCD (NVIDIA High Definition Audio) (8.0)
+14.1765 	WARNING 	No default speaker specified in Preferences / Hardware, using first speaker found: BenQ LCD (NVIDIA High Definition Audio)
+14.1810 	INFO 	Created stream for speaker device: BenQ LCD (NVIDIA High Definition Audio) (8.0)
+14.1820 	EXP 	TSST_fnirs_V4_CONTROL: status = STARTED
+14.2913 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+14.2915 	INFO 	keyboard.Keyboard is using ptb backend.
+14.2915 	EXP 	start_tone: sampleRate = 48000
+14.2915 	EXP 	start_tone: channels = None
+14.2919 	EXP 	Sound start_tone set volume 1.000
+14.2933 	EXP 	Created read_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_number', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.2933 	EXP 	start_pause_tone: sampleRate = 48000
+14.2933 	EXP 	start_pause_tone: channels = None
+14.2936 	EXP 	Sound start_pause_tone set volume 1.000
+14.2945 	EXP 	Created read_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_pausing', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.3496 	EXP 	Created ctl2_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl2_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+14.3496 	EXP 	start_tone_2: sampleRate = 48000
+14.3497 	EXP 	start_tone_2: channels = None
+14.3500 	EXP 	Sound start_tone_2 set volume 1.000
+14.3509 	EXP 	Created subtract_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.3509 	EXP 	start_pause_tone_2: sampleRate = 48000
+14.3510 	EXP 	start_pause_tone_2: channels = None
+14.3512 	EXP 	Sound start_pause_tone_2 set volume 1.000
+14.3521 	EXP 	Created subtract_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.3592 	EXP 	Created task_end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='task_end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Please wait for the next task to begin..', units='height', win=Window(...), wrapWidth=1)
+0.0713 	INFO 	Keyboard events cleared
+0.0762 	EXP 	ctl1_instruction_text: autoDraw = True
+18.8599 	EXP 	Device response: <KeyPress from None: t=18.764808600000038, value=return, duration=None>
+18.8601 	INFO 	Keyboard events cleared
+18.8604 	EXP 	Created sequence: sequential, trialTypes=1, nReps=6, seed=None
+18.8606 	EXP 	New trial (rep=0, index=0): None
+18.8607 	INFO 	Keyboard events cleared
+18.8667 	EXP 	Device response: <KeyPress from None: t=18.764808600000038, value=return, duration=0.09599989999998115>
+18.8667 	EXP 	Sound start_tone reached end of file
+18.8825 	EXP 	Playing sound start_tone on speaker BenQ LCD (NVIDIA High Definition Audio)
+18.8679 	DATA 	Keypress: return
+18.8693 	EXP 	ctl1_instruction_text: autoDraw = False
+18.8693 	EXP 	read_number: height = np.float64(0.07)
+18.8693 	EXP 	read_number: height = np.float64(0.07)
+18.8693 	EXP 	read_number: height = np.float64(0.07)
+18.8693 	EXP 	read_number: text = 1022
+19.0661 	EXP 	read_number: autoDraw = True
+19.0788 	EXP 	Sound start_tone stopped
+19.0789 	EXP 	Sound start_tone reached end of file
+30.2103 	EXP 	Device response: <KeyPress from None: t=30.20630090000003, value=escape, duration=None>
+30.2114 	DATA 	Keypress: escape
+30.3104 	EXP 	Device response: <KeyPress from None: t=30.20630090000003, value=escape, duration=0.09611289999998007>
+30.3105 	EXP 	TSST_fnirs_V4_CONTROL: status = STOPPED
+30.3268 	EXP 	read_number: autoDraw = False
+30.3269 	EXP 	TSST_fnirs_V4_CONTROL: status = STOPPED
+30.3347 	INFO 	saved data to 'c:\\Users\\neuro\\GitHub\\fNIRS_TSST_PsychoPy\\builder_files\\data\\044872_TSST_fnirs_V4_CONTROL_2025-12-09_17h07.00.859.csv'
+30.3360 	INFO 	saved data to c:\Users\neuro\GitHub\fNIRS_TSST_PsychoPy\builder_files\data\044872_TSST_fnirs_V4_CONTROL_2025-12-09_17h07.00.859.psydat
+31.1969 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+31.2062 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.

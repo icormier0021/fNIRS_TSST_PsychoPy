@@ -1,0 +1,385 @@
+1.9047 	ERROR 	Failed to load any of the audioLibs: ['pyo']. Falling back to PsychToolbox ('ptb') backend for sound. Be sure to add 'ptb' to preferences to avoid seeing this message again.
+2.0874 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['pyo'] (in that order).
+6.0179 	INFO 	Loaded monitor calibration from ['2024_08_14 14:13']
+6.2119 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [1920, 1080]. Using actual size
+6.4844 	INFO 	Using renderer 'NVIDIA GeForce GTX 1660/PCIe/SSE2' for graphics
+6.4844 	INFO 	OpenGL version supported by driver is 4..
+6.5052 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000029980589DE0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000029980589D80>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000299800DAB90>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=3, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.5053 	EXP 	window1: backgroundImage = ''
+6.5053 	EXP 	window1: backgroundFit = 'none'
+6.9202 	EXP 	window1: Attempting to measure frame rate of screen (3) ...
+6.9202 	EXP 	window1: recordFrameIntervals = False
+6.9881 	EXP 	window1: recordFrameIntervals = True
+7.0643 	EXP 	Screen (3) actual frame rate measured at 143.98Hz
+7.0643 	EXP 	window1: recordFrameIntervals = False
+8.1316 	INFO 	keyboard.Keyboard is using ptb backend.
+8.1316 	EXP 	TSST_fnirs_V4_FULL: status = STARTED
+8.2100 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.2101 	INFO 	keyboard.Keyboard is using ptb backend.
+8.2243 	INFO 	Created stream for speaker device: Headphones (X10) (11.0)
+8.2257 	EXP 	: sampleRate = 44100
+8.2257 	EXP 	: channels = None
+8.2261 	EXP 	Sound  set volume 1.000
+8.2308 	INFO 	Created stream for speaker device: Headphones (X10) (11.0)
+8.2321 	EXP 	: sampleRate = 44100
+8.2321 	EXP 	: channels = None
+8.2325 	EXP 	Sound  set volume 1.000
+8.2380 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.08), italic=False, languageStyle='LTR', name='fixation_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+8.2394 	EXP 	Created read_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_number', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.2403 	EXP 	Created read_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='read_pausing', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.2854 	EXP 	Created ctl2_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl2_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.2893 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.08), italic=False, languageStyle='LTR', name='fixation_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+8.2905 	EXP 	Created subtract_number = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.2915 	EXP 	Created subtract_pausing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.2975 	EXP 	Created task_end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='task_end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Please wait for the next task to begin..', units='height', win=Window(...), wrapWidth=1)
+8.3001 	EXP 	Created fixation_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.08), italic=False, languageStyle='LTR', name='fixation_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+8.3084 	EXP 	Created tsst_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='tsst_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.3095 	EXP 	Created subtract_number_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_number_TSST', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.3104 	EXP 	Created subtract_pausing_TSST = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='subtract_pausing_TSST', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.3172 	EXP 	Created finished_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='finished_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0854 	INFO 	Keyboard events cleared
+0.0890 	EXP 	ctl1_instruction_text: autoDraw = True
+26.4588 	EXP 	Device response: <KeyPress from None: t=26.452669700000115, value=return, duration=None>
+26.4589 	INFO 	Keyboard events cleared
+26.4591 	INFO 	Keyboard events cleared
+26.4618 	DATA 	Keypress: return
+26.4629 	EXP 	ctl1_instruction_text: autoDraw = False
+26.4629 	EXP 	fixation_cross: autoDraw = True
+26.5384 	EXP 	Device response: <KeyPress from None: t=26.452669700000115, value=return, duration=0.08002840000017386>
+56.4483 	EXP 	Created sequence: sequential, trialTypes=1, nReps=6, seed=None
+56.4485 	EXP 	New trial (rep=0, index=0): None
+56.4486 	INFO 	Keyboard events cleared
+56.4486 	EXP 	Sound  reached end of file
+56.4487 	EXP 	Playing sound  on speaker Headphones (X10)
+56.4545 	EXP 	fixation_cross: autoDraw = False
+56.4545 	EXP 	fixation_cross: autoDraw = False
+56.4545 	EXP 	read_number: height = np.float64(0.07)
+56.4545 	EXP 	read_number: height = np.float64(0.07)
+56.4545 	EXP 	read_number: height = np.float64(0.07)
+56.4545 	EXP 	read_number: text = 1022
+56.6489 	EXP 	read_number: autoDraw = True
+59.7188 	EXP 	Device response: <KeyPress from None: t=59.713078300000234, value=space, duration=None>
+59.7224 	DATA 	Keypress: space
+59.7253 	EXP 	read_number: height = np.float64(0.07)
+59.7253 	EXP 	read_number: height = np.float64(0.07)
+59.7253 	EXP 	read_number: height = np.float64(0.07)
+59.7253 	EXP 	read_number: text = '1009'
+59.7463 	EXP 	Device response: <KeyPress from None: t=59.713078300000234, value=space, duration=0.03195759999971415>
+59.7949 	EXP 	Device response: <KeyPress from None: t=59.79304970000021, value=space, duration=None>
+59.7983 	DATA 	Keypress: space
+59.8017 	EXP 	read_number: height = np.float64(0.07)
+59.8017 	EXP 	read_number: height = np.float64(0.07)
+59.8017 	EXP 	read_number: height = np.float64(0.07)
+59.8017 	EXP 	read_number: text = '996'
+59.8853 	EXP 	Device response: <KeyPress from None: t=59.79304970000021, value=space, duration=0.08799469999985376>
+59.9616 	EXP 	Device response: <KeyPress from None: t=59.961066500000015, value=space, duration=None>
+59.9653 	DATA 	Keypress: space
+59.9684 	EXP 	read_number: height = np.float64(0.07)
+59.9684 	EXP 	read_number: height = np.float64(0.07)
+59.9684 	EXP 	read_number: height = np.float64(0.07)
+59.9684 	EXP 	read_number: text = '983'
+60.0310 	EXP 	Device response: <KeyPress from None: t=59.961066500000015, value=space, duration=0.06401770000002216>
+60.1074 	EXP 	Device response: <KeyPress from None: t=60.105089900000166, value=space, duration=None>
+60.1106 	DATA 	Keypress: space
+60.1142 	EXP 	read_number: height = np.float64(0.07)
+60.1142 	EXP 	read_number: height = np.float64(0.07)
+60.1142 	EXP 	read_number: height = np.float64(0.07)
+60.1142 	EXP 	read_number: text = '970'
+60.1630 	EXP 	Device response: <KeyPress from None: t=60.105089900000166, value=space, duration=0.05600830000003043>
+60.2534 	EXP 	Device response: <KeyPress from None: t=60.24911680000014, value=space, duration=None>
+60.2566 	DATA 	Keypress: space
+60.2601 	EXP 	read_number: height = np.float64(0.07)
+60.2601 	EXP 	read_number: height = np.float64(0.07)
+60.2601 	EXP 	read_number: height = np.float64(0.07)
+60.2601 	EXP 	read_number: text = '957'
+60.3088 	EXP 	Device response: <KeyPress from None: t=60.24911680000014, value=space, duration=0.055977399999846966>
+60.3854 	EXP 	Device response: <KeyPress from None: t=60.385128500000064, value=space, duration=None>
+60.3885 	DATA 	Keypress: space
+60.3920 	EXP 	read_number: height = np.float64(0.07)
+60.3920 	EXP 	read_number: height = np.float64(0.07)
+60.3920 	EXP 	read_number: height = np.float64(0.07)
+60.3920 	EXP 	read_number: text = '944'
+60.4338 	EXP 	Device response: <KeyPress from None: t=60.385128500000064, value=space, duration=0.04800840000007156>
+60.5241 	EXP 	Device response: <KeyPress from None: t=60.521143400000255, value=space, duration=None>
+60.5263 	DATA 	Keypress: space
+60.5309 	EXP 	read_number: height = np.float64(0.07)
+60.5309 	EXP 	read_number: height = np.float64(0.07)
+60.5309 	EXP 	read_number: height = np.float64(0.07)
+60.5309 	EXP 	read_number: text = '931'
+60.5796 	EXP 	Device response: <KeyPress from None: t=60.521143400000255, value=space, duration=0.05601329999990412>
+60.6840 	EXP 	Device response: <KeyPress from None: t=60.68114910000031, value=space, duration=None>
+60.6865 	DATA 	Keypress: space
+60.6906 	EXP 	read_number: height = np.float64(0.07)
+60.6906 	EXP 	read_number: height = np.float64(0.07)
+60.6906 	EXP 	read_number: height = np.float64(0.07)
+60.6906 	EXP 	read_number: text = '918'
+60.7324 	EXP 	Device response: <KeyPress from None: t=60.68114910000031, value=space, duration=0.04801679999991393>
+60.8158 	EXP 	Device response: <KeyPress from None: t=60.80924790000017, value=space, duration=None>
+60.8180 	DATA 	Keypress: space
+60.8226 	EXP 	read_number: height = np.float64(0.07)
+60.8226 	EXP 	read_number: height = np.float64(0.07)
+60.8226 	EXP 	read_number: height = np.float64(0.07)
+60.8226 	EXP 	read_number: text = '905'
+60.8782 	EXP 	Device response: <KeyPress from None: t=60.80924790000017, value=space, duration=0.06394480000017211>
+60.9615 	EXP 	Device response: <KeyPress from None: t=60.961272400000325, value=space, duration=None>
+60.9637 	DATA 	Keypress: space
+60.9684 	EXP 	read_number: height = np.float64(0.07)
+60.9684 	EXP 	read_number: height = np.float64(0.07)
+60.9684 	EXP 	read_number: height = np.float64(0.07)
+60.9684 	EXP 	read_number: text = '892'
+61.0103 	EXP 	Device response: <KeyPress from None: t=60.961272400000325, value=space, duration=0.04791709999972227>
+61.0936 	EXP 	Device response: <KeyPress from None: t=61.08921980000014, value=space, duration=None>
+61.0959 	DATA 	Keypress: space
+61.1004 	EXP 	read_number: height = np.float64(0.07)
+61.1004 	EXP 	read_number: height = np.float64(0.07)
+61.1004 	EXP 	read_number: height = np.float64(0.07)
+61.1004 	EXP 	read_number: text = '879'
+61.1561 	EXP 	Device response: <KeyPress from None: t=61.08921980000014, value=space, duration=0.0640134999998736>
+61.3858 	DATA 	Keypress: space
+61.3922 	EXP 	Device response: <KeyPress from None: t=61.385260700000345, value=space, duration=None>
+61.3989 	EXP 	read_number: height = np.float64(0.07)
+61.3989 	EXP 	read_number: height = np.float64(0.07)
+61.3989 	EXP 	read_number: height = np.float64(0.07)
+61.3989 	EXP 	read_number: text = '866'
+61.4338 	EXP 	Device response: <KeyPress from None: t=61.385260700000345, value=space, duration=0.04800909999994474>
+61.5241 	EXP 	Device response: <KeyPress from None: t=61.52128020000009, value=space, duration=None>
+61.5262 	DATA 	Keypress: space
+61.5309 	EXP 	read_number: height = np.float64(0.07)
+61.5309 	EXP 	read_number: height = np.float64(0.07)
+61.5309 	EXP 	read_number: height = np.float64(0.07)
+61.5309 	EXP 	read_number: text = '853'
+61.5796 	EXP 	Device response: <KeyPress from None: t=61.52128020000009, value=space, duration=0.05600129999993442>
+61.6701 	EXP 	Device response: <KeyPress from None: t=61.66529820000005, value=space, duration=None>
+61.6722 	DATA 	Keypress: space
+61.6767 	EXP 	read_number: height = np.float64(0.07)
+61.6767 	EXP 	read_number: height = np.float64(0.07)
+61.6767 	EXP 	read_number: height = np.float64(0.07)
+61.6767 	EXP 	read_number: text = '840'
+61.7187 	EXP 	Device response: <KeyPress from None: t=61.66529820000005, value=space, duration=0.04799039999988963>
+61.8157 	EXP 	Device response: <KeyPress from None: t=61.809337700000015, value=space, duration=None>
+61.8179 	DATA 	Keypress: space
+61.8226 	EXP 	read_number: height = np.float64(0.07)
+61.8226 	EXP 	read_number: height = np.float64(0.07)
+61.8226 	EXP 	read_number: height = np.float64(0.07)
+61.8226 	EXP 	read_number: text = '827'
+61.8715 	EXP 	Device response: <KeyPress from None: t=61.809337700000015, value=space, duration=0.05596740000009959>
+61.9548 	EXP 	Device response: <KeyPress from None: t=61.9533435000003, value=space, duration=None>
+61.9570 	DATA 	Keypress: space
+61.9614 	EXP 	read_number: height = np.float64(0.07)
+61.9614 	EXP 	read_number: height = np.float64(0.07)
+61.9614 	EXP 	read_number: height = np.float64(0.07)
+61.9614 	EXP 	read_number: text = '814'
+62.0241 	EXP 	Device response: <KeyPress from None: t=61.9533435000003, value=space, duration=0.06399650000003021>
+62.1075 	EXP 	Device response: <KeyPress from None: t=62.105354400000124, value=space, duration=None>
+62.1099 	DATA 	Keypress: space
+62.1142 	EXP 	read_number: height = np.float64(0.07)
+62.1142 	EXP 	read_number: height = np.float64(0.07)
+62.1142 	EXP 	read_number: height = np.float64(0.07)
+62.1142 	EXP 	read_number: text = '801'
+62.1561 	EXP 	Device response: <KeyPress from None: t=62.105354400000124, value=space, duration=0.0479974999998376>
+62.2463 	EXP 	Device response: <KeyPress from None: t=62.24136630000021, value=space, duration=None>
+62.2484 	DATA 	Keypress: space
+62.2531 	EXP 	read_number: height = np.float64(0.07)
+62.2531 	EXP 	read_number: height = np.float64(0.07)
+62.2531 	EXP 	read_number: height = np.float64(0.07)
+62.2531 	EXP 	read_number: text = '788'
+62.3020 	EXP 	Device response: <KeyPress from None: t=62.24136630000021, value=space, duration=0.05600589999994554>
+62.3858 	DATA 	Keypress: space
+62.3922 	EXP 	Device response: <KeyPress from None: t=62.38546260000021, value=space, duration=None>
+62.3989 	EXP 	read_number: height = np.float64(0.07)
+62.3989 	EXP 	read_number: height = np.float64(0.07)
+62.3989 	EXP 	read_number: height = np.float64(0.07)
+62.3989 	EXP 	read_number: text = '775'
+62.4548 	EXP 	Device response: <KeyPress from None: t=62.38546260000021, value=space, duration=0.06391619999976683>
+62.5310 	EXP 	Device response: <KeyPress from None: t=62.52943770000002, value=space, duration=None>
+62.5332 	DATA 	Keypress: space
+62.5378 	EXP 	read_number: height = np.float64(0.07)
+62.5378 	EXP 	read_number: height = np.float64(0.07)
+62.5378 	EXP 	read_number: height = np.float64(0.07)
+62.5378 	EXP 	read_number: text = '762'
+62.6074 	EXP 	Device response: <KeyPress from None: t=62.52943770000002, value=space, duration=0.07196840000005977>
+62.6907 	EXP 	Device response: <KeyPress from None: t=62.689464900000075, value=space, duration=None>
+62.6929 	DATA 	Keypress: space
+62.6975 	EXP 	read_number: height = np.float64(0.07)
+62.6975 	EXP 	read_number: height = np.float64(0.07)
+62.6975 	EXP 	read_number: height = np.float64(0.07)
+62.6975 	EXP 	read_number: text = '749'
+62.7601 	EXP 	Device response: <KeyPress from None: t=62.689464900000075, value=space, duration=0.06405369999993127>
+62.8296 	EXP 	Device response: <KeyPress from None: t=62.82543970000006, value=space, duration=None>
+62.8317 	DATA 	Keypress: space
+62.8364 	EXP 	read_number: height = np.float64(0.07)
+62.8364 	EXP 	read_number: height = np.float64(0.07)
+62.8364 	EXP 	read_number: height = np.float64(0.07)
+62.8364 	EXP 	read_number: text = '736'
+62.8990 	EXP 	Device response: <KeyPress from None: t=62.82543970000006, value=space, duration=0.07202030000007653>
+62.9895 	EXP 	Device response: <KeyPress from None: t=62.98548040000014, value=space, duration=None>
+62.9916 	DATA 	Keypress: space
+62.9961 	EXP 	read_number: height = np.float64(0.07)
+62.9961 	EXP 	read_number: height = np.float64(0.07)
+62.9961 	EXP 	read_number: height = np.float64(0.07)
+62.9961 	EXP 	read_number: text = '723'
+63.0449 	EXP 	Device response: <KeyPress from None: t=62.98548040000014, value=space, duration=0.05600009999989197>
+63.1218 	DATA 	Keypress: space
+63.1283 	EXP 	Device response: <KeyPress from None: t=63.121510899999976, value=space, duration=None>
+63.1350 	EXP 	read_number: height = np.float64(0.07)
+63.1350 	EXP 	read_number: height = np.float64(0.07)
+63.1350 	EXP 	read_number: height = np.float64(0.07)
+63.1350 	EXP 	read_number: text = '710'
+63.1909 	EXP 	Device response: <KeyPress from None: t=63.121510899999976, value=space, duration=0.06397530000003826>
+63.2743 	EXP 	Device response: <KeyPress from None: t=63.27351090000002, value=space, duration=None>
+63.2764 	DATA 	Keypress: space
+63.2809 	EXP 	read_number: height = np.float64(0.07)
+63.2809 	EXP 	read_number: height = np.float64(0.07)
+63.2809 	EXP 	read_number: height = np.float64(0.07)
+63.2809 	EXP 	read_number: text = '697'
+63.3366 	EXP 	Device response: <KeyPress from None: t=63.27351090000002, value=space, duration=0.056005800000093586>
+63.4200 	EXP 	Device response: <KeyPress from None: t=63.41753370000015, value=space, duration=None>
+63.4225 	DATA 	Keypress: space
+63.4267 	EXP 	read_number: height = np.float64(0.07)
+63.4267 	EXP 	read_number: height = np.float64(0.07)
+63.4267 	EXP 	read_number: height = np.float64(0.07)
+63.4267 	EXP 	read_number: text = '684'
+63.4824 	EXP 	Device response: <KeyPress from None: t=63.41753370000015, value=space, duration=0.06399929999997767>
+63.5940 	DATA 	Keypress: space
+63.6005 	EXP 	Device response: <KeyPress from None: t=63.593659500000285, value=space, duration=None>
+63.6072 	EXP 	read_number: height = np.float64(0.07)
+63.6072 	EXP 	read_number: height = np.float64(0.07)
+63.6072 	EXP 	read_number: height = np.float64(0.07)
+63.6072 	EXP 	read_number: text = '671'
+63.6282 	EXP 	Device response: <KeyPress from None: t=63.593659500000285, value=space, duration=0.03190089999998236>
+63.7186 	EXP 	Device response: <KeyPress from None: t=63.71357050000006, value=space, duration=None>
+63.7208 	DATA 	Keypress: space
+63.7253 	EXP 	read_number: height = np.float64(0.07)
+63.7253 	EXP 	read_number: height = np.float64(0.07)
+63.7253 	EXP 	read_number: height = np.float64(0.07)
+63.7253 	EXP 	read_number: text = '658'
+63.7742 	EXP 	Device response: <KeyPress from None: t=63.71357050000006, value=space, duration=0.05599620000020877>
+64.1490 	EXP 	Device response: <KeyPress from None: t=64.14560840000013, value=space, duration=None>
+64.1512 	DATA 	Keypress: space
+64.1559 	EXP 	read_number: height = np.float64(0.07)
+64.1559 	EXP 	read_number: height = np.float64(0.07)
+64.1559 	EXP 	read_number: height = np.float64(0.07)
+64.1559 	EXP 	read_number: text = '645'
+64.2048 	EXP 	Device response: <KeyPress from None: t=64.14560840000013, value=space, duration=0.056016900000031455>
+64.2949 	EXP 	Device response: <KeyPress from None: t=64.28963079999994, value=space, duration=None>
+64.2972 	DATA 	Keypress: space
+64.3017 	EXP 	read_number: height = np.float64(0.07)
+64.3017 	EXP 	read_number: height = np.float64(0.07)
+64.3017 	EXP 	read_number: height = np.float64(0.07)
+64.3017 	EXP 	read_number: text = '632'
+64.3504 	EXP 	Device response: <KeyPress from None: t=64.28963079999994, value=space, duration=0.05600910000021031>
+64.4477 	EXP 	Device response: <KeyPress from None: t=64.44166110000015, value=space, duration=None>
+64.4499 	DATA 	Keypress: space
+64.4545 	EXP 	read_number: height = np.float64(0.07)
+64.4545 	EXP 	read_number: height = np.float64(0.07)
+64.4545 	EXP 	read_number: height = np.float64(0.07)
+64.4545 	EXP 	read_number: text = '619'
+64.5102 	EXP 	Device response: <KeyPress from None: t=64.44166110000015, value=space, duration=0.06399559999999838>
+64.5868 	EXP 	Device response: <KeyPress from None: t=64.58568000000014, value=space, duration=None>
+64.5889 	DATA 	Keypress: space
+64.5934 	EXP 	read_number: height = np.float64(0.07)
+64.5934 	EXP 	read_number: height = np.float64(0.07)
+64.5934 	EXP 	read_number: height = np.float64(0.07)
+64.5934 	EXP 	read_number: text = '606'
+64.6630 	EXP 	Device response: <KeyPress from None: t=64.58568000000014, value=space, duration=0.07201450000002296>
+64.7463 	EXP 	Device response: <KeyPress from None: t=64.74591349999992, value=space, duration=None>
+64.7485 	DATA 	Keypress: space
+64.7531 	EXP 	read_number: height = np.float64(0.07)
+64.7531 	EXP 	read_number: height = np.float64(0.07)
+64.7531 	EXP 	read_number: height = np.float64(0.07)
+64.7531 	EXP 	read_number: text = '593'
+64.8158 	EXP 	Device response: <KeyPress from None: t=64.74591349999992, value=space, duration=0.06378510000013193>
+64.8923 	EXP 	Device response: <KeyPress from None: t=64.88972430000013, value=space, duration=None>
+64.8945 	DATA 	Keypress: space
+64.8989 	EXP 	read_number: height = np.float64(0.07)
+64.8989 	EXP 	read_number: height = np.float64(0.07)
+64.8989 	EXP 	read_number: height = np.float64(0.07)
+64.8989 	EXP 	read_number: text = '580'
+64.9548 	EXP 	Device response: <KeyPress from None: t=64.88972430000013, value=space, duration=0.0640121999999792>
+65.0449 	EXP 	Device response: <KeyPress from None: t=65.04174340000009, value=space, duration=None>
+65.0474 	DATA 	Keypress: space
+65.0517 	EXP 	read_number: height = np.float64(0.07)
+65.0517 	EXP 	read_number: height = np.float64(0.07)
+65.0517 	EXP 	read_number: height = np.float64(0.07)
+65.0517 	EXP 	read_number: text = '567'
+65.1282 	EXP 	Device response: <KeyPress from None: t=65.04174340000009, value=space, duration=0.08005240000011327>
+65.2046 	EXP 	Device response: <KeyPress from None: t=65.20176100000026, value=space, duration=None>
+65.2068 	DATA 	Keypress: space
+65.2114 	EXP 	read_number: height = np.float64(0.07)
+65.2114 	EXP 	read_number: height = np.float64(0.07)
+65.2114 	EXP 	read_number: height = np.float64(0.07)
+65.2114 	EXP 	read_number: text = '554'
+65.2742 	EXP 	Device response: <KeyPress from None: t=65.20176100000026, value=space, duration=0.07201239999994868>
+65.3644 	EXP 	Device response: <KeyPress from None: t=65.36177720000023, value=space, duration=None>
+65.3665 	DATA 	Keypress: space
+65.3711 	EXP 	read_number: height = np.float64(0.07)
+65.3711 	EXP 	read_number: height = np.float64(0.07)
+65.3711 	EXP 	read_number: height = np.float64(0.07)
+65.3711 	EXP 	read_number: text = '541'
+65.4200 	EXP 	Device response: <KeyPress from None: t=65.36177720000023, value=space, duration=0.05601589999969292>
+65.5101 	EXP 	Device response: <KeyPress from None: t=65.50579000000016, value=space, duration=None>
+65.5123 	DATA 	Keypress: space
+65.5169 	EXP 	read_number: height = np.float64(0.07)
+65.5169 	EXP 	read_number: height = np.float64(0.07)
+65.5169 	EXP 	read_number: height = np.float64(0.07)
+65.5169 	EXP 	read_number: text = '528'
+65.5518 	EXP 	Device response: <KeyPress from None: t=65.50579000000016, value=space, duration=0.03999599999997372>
+65.7949 	EXP 	Device response: <KeyPress from None: t=65.79385700000012, value=space, duration=None>
+65.7971 	DATA 	Keypress: space
+65.8017 	EXP 	read_number: height = np.float64(0.07)
+65.8017 	EXP 	read_number: height = np.float64(0.07)
+65.8017 	EXP 	read_number: height = np.float64(0.07)
+65.8017 	EXP 	read_number: text = '515'
+65.8297 	EXP 	Device response: <KeyPress from None: t=65.79385700000012, value=space, duration=0.031966600000032486>
+65.9270 	EXP 	Device response: <KeyPress from None: t=65.92184260000022, value=space, duration=None>
+65.9291 	DATA 	Keypress: space
+65.9336 	EXP 	read_number: height = np.float64(0.07)
+65.9336 	EXP 	read_number: height = np.float64(0.07)
+65.9336 	EXP 	read_number: height = np.float64(0.07)
+65.9336 	EXP 	read_number: text = '502'
+65.9685 	EXP 	Device response: <KeyPress from None: t=65.92184260000022, value=space, duration=0.04000919999998587>
+66.0310 	EXP 	Device response: <KeyPress from None: t=66.02586610000026, value=space, duration=None>
+66.0333 	DATA 	Keypress: space
+66.0378 	EXP 	read_number: height = np.float64(0.07)
+66.0378 	EXP 	read_number: height = np.float64(0.07)
+66.0378 	EXP 	read_number: height = np.float64(0.07)
+66.0378 	EXP 	read_number: text = '489'
+66.1005 	EXP 	Device response: <KeyPress from None: t=66.02586610000026, value=space, duration=0.07202849999976024>
+66.5103 	EXP 	Device response: <KeyPress from None: t=66.50593210000034, value=space, duration=None>
+66.5125 	DATA 	Keypress: space
+66.5170 	EXP 	read_number: height = np.float64(0.07)
+66.5170 	EXP 	read_number: height = np.float64(0.07)
+66.5170 	EXP 	read_number: height = np.float64(0.07)
+66.5170 	EXP 	read_number: text = '476'
+66.5729 	EXP 	Device response: <KeyPress from None: t=66.50593210000034, value=space, duration=0.06400739999980942>
+66.6563 	EXP 	Device response: <KeyPress from None: t=66.64995180000005, value=space, duration=None>
+66.6585 	DATA 	Keypress: space
+66.6628 	EXP 	read_number: height = np.float64(0.07)
+66.6628 	EXP 	read_number: height = np.float64(0.07)
+66.6628 	EXP 	read_number: height = np.float64(0.07)
+66.6628 	EXP 	read_number: text = '463'
+66.7255 	EXP 	Device response: <KeyPress from None: t=66.64995180000005, value=space, duration=0.07201549999990675>
+66.8025 	DATA 	Keypress: space
+66.8088 	EXP 	Device response: <KeyPress from None: t=66.8020778, value=space, duration=None>
+66.8155 	EXP 	read_number: height = np.float64(0.07)
+66.8155 	EXP 	read_number: height = np.float64(0.07)
+66.8155 	EXP 	read_number: height = np.float64(0.07)
+66.8155 	EXP 	read_number: text = '450'
+66.8782 	EXP 	Device response: <KeyPress from None: t=66.8020778, value=space, duration=0.07194819999995161>
+66.9546 	EXP 	Device response: <KeyPress from None: t=66.95398819999991, value=space, duration=None>
+66.9568 	DATA 	Keypress: space
+66.9614 	EXP 	read_number: height = np.float64(0.07)
+66.9614 	EXP 	read_number: height = np.float64(0.07)
+66.9614 	EXP 	read_number: height = np.float64(0.07)
+66.9614 	EXP 	read_number: text = '437'
+67.0727 	EXP 	Device response: <KeyPress from None: t=66.95398819999991, value=space, duration=0.11207030000014129>
+67.8923 	EXP 	Device response: <KeyPress from None: t=67.89011770000025, value=escape, duration=None>
+67.8930 	DATA 	Keypress: escape
+67.9824 	EXP 	Device response: <KeyPress from None: t=67.89011770000025, value=escape, duration=0.08800130000008721>
+67.9825 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+67.9891 	EXP 	read_number: autoDraw = False
+67.9892 	EXP 	TSST_fnirs_V4_FULL: status = STOPPED
+68.0211 	INFO 	saved data to 'c:\\Users\\neuro\\GitHub\\fNIRS_TSST_PsychoPy\\data\\967270_TSST_fnirs_V4_FULL_2025-12-09_18h04.52.544.csv'
+68.0222 	INFO 	saved data to c:\Users\neuro\GitHub\fNIRS_TSST_PsychoPy\data\967270_TSST_fnirs_V4_FULL_2025-12-09_18h04.52.544.psydat
+68.2359 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
+68.2793 	WARNING 	Stopping key buffers but this could be dangerous ifother keyboards rely on the same.
