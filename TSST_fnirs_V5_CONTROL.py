@@ -416,6 +416,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     
+    # --- Initialize components for Routine "task_end" ---
+    task_end_text = visual.TextStim(win=win, name='task_end_text',
+        text='Please wait for the next task to begin..',
+        font='Arial',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    
     # --- Initialize components for Routine "CTL2_instruction_start" ---
     ctl2_instruction_text = visual.TextStim(win=win, name='ctl2_instruction_text',
         text='Out loud, please consecutively subtract the number 13 from the number that appears on the screen. Keep subtracting the number 13 from the number.  If you reach 0, start again. If you make a mistake, the experimenter will tell you the correct number. You can work as fast or a slow as you want, just do your best! Please pause when you see the PAUSE screen. \n\nPress the ENTER KEY to start the task.',
@@ -987,7 +996,99 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
     # completed 6.0 repeats of 'CTL1_Loop'
+
+    # --- Prepare to start Routine "task_end" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('task_end.started', globalClock.getTime(format='float'))
+    # Run 'Begin Routine' code from continue_task_code
+    kb.clearEvents()
+    win.mouseVisible = False
+    # keep track of which components have finished
+    task_endComponents = [task_end_text]
+    for thisComponent in task_endComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
     
+    # --- Run Routine "task_end" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *task_end_text* updates
+        
+        # if task_end_text is starting this frame...
+        if task_end_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            task_end_text.frameNStart = frameN  # exact frame index
+            task_end_text.tStart = t  # local t and not account for scr refresh
+            task_end_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(task_end_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'task_end_text.started')
+            # update status
+            task_end_text.status = STARTED
+            task_end_text.setAutoDraw(True)
+        
+        # if task_end_text is active this frame...
+        if task_end_text.status == STARTED:
+            # update params
+            pass
+        # Run 'Each Frame' code from continue_task_code
+        ## EACH FRAME
+        
+        task_key = kb.getKeys(["return"], waitRelease=False, clear=True)
+        # Check if space key was pressed
+        if task_key:
+            continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in task_endComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "task_end" ---
+    for thisComponent in task_endComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('task_end.stopped', globalClock.getTime(format='float'))
+    # Run 'End Routine' code from continue_task_code
+    kb.clearEvents()
+    thisExp.nextEntry()
+    # the Routine "task_end" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # mark experiment as finished
+    endExperiment(thisExp, win=win)    
     
     # --- Prepare to start Routine "CTL2_instruction_start" ---
     continueRoutine = True

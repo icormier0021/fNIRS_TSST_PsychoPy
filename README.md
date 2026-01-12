@@ -101,3 +101,4 @@ Version 5: 2025/12/09
 - Removed builder components for start and stop audio tones and added code to manually create tone; should solve issue with inconsistent tones
 - Added fixation cross before each section
 - Set audio source to be X10 bluetooth speaker (CODE ONLY; change not made in the PsychoPy builder files found under the 'builder_files' directory)
+- 2026/01/12: Added "task_ended" screen after CTL1 and before CTL2  (CODE ONLY; change not made in the PsychoPy builder files found under the 'builder_files' directory)
