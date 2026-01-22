@@ -74,9 +74,10 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 # work out from system args whether we are running in pilot mode
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
-_fullScr = True
-_winSize = [1440, 900]
+_fullScr = False
+_winSize = [1000, 980]
 _loggingLevel = logging.getLevel('info')
+_allowGUI = True
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -201,7 +202,7 @@ def setupWindow(expInfo=None, win=None):
         # if not given a window to setup, make one
         win = visual.Window(
             size=_winSize, fullscr=_fullScr, screen=3,
-            winType='pyglet', allowStencil=False,
+            winType='pyglet', allowStencil=False, allowGUI=_allowGUI,
             monitor='testMonitor', color=[-1.0000, -1.0000, -1.0000], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
             blendMode='avg', useFBO=True,

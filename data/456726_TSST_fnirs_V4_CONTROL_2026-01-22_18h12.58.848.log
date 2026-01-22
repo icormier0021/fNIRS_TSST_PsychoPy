@@ -1,0 +1,4 @@
+1.6214 	ERROR 	Failed to load any of the audioLibs: ['pyo']. Falling back to PsychToolbox ('ptb') backend for sound. Be sure to add 'ptb' to preferences to avoid seeing this message again.
+1.7905 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['pyo'] (in that order).
+5.1700 	INFO 	saved data to c:\Users\MSVU\Documents\GitHub\fNIRS_TSST_PsychoPy\data\456726_TSST_fnirs_V4_CONTROL_2026-01-22_18h12.58.848.psydat
+5.1706 	INFO 	saved data to 'c:\\Users\\MSVU\\Documents\\GitHub\\fNIRS_TSST_PsychoPy\\data\\456726_TSST_fnirs_V4_CONTROL_2026-01-22_18h12.58.848.csv'

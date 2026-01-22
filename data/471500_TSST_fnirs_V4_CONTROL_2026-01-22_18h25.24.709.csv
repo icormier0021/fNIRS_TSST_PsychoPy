@@ -1,0 +1,6 @@
+﻿CTL1_Loop.thisRepN,CTL1_Loop.thisTrialN,CTL1_Loop.thisN,CTL1_Loop.thisIndex,thisRow.t,notes,CTL1_instruction_start.started,ctl1_instruction_text.started,CTL1_instruction_start.stopped,FIXATION.started,fixation_cross.started,FIXATION.stopped,CTL1_TASK.started,CTL1_TASK.stopped,CTL1_PAUSE.started,CTL1_PAUSE.stopped,task_end.started,task_end_text.started,task_end.stopped,CTL2_instruction_start.started,ctl2_instruction_text.started,participant,session,date,expName,psychopyVersion,frameRate,expStart,
+,,,,,,0.14056670002173632,0.14543989999219775,233.4125874999445,,,,,,,,,,,,,471500,001,2026-01-22_18h25.24.709,TSST_fnirs_V4_CONTROL,2024.1.4,None,2026-01-22 18h25.29.350726 -0400,
+,,,,,,,,,233.41263699997216,233.4183567999862,236.14095809997525,,,,,,,,,,471500,001,2026-01-22_18h25.24.709,TSST_fnirs_V4_CONTROL,2024.1.4,None,2026-01-22 18h25.29.350726 -0400,
+0,0,0,0,236.15700040000957,,,,,,,,236.14154410001356,236.14756970002782,236.1476030999329,236.15356100001372,,,,,,471500,001,2026-01-22_18h25.24.709,TSST_fnirs_V4_CONTROL,2024.1.4,None,2026-01-22 18h25.29.350726 -0400,
+,,,,,,,,,,,,,,,,236.15362380002625,236.15700040000957,238.19699329999276,,,471500,001,2026-01-22_18h25.24.709,TSST_fnirs_V4_CONTROL,2024.1.4,None,2026-01-22 18h25.29.350726 -0400,
+,,,,,,,,,,,,,,,,,,,238.21085379994474,238.21626719995402,,,,,,,,
