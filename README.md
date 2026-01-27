@@ -10,12 +10,11 @@ Make sure you have PsychoPy version 2024.2.1. If using a newer version of Psycho
 
 
 # Usage
-There are three experiment files you can choose from:
-1. 'TSST_fnirs_V2_FULL.psyexp': Contains all two control conditions and the TSST arithmetic condition. 
-2. 'TSST_fnirs_V2_CONTROL.psyexp': Contains only the two control conditions. 
-3. 'TSST_fnirs_V2_ARITH.psyexp': Contains only the TSST arithmetic condition.
+As of January 27, 2026, Version 6 contains all parts of the fNIRS experiment (CTL1, CTL2, SPEECH, ARITH). 
 
-Make sure that the experiment is set to 'Run' before starting the paradigm to ensure it is fullscreen. 
+You can choose to skip any one section by pressing the 's' key. 
+
+The experiment is currently set to NOT be fullscreen, but rather to fit half of the examinee's monitor. This allows the participant to see both the experimental screen and the judges present on Zoom. 
 
 Before the experiment begins, you will need to enter a participant ID and session number. These will be auto-populated with default values, and can be modified as needed.
 
@@ -53,18 +52,25 @@ Below is a brief overview of the paradigm, with descriptions and notes for each 
 - Presents the text "Please wait for the next task to begin.." to signify the end of the control tasks and waits for the user to press the 'ENTER' key to continue onto the TSST once instructed by the researchers.
 - After the completion of CTL1 and CTL2, research assistants designated as the TSST committee members dressed in white physician coats (one male and one female) will introduce themselves to the subject. The subjects will then undergo an anticipatory stress phase and mock job interview phase before starting the TSST arithmetic task.
 
-6. TSST_instruction_start
+6. TSST_SPEECH_instructions
 - Presents the following text and waits for the judges to explain the instructions. This time, one of the research assistants, not the user, will press the 'ENTER' key to continue onto the next routine:
 "The judges will explain the task to you. Please do not press any keys."
 
-7. TSST_Arith_Loop & TSST_arith
+7. TSST_SPEECH
+- Presents ellipses ('...') while the participant completes the speech portion of the TSST. The screen will continue onto the next routine once the 'ENTER' key is pressed.
+
+8. TSST_instruction_start
+- Presents the following text and waits for the judges to explain the instructions. This time, one of the research assistants, not the user, will press the 'ENTER' key to continue onto the next routine:
+"The judges will explain the task to you. Please do not press any keys."
+
+9. TSST_Arith_Loop & TSST_arith
 - TSST_Arith_Loop pulls the the variables 'Block' and 'StartingNumber' from the excel sheet "TSST_arith.xlsx" found under the "stims" sub-directory. The loop is set to repeat 6 times, with each row of the excel sheet representing a different block.  This allows the experimenter to change the starting numbers for each block as desired. All starting numbers differ from those in CTL2.
 - Each block of TSST_arith includes 40 seconds of subtracting numbers out loud (task), followed by 20 seconds of looking at a fixation cross (pause).
 - The subject is presented with the starting number, which remains on the screen for the duration of the task. They are instructed to perform serial subtractions without any aids in steps of 13. Each block has a different starting number (randomly selected by the paradigm developer). 
 - The subject is told that this task is independent from all prior tasks. To maximize social stress, subjects should be told to count as fast and correctly as possible, as well as to hold eye contact with one of the committee members. If an error occurs, the other committee member should say "Stop. Start again from...". 
 - Before Blocks 3 and 5, subjects should be told to work faster and better. 
 
-8. Finished
+10. Finished
 - Presents the following text and waits for the user to press the 'ENTER' key to continue onto the next routine once instructed by the researchers:
 "This part of the task is finished, please wait for further instructions."
 
@@ -102,3 +108,8 @@ Version 5: 2025/12/09
 - Added fixation cross before each section
 - Set audio source to be X10 bluetooth speaker (CODE ONLY; change not made in the PsychoPy builder files found under the 'builder_files' directory)
 - 2026/01/12: Added "task_ended" screen after CTL1 and before CTL2  (CODE ONLY; change not made in the PsychoPy builder files found under the 'builder_files' directory)
+
+Version 6: 2026/01/27
+- Simplified the workflow by adding a TSST speech portion and creating a single experiment file 'TSST_fnirs_V6_FULL.py'.
+- Changed experiment to not be fullscreen by default, and to fit half of the participant's computer monitor so that both the screen and the judges on Zoom can be seen by the participant. 
+- Added start and stop markers for the TSST speech portion, and updated the 'fNIRS_marker_key.json' file to reflect current marker value assignments. 

@@ -2085,7 +2085,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         else:
             #Schedule start tone to begin on next screen flip
             nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            arithTone.play(when=nextFlip_ptb)
+            StartTone.play(when=nextFlip_ptb)
         #tsst_start_pause_tone.status = NOT_STARTED
         
         # keep track of which components have finished

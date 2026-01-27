@@ -51,24 +51,34 @@
       "Assigned Value": 51
     },
     {
+      "Routine": "TSST_SPEECH",
+      "Marker Description": "TSST_SPEECH Block Start",
+      "Assigned Value": 60
+    },
+    {
+      "Routine": "TSST_SPEECH",
+      "Marker Description": "TSST_SPEECH Block End",
+      "Assigned Value": 61
+    },
+    {
       "Routine": "TSST_ARITH_TASK",
       "Marker Description": "TSST_ARITH_TASK Block Start",
-      "Assigned Value": 60
+      "Assigned Value": 70
     },
     {
       "Routine": "TSST_ARITH_TASK",
       "Marker Description": "TSST_ARITH_TASK Block End",
-      "Assigned Value": 61
+      "Assigned Value": 71
     },
     {
       "Routine": "TSST_ARITH_PAUSE",
       "Marker Description": "TSST_ARITH_PAUSE Block Start",
-      "Assigned Value": 70
+      "Assigned Value": 80
     },
     {
       "Routine": "TSST_ARITH_PAUSE",
       "Marker Description": "TSST_ARITH_PAUSE Block End",
-      "Assigned Value": 71
+      "Assigned Value": 81
     }
   ]
 }
