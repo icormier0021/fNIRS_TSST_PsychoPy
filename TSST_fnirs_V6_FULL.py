@@ -392,6 +392,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             deviceClass='keyboard', deviceName='defaultKeyboard', backend='PsychToolbox'
         )
     eyetracker = deviceManager.getDevice('eyetracker')
+    
+    globalKeyboardClock = core.Clock()
+    def check_global_trigger():
+        """Check if 't' key is pressed and send trigger value 90"""
+        keys = event.getKeys(keyList=['t'], timeStamped=False)
+        if 't' in keys:
+            lsl_outlet.push_sample([90])  # Send trigger value 90
+            logging.log(level=logging.EXP, msg=f'Global trigger 90 sent at {globalClock.getTime()}')
+
     # make sure we're running in the directory for this experiment
     os.chdir(_thisDir)
     # get filename from ExperimentHandler for convenience
@@ -641,6 +650,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "CTL1_instruction_start" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1135,6 +1145,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "task_end" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1225,6 +1236,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "CTL2_instruction_start" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1707,6 +1719,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "task_end" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1797,6 +1810,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "TSST_SPEECH_instructions" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1888,6 +1902,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "TSST_SPEECH" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1968,6 +1983,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "task_end" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2176,6 +2192,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "TSST_instruction_start" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2547,6 +2564,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "Finished" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        check_global_trigger()
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
