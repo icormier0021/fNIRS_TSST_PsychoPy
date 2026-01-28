@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TSST fNIRS TSST Paradigm (Version 6)
-Last Updated: January 27, 2026
+Last Updated: January 28, 2026
 Author: Isaac Cormier, DPRC
 
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
@@ -22,7 +22,8 @@ from psychopy import plugins
 plugins.activatePlugins()
 prefs.hardware['audioLib'] = 'pyo'
 prefs.hardware['audioLatencyMode'] = '3'
-prefs.hardware['audioDevice'] = 'Headphones (X10)'
+#prefs.hardware['audioDevice'] = 'Headphones (X10)'
+
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware
 from psychopy.tools import environmenttools
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
@@ -43,6 +44,37 @@ markers = StreamInfo('fNIRSMarkerStream', 'Markers', 1, 0, 'int32', 'CPSPsychoPy
 lsl_outlet = StreamOutlet(markers)
 modality = 'nirs'
 
+def list_output_audio_devices():
+    """Return a list of output audio device names (tries sounddevice, then PyAudio)."""
+    devices = []
+    try:
+        import sounddevice as sd
+        devs = sd.query_devices(kind='output')
+        if isinstance(devs, dict):
+            devs = [devs]
+        for d in devs:
+            max_out = d.get('max_output_channels', d.get('maxOutputChannels', 0))
+            name = d.get('name') or d.get('device_name') or str(d)
+            if max_out and max_out > 0:
+                devices.append(name)
+    except Exception:
+        try:
+            import pyaudio
+            p = pyaudio.PyAudio()
+            for i in range(p.get_device_count()):
+                info = p.get_device_info_by_index(i)
+                if info.get('maxOutputChannels', 0) > 0:
+                    devices.append(info.get('name'))
+            p.terminate()
+        except Exception:
+            devices = ['Default', 'Headphones (X10)']
+    seen = set()
+    unique_devices = []
+    for d in devices:
+        if d not in seen:
+            seen.add(d)
+            unique_devices.append(d)
+    return unique_devices or ['Default']
 
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
@@ -59,6 +91,8 @@ expInfo = {
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
     'psychopyVersion|hid': psychopyVersion,
+    'Fullscreen': ['Windowed', 'Fullscreen'],
+    'Screen No.': ['3', '1', '2', '4']
 }
 
 # --- Define some variables which will change depending on pilot mode ---
@@ -195,11 +229,24 @@ def setupWindow(expInfo=None, win=None):
     """
     if PILOTING:
         logging.debug('Fullscreen settings ignored as running in pilot mode.')
-    
+    fullscr_choice = _fullScr
+    screen_choice = _screen
+    if expInfo is not None and 'Fullscreen' in expInfo:
+        val = expInfo['Fullscreen']
+        if isinstance(val, str):
+            fullscr_choice = True if val.lower() in ('fullscreen', 'full', 'yes', 'true', '1') else False
+        else:
+            fullscr_choice = bool(val)
+    if expInfo is not None and 'Screen No.' in expInfo:
+        try:
+            screen_choice = int(expInfo['Screen No.'])
+        except Exception:
+            screen_choice = _screen
+
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=_screen,
+            size=_winSize, fullscr=fullscr_choice, screen=screen_choice,
             winType='pyglet', allowStencil=False, allowGUI=_allowGUI,
             monitor='testMonitor', color=[-1.0000, -1.0000, -1.0000], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -2645,8 +2692,18 @@ def quit(thisExp, win=None, thisSession=None):
 # if running this experiment as a script...
 if __name__ == '__main__':
     # call all functions in order
+    audio_devices = list_output_audio_devices()
+    expInfo['Audio Device'] = audio_devices
     expInfo = showExpInfoDlg(expInfo=expInfo)
     thisExp = setupData(expInfo=expInfo)
+    try:
+        selected = expInfo.get('Audio Device')
+        if isinstance(selected, str):
+            prefs.hardware['audioDevice'] = selected
+        elif isinstance(selected, (list, tuple)):
+            prefs.hardware['audioDevice'] = selected[0]
+    except Exception:
+        pass
     logFile = setupLogging(filename=thisExp.dataFileName)
     win = setupWindow(expInfo=expInfo)
     setupDevices(expInfo=expInfo, thisExp=thisExp, win=win)
