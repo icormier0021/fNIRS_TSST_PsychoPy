@@ -20,8 +20,17 @@ from psychopy import locale_setup
 from psychopy import prefs
 from psychopy import plugins
 plugins.activatePlugins()
-prefs.hardware['audioLib'] = 'pyo'
-prefs.hardware['audioLatencyMode'] = '3'
+
+import platform
+
+if platform.system() == "Darwin":
+    audio_libs = ["sounddevice", "pygame", "pyo"]   # avoid PTB on macOS
+else:
+    audio_libs = ["ptb", "sounddevice", "pyo", "pygame"]
+
+prefs.hardware["audioLib"] = 'sounddevice'
+prefs.hardware["audioLatencyMode"] = 3
+
 #prefs.hardware['audioDevice'] = 'Headphones (X10)'
 
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware
@@ -36,13 +45,22 @@ from numpy.random import random, randint, normal, shuffle, choice as randchoice
 import os  # handy system and path functions
 import sys  # to get file system encoding
 from psychopy.hardware import keyboard
-
+from psychopy.iohub.client import launchHubServer
+from pyglet import canvas
+# set sound backend
+#sound.Sound.backend = 'pysound'
 # for markers
 import socket
 from pylsl import StreamInfo, StreamOutlet
 markers = StreamInfo('fNIRSMarkerStream', 'Markers', 1, 0, 'int32', 'CPSPsychoPy')
 lsl_outlet = StreamOutlet(markers)
 modality = 'nirs'
+
+def get_screen_size_px(screen_index=0):
+    screens = canvas.get_display().get_screens()
+    screen_index = max(0, min(screen_index, len(screens)-1))
+    s = screens[screen_index]
+    return s.width, s.height
 
 def list_output_audio_devices():
     """Return a list of output audio device names (tries sounddevice, then PyAudio)."""
@@ -94,7 +112,6 @@ expInfo = {
     'Fullscreen': ['Windowed', 'Fullscreen'],
     'Screen No.': ['3', '1', '2', '4']
 }
-
 # --- Define some variables which will change depending on pilot mode ---
 '''
 To run in pilot mode, either use the run/pilot toggle in Builder, Coder and Runner, 
@@ -144,6 +161,39 @@ def showExpInfoDlg(expInfo):
     # return expInfo
     return expInfo
 
+def ask_display_mode(section_name, win):
+    """
+    Show participant info dialog for selecting fullscreen before a routine.
+    Parameters
+    ==========
+    section_name : string
+        Name of the routine
+    win : pre-defined window object in the environment
+    
+    """
+    # temp leave fullscreen so os dialog is visible
+    was_full = bool(getattr(win, "fullscr", False))
+    prev_mouse = getattr(win, "mouseVisible", False)
+
+    if was_full:
+        win.fullscr = False
+        win.flip()
+        core.wait(0.2)
+
+    win.mouseVisible = True
+    dlg = gui.Dlg(title=f"{section_name} display")
+    dlg.addField("Mode:", choices=["Fullscreen", "Windowed"])
+    dlg.show()
+    win.mouseVisible = prev_mouse
+
+    if not dlg.OK:
+        core.quit()
+
+    want_full = (dlg.data[0] == "Fullscreen")
+    if win.fullscr != want_full:
+        win.fullscr = want_full  # calls backend.setFullScr
+        win.flip()               # re‑sync
+        core.wait(0.2)  
 
 def setupData(expInfo, dataDir=None):
     """
@@ -303,8 +353,9 @@ def setupDevices(expInfo, thisExp, win):
     # create a default keyboard (e.g. to check for escape)
     if deviceManager.getDevice('defaultKeyboard') is None:
         deviceManager.addDevice(
-            deviceClass='keyboard', deviceName='defaultKeyboard', backend='ptb'
+            deviceClass='keyboard', deviceName='defaultKeyboard', backend='iohub'
         )
+
     # return True if completed successfully
     return True
 
@@ -338,8 +389,7 @@ def pauseExperiment(thisExp, win=None, timers=[], playbackComponents=[]):
     if defaultKeyboard is None:
         defaultKeyboard = deviceManager.addKeyboard(
             deviceClass='keyboard',
-            deviceName='defaultKeyboard',
-            backend='PsychToolbox',
+            deviceName='defaultKeyboard'
         )
     # run a while loop while we wait to unpause
     while thisExp.status == PAUSED:
@@ -389,17 +439,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     defaultKeyboard = deviceManager.getDevice('defaultKeyboard')
     if defaultKeyboard is None:
         deviceManager.addDevice(
-            deviceClass='keyboard', deviceName='defaultKeyboard', backend='PsychToolbox'
+            deviceClass='keyboard', deviceName='defaultKeyboard'
         )
     eyetracker = deviceManager.getDevice('eyetracker')
-    
+
     globalKeyboardClock = core.Clock()
     def check_global_trigger():
         """Check if 't' key is pressed and send trigger value 90"""
-        keys = event.getKeys(keyList=['t'], timeStamped=False)
+        keys = defaultKeyboard.getKeys(keyList=['t', 'm'], waitRelease=False, clear=True)
         if 't' in keys:
             lsl_outlet.push_sample([90])  # Send trigger value 90
             logging.log(level=logging.EXP, msg=f'Global trigger 90 sent at {globalClock.getTime()}')
+        if 'm' in keys:
+            lsl_outlet.push_sample([91]) # Send trigger value 91
+            logging.log(level=logging.EXP, msg=f'Movement trigger 91 sent at {globalClock.getTime()}')
 
     # make sure we're running in the directory for this experiment
     os.chdir(_thisDir)
@@ -424,11 +477,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     # Run 'Begin Experiment' code from end_ctl1_instruction
-    kb = keyboard.Keyboard()
+    kb = defaultKeyboard
     win.mouseVisible = False
     # Run 'Begin Experiment' code from createTones
-    import psychtoolbox as ptb
-    from psychopy import sound
     
     StartTone = sound.Sound(800, secs=0.2, hamming=True)
     StartTone.setVolume(1.0)
@@ -489,8 +540,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     # Run 'Begin Experiment' code from end_ctl2_instruction
-    kb = keyboard.Keyboard()
-    
     # --- Initialize components for Routine "FIXATION" ---
     fixation_cross = visual.TextStim(win=win, name='fixation_cross',
         text='+',
@@ -569,7 +618,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     # Run 'Begin Experiment' code from end_tsst_instruction
-    kb = keyboard.Keyboard()
     
     # --- Initialize components for Routine "TSST_ARITH_TASK" ---
     subtract_number_TSST = visual.TextStim(win=win, name='subtract_number_TSST',
@@ -876,8 +924,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
         else:
             #Schedule start tone to begin on next screen flip
-            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            StartTone.play(when=nextFlip_ptb)
+            win.callOnFlip(StartTone.play)
         read_number.setText(current_number)
         # keep track of which components have finished
         CTL1_TASKComponents = [read_number]
@@ -1008,8 +1055,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
         else:
             #Schedule start tone to begin on next screen flip
-            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            PauseTone.play(when=nextFlip_ptb)
+            win.callOnFlip(PauseTone.play)
         # keep track of which components have finished
         CTL1_PAUSEComponents = [read_pausing]
         for thisComponent in CTL1_PAUSEComponents:
@@ -1211,7 +1257,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     thisExp.nextEntry()
     # the Routine "task_end" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset() 
-
+    
+    event.clearEvents()
+    #ask_display_mode("Section 2", win)
+    #ctl2_instruction_text.wrapWidth = None
+    #ctl2_instruction_text.setText(ctl2_instruction_text.text)
     # --- Prepare to start Routine "CTL2_instruction_start" ---
     continueRoutine = True
     # update component parameters for each repeat
@@ -1446,6 +1496,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisCTL2_Loop:
                 globals()[paramName] = thisCTL2_Loop[paramName]
         
+
         # --- Prepare to start Routine "CTL2_TASK" ---
         continueRoutine = True
         # update component parameters for each repeat
@@ -1461,8 +1512,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
         else:
             #Schedule start tone to begin on next screen flip
-            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            StartTone.play(when=nextFlip_ptb)
+            win.callOnFlip(StartTone.play)
         subtract_number.setText(StartingNumber)
         # keep track of which components have finished
         CTL2_TASKComponents = [subtract_number]
@@ -1582,8 +1632,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
         else:
             #Schedule start tone to begin on next screen flip
-            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            PauseTone.play(when=nextFlip_ptb)
+            win.callOnFlip(PauseTone.play)
         # keep track of which components have finished
         CTL2_PAUSEComponents = [subtract_pausing]
         for thisComponent in CTL2_PAUSEComponents:
@@ -2049,120 +2098,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     thisExp.nextEntry()
     # the Routine "task_end" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
-
-    # --- Prepare to start Routine "FIXATION" ---
-    continueRoutine = True
-    # update component parameters for each repeat
-    thisExp.addData('FIXATION.started', globalClock.getTime(format='float'))
-    # Run 'Begin Routine' code from skip_fixation
-    ## BEGIN ROUTINE
-    #number_clock.reset()
-    lsl_outlet.push_sample([10]) #Fixation-Cross Start
-    win.mouseVisible = False
-    kb.clearEvents()
-    
-    # keep track of which components have finished
-    FIXATIONComponents = [fixation_cross]
-    for thisComponent in FIXATIONComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "FIXATION" ---
-    routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 30.0:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *fixation_cross* updates
-        
-        # if fixation_cross is starting this frame...
-        if fixation_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            fixation_cross.frameNStart = frameN  # exact frame index
-            fixation_cross.tStart = t  # local t and not account for scr refresh
-            fixation_cross.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(fixation_cross, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'fixation_cross.started')
-            # update status
-            fixation_cross.status = STARTED
-            fixation_cross.setAutoDraw(True)
-        
-        # if fixation_cross is active this frame...
-        if fixation_cross.status == STARTED:
-            # update params
-            pass
-        
-        # if fixation_cross is stopping this frame...
-        if fixation_cross.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > fixation_cross.tStartRefresh + 30-frameTolerance:
-                # keep track of stop time/frame for later
-                fixation_cross.tStop = t  # not accounting for scr refresh
-                fixation_cross.tStopRefresh = tThisFlipGlobal  # on global time
-                fixation_cross.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'fixation_cross.stopped')
-                # update status
-                fixation_cross.status = FINISHED
-                fixation_cross.setAutoDraw(False)
-        # Run 'Each Frame' code from skip_fixation
-        # hard stop at 30 s
-        if t >= 30.0 - frameTolerance:
-            fixation_cross.setAutoDraw(False)
-            continueRoutine = False
-            
-        skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)
-        if skip_keys:
-            skipNextRoutine = True
-            continueRoutine = False
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in FIXATIONComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "FIXATION" ---
-    for thisComponent in FIXATIONComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    thisExp.addData('FIXATION.stopped', globalClock.getTime(format='float'))
-    # Run 'End Routine' code from skip_fixation
-    lsl_outlet.push_sample([11]) #Fixation-Cross End
-    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-    if routineForceEnded:
-        routineTimer.reset()
-    else:
-        routineTimer.addTime(-30.000000)
-    thisExp.nextEntry()
     
     # --- Prepare to start Routine "TSST_instruction_start" ---
     continueRoutine = True
@@ -2305,8 +2240,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
         else:
             #Schedule start tone to begin on next screen flip
-            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            StartTone.play(when=nextFlip_ptb)
+            win.callOnFlip(StartTone.play)
         # keep track of which components have finished
         TSST_ARITH_TASKComponents = [subtract_number_TSST]
         for thisComponent in TSST_ARITH_TASKComponents:
@@ -2425,8 +2359,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
         else:
             #Schedule start tone to begin on next screen flip
-            nextFlip_ptb = win.getFutureFlipTime(clock='ptb')
-            StartTone.play(when=nextFlip_ptb)
+            win.callOnFlip(StartTone.play)
         #tsst_start_pause_tone.status = NOT_STARTED
         
         # keep track of which components have finished
@@ -2723,6 +2656,13 @@ if __name__ == '__main__':
     except Exception:
         pass
     logFile = setupLogging(filename=thisExp.dataFileName)
+    screen_idx = int(expInfo['Screen No.']) - 1 
+    sw, sh = get_screen_size_px(screen_idx)
+    if expInfo['Fullscreen'] == 'Fullscreen':
+        _fullScr = True
+    else:
+        _fullScr = False
+        _winSize = [int(sw * 0.90), int(sh * 0.90)]
     win = setupWindow(expInfo=expInfo)
     setupDevices(expInfo=expInfo, thisExp=thisExp, win=win)
     run(
