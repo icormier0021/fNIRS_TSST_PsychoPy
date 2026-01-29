@@ -2656,13 +2656,6 @@ if __name__ == '__main__':
     except Exception:
         pass
     logFile = setupLogging(filename=thisExp.dataFileName)
-    screen_idx = int(expInfo['Screen No.']) - 1 
-    sw, sh = get_screen_size_px(screen_idx)
-    if expInfo['Fullscreen'] == 'Fullscreen':
-        _fullScr = True
-    else:
-        _fullScr = False
-        _winSize = [int(sw * 0.90), int(sh * 0.90)]
     win = setupWindow(expInfo=expInfo)
     setupDevices(expInfo=expInfo, thisExp=thisExp, win=win)
     run(
