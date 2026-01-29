@@ -28,7 +28,7 @@ if platform.system() == "Darwin":
 else:
     audio_libs = ["ptb", "sounddevice", "pyo", "pygame"]
 
-prefs.hardware["audioLib"] = 'sounddevice'
+prefs.hardware["audioLib"] = 'ptb'
 prefs.hardware["audioLatencyMode"] = 3
 
 #prefs.hardware['audioDevice'] = 'Headphones (X10)'
