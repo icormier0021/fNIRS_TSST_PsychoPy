@@ -79,6 +79,16 @@
       "Routine": "TSST_ARITH_PAUSE",
       "Marker Description": "TSST_ARITH_PAUSE Block End",
       "Assigned Value": 81
+    },
+    {
+      "Routine": "ALL_ROUTINES",
+      "Marker Description": "Manual trigger to mark misc. events",
+      "Assigned Value": 90
+    },
+    {
+      "Routine": "ALL_ROUTINES",
+      "Marker Description": "Manual trigger to mark movement",
+      "Assigned Value": 91
     }
   ]
 }
