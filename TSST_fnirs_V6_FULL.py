@@ -195,6 +195,9 @@ def ask_display_mode(section_name, win):
         win.flip()               # re‑sync
         core.wait(0.2)  
 
+def skip_pressed(kb):
+    return bool(kb.getKeys(['s'], waitRelease=False, clear=True))
+
 def setupData(expInfo, dataDir=None):
     """
     Make an ExperimentHandler to handle trials and saving.
@@ -324,6 +327,9 @@ def setupWindow(expInfo=None, win=None):
     
     return win
 
+def top_right_pos(win, margin=0.02):
+    aspect = win.size[0] / win.size[1]
+    return (aspect / 2 - margin, 0.5 - margin)
 
 def setupDevices(expInfo, thisExp, win):
     """
@@ -479,6 +485,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from end_ctl1_instruction
     kb = defaultKeyboard
     win.mouseVisible = False
+    skipNextRoutine = False
     # Run 'Begin Experiment' code from createTones
     
     StartTone = sound.Sound(800, secs=0.2, hamming=True)
@@ -531,6 +538,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     
+    task_end_next_text = visual.TextStim(
+        win=win, name='task_end_next_text',
+        text='',
+        font='Arial',
+        pos=top_right_pos(win, margin=0.03),
+        height=0.03,  # smaller than 0.05
+        color='white', colorSpace='rgb',
+        anchorHoriz='right', anchorVert='top',alignText='right');
+    
     # --- Initialize components for Routine "CTL2_instruction_start" ---
     ctl2_instruction_text = visual.TextStim(win=win, name='ctl2_instruction_text',
         text='Out loud, please consecutively subtract the number 13 from the number that appears on the screen. Keep subtracting the number 13 from the number.  If you reach 0, start again. If you make a mistake, the experimenter will tell you the correct number. You can work as fast or a slow as you want, just do your best! Please pause when you see the PAUSE screen. \n\nPress the ENTER KEY to start the task.',
@@ -540,6 +556,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     # Run 'Begin Experiment' code from end_ctl2_instruction
+    skipNextRoutine = False
     # --- Initialize components for Routine "FIXATION" ---
     fixation_cross = visual.TextStim(win=win, name='fixation_cross',
         text='+',
@@ -618,7 +635,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     # Run 'Begin Experiment' code from end_tsst_instruction
-    
+    skipNextRoutine = False
     # --- Initialize components for Routine "TSST_ARITH_TASK" ---
     subtract_number_TSST = visual.TextStim(win=win, name='subtract_number_TSST',
         text='',
@@ -698,6 +715,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "CTL1_instruction_start" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        if skip_pressed(kb):
+            skipNextRoutine = True
+            continueRoutine = False
         check_global_trigger()
         # get current time
         t = routineTimer.getTime()
@@ -727,7 +747,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             pass
         # Run 'Each Frame' code from end_ctl1_instruction
         ## EACH FRAME
-        
         continue_key = kb.getKeys(["return"], waitRelease=False, clear=True)
         # Check if space key was pressed
         if continue_key:
@@ -775,6 +794,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     lsl_outlet.push_sample([10]) #Fixation-Cross Start
     win.mouseVisible = False
     kb.clearEvents()
+    if skipNextRoutine:
+        #CTL1_Loop.finished = True
+        skipNextRoutine = True
+        continueRoutine = False
     
     # keep track of which components have finished
     FIXATIONComponents = [fixation_cross]
@@ -839,8 +862,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fixation_cross.setAutoDraw(False)
             continueRoutine = False
             
-        skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)
-        if skip_keys:
+        if skip_pressed(kb):
             skipNextRoutine = True
             continueRoutine = False
         
@@ -961,8 +983,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         current_number = starting_number
                     read_number.text = str(current_number)
                     
-            skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)
-            if skip_keys:
+            if skip_pressed(kb):
                 CTL1_Loop.finished = True
                 skipNextRoutine = True 
                 continueRoutine = False
@@ -1120,8 +1141,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 continueRoutine = False
                 
                 
-            skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
-            if skip_keys:
+            if skip_pressed(kb):
                 CTL1_Loop.finished = True
             #    skipNextRoutine = True 
                 continueRoutine = False
@@ -1174,8 +1194,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Routine' code from continue_task_code
     kb.clearEvents()
     win.mouseVisible = False
+    task_end_next_text.setText("Next: CTL2")
     # keep track of which components have finished
-    task_endComponents = [task_end_text]
+    task_endComponents = [task_end_text, task_end_next_text]
     for thisComponent in task_endComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1216,6 +1237,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # if task_end_text is active this frame...
         if task_end_text.status == STARTED:
+            # update params
+            pass
+
+        # *task_end_next_text* updates
+        
+        # if task_end_next_text is starting this frame...
+        if task_end_next_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            task_end_next_text.frameNStart = frameN  # exact frame index
+            task_end_next_text.tStart = t  # local t and not account for scr refresh
+            task_end_next_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(task_end_next_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'task_end_next_text.started')
+            # update status
+            task_end_next_text.status = STARTED
+            task_end_next_text.setAutoDraw(True)
+        
+        # if task_end_next_text is active this frame...
+        if task_end_next_text.status == STARTED:
             # update params
             pass
         # Run 'Each Frame' code from continue_task_code
@@ -1286,6 +1327,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "CTL2_instruction_start" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        if skip_pressed(kb):
+            skipNextRoutine = True
+            continueRoutine = False
         check_global_trigger()
         # get current time
         t = routineTimer.getTime()
@@ -1314,8 +1358,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         # Run 'Each Frame' code from end_ctl2_instruction
-        ## EACH FRAME
-        
+        ## EACH FRAME       
         continue_key = kb.getKeys(["return"], waitRelease=False, clear=True)
         # Check if space key was pressed
         if continue_key:
@@ -1364,7 +1407,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     lsl_outlet.push_sample([10]) #Fixation-Cross Start
     win.mouseVisible = False
     kb.clearEvents()
-    
+    if skipNextRoutine:
+        #CTL1_Loop.finished = True
+        skipNextRoutine = True
+        continueRoutine = False
     # keep track of which components have finished
     FIXATIONComponents = [fixation_cross]
     for thisComponent in FIXATIONComponents:
@@ -1428,8 +1474,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fixation_cross.setAutoDraw(False)
             continueRoutine = False
             
-        skip_keys = kb.getKeys(['s'],waitRelease=False,clear=True)
-        if skip_keys:
+        if skip_pressed(kb):
             skipNextRoutine = True
             continueRoutine = False
         
@@ -1538,8 +1583,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from skip_CTL2
-            skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
-            if skip_keys:
+
+            if skip_pressed(kb):
                 CTL2_Loop.finished = True
                 skipNextRoutine = True
                 continueRoutine = False
@@ -1697,8 +1742,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 continueRoutine = False
                 
             
-            skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
-            if skip_keys:
+            if skip_pressed(kb):
                 CTL2_Loop.finished = True
             #    skipNextRoutine = True 
                 continueRoutine = False
@@ -1751,8 +1795,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Routine' code from continue_task_code
     kb.clearEvents()
     win.mouseVisible = False
+    task_end_next_text.setText("Next: TSST-SPEECH")
     # keep track of which components have finished
-    task_endComponents = [task_end_text]
+    task_endComponents = [task_end_text, task_end_next_text]
     for thisComponent in task_endComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1793,6 +1838,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # if task_end_text is active this frame...
         if task_end_text.status == STARTED:
+            # update params
+            pass
+
+         # *task_end_next_text* updates
+        
+        # if task_end_next_text is starting this frame...
+        if task_end_next_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            task_end_next_text.frameNStart = frameN  # exact frame index
+            task_end_next_text.tStart = t  # local t and not account for scr refresh
+            task_end_next_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(task_end_next_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'task_end_next_text.started')
+            # update status
+            task_end_next_text.status = STARTED
+            task_end_next_text.setAutoDraw(True)
+        
+        # if task_end_next_text is active this frame...
+        if task_end_next_text.status == STARTED:
             # update params
             pass
         # Run 'Each Frame' code from continue_task_code
@@ -1859,6 +1924,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "TSST_SPEECH_instructions" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        if skip_pressed(kb):
+            skipNextRoutine = True
+            continueRoutine = False
         check_global_trigger()
         # get current time
         t = routineTimer.getTime()
@@ -1888,6 +1956,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             pass
         # Run 'Each Frame' code from continue_task_code
         ## EACH FRAME
+        if skip_pressed(kb):
+            skipNextRoutine = True
+            continueRoutine = False
         
         task_key = kb.getKeys(["return"], waitRelease=False, clear=True)
         # Check if space key was pressed
@@ -1973,8 +2044,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = False
 
         # check for skip ('s')
-        skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
-        if skip_keys:
+        if skip_pressed(kb):
             skipNextRoutine = True
             continueRoutine = False
 
@@ -2015,8 +2085,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Routine' code from continue_task_code
     kb.clearEvents()
     win.mouseVisible = False
+    task_end_next_text.setText("Next: TSST-ARITH")
     # keep track of which components have finished
-    task_endComponents = [task_end_text]
+    task_endComponents = [task_end_text, task_end_next_text]
     for thisComponent in task_endComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2057,6 +2128,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # if task_end_text is active this frame...
         if task_end_text.status == STARTED:
+            # update params
+            pass
+
+        # *task_end_next_text* updates
+        
+        # if task_end_next_text is starting this frame...
+        if task_end_next_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            task_end_next_text.frameNStart = frameN  # exact frame index
+            task_end_next_text.tStart = t  # local t and not account for scr refresh
+            task_end_next_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(task_end_next_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'task_end_next_text.started')
+            # update status
+            task_end_next_text.status = STARTED
+            task_end_next_text.setAutoDraw(True)
+        
+        # if task_end_next_text is active this frame...
+        if task_end_next_text.status == STARTED:
             # update params
             pass
         # Run 'Each Frame' code from continue_task_code
@@ -2106,10 +2197,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Routine' code from end_tsst_instruction
     kb.clearEvents()
     win.mouseVisible = False
-    
-    if skipNextRoutine:
-        skipNextRoutine = True
-        continueRoutine = False
+    #if skipNextRoutine:
+    #    skipNextRoutine = True
+    #    continueRoutine = False
     # keep track of which components have finished
     TSST_instruction_startComponents = [tsst_instruction_text]
     for thisComponent in TSST_instruction_startComponents:
@@ -2127,6 +2217,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Run Routine "TSST_instruction_start" ---
     routineForceEnded = not continueRoutine
     while continueRoutine:
+        if skip_pressed(kb):
+            skipNextRoutine = True
+            continueRoutine = False
         check_global_trigger()
         # get current time
         t = routineTimer.getTime()
@@ -2258,6 +2351,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # --- Run Routine "TSST_ARITH_TASK" ---
         routineForceEnded = not continueRoutine
         while continueRoutine and routineTimer.getTime() < 40.0:
+            
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2299,11 +2393,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     subtract_number_TSST.status = FINISHED
                     subtract_number_TSST.setAutoDraw(False)
             # Run 'Each Frame' code from skip_TSST
-            skip_keys = kb.getKeys(['s'], waitRelease=False, clear=True)
-            if skip_keys:
+            if skip_pressed(kb):
                 TSST_Arith_Loop.finished = True
-                skipNextRoutine = True 
+                skipNextRoutine = True
                 continueRoutine = False
+     
             # Run 'Each Frame' code from check_time_2
             # hard stop at 40 s
             if t >= 40.0 - frameTolerance:
@@ -2426,8 +2520,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 continueRoutine = False
             
             
-            skip_keys = kb.getKeys(['s'],waitRelease=False, clear=True)
-            if skip_keys:
+            if skip_pressed(kb):
                 TSST_Arith_Loop.finished = True
             #    skipNextRoutine = True 
                 continueRoutine = False

@@ -1,0 +1,25 @@
+10.9364 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+11.0373 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+11.0458 	WARNING 	Import Error: dlopen(/Users/Isaac/miniforge3/envs/psychopy-2025/lib/python3.10/site-packages/psychtoolbox/PsychHID.cpython-310-darwin.so, 0x0002): symbol not found in flat namespace '_libusb_bulk_transfer'. Using event module for keyboard component.
+13.2204 	INFO 	Loaded monitor calibration from ['2025_10_16 07:47']
+13.2224 	WARNING 	Requested an unavailable screen number - using first available.
+13.3090 	INFO 	Using renderer 'Apple M1' for graphics
+13.3091 	INFO 	OpenGL version supported by driver is 2..
+13.3192 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x164a3d4b0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x164a3d450>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1649725c0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(220.0), np.float64(-40.0)], screen=3, size=array([2000, 1960]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+13.3192 	EXP 	window1: backgroundImage = ''
+13.3192 	EXP 	window1: backgroundFit = 'none'
+13.5295 	EXP 	window1: Attempting to measure frame rate of screen (3) ...
+13.5295 	EXP 	window1: recordFrameIntervals = False
+13.7308 	EXP 	window1: recordFrameIntervals = True
+14.0747 	WARNING 	t of last frame was 20.55ms (=1/48)
+14.5711 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+16.2413 	INFO 	keyboard.Keyboard is using iohub backend.
+16.2414 	INFO 	keyboard.Keyboard is using iohub backend.
+16.2414 	EXP 	TSST_fnirs_V6_FULL: status = STARTED
+16.2683 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.2684 	INFO 	keyboard.Keyboard is using iohub backend.
+16.4152 	INFO 	saved data to /Users/Isaac/Documents/fNIRS_TSST_PsychoPy/data/044965_TSST_fnirs_V6_FULL_2026-01-28_22h38.57.917.psydat
+16.4154 	INFO 	saved data to '/Users/Isaac/Documents/fNIRS_TSST_PsychoPy/data/044965_TSST_fnirs_V6_FULL_2026-01-28_22h38.57.917.csv'

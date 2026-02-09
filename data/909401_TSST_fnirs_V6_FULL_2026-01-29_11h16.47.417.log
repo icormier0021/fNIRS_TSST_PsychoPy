@@ -1,0 +1,22 @@
+10.8912 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+10.9329 	WARNING 	Font Manager failed to load file /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc
+10.9412 	WARNING 	Import Error: dlopen(/Users/Isaac/miniforge3/envs/psychopy-2025/lib/python3.10/site-packages/psychtoolbox/PsychHID.cpython-310-darwin.so, 0x0002): symbol not found in flat namespace '_libusb_bulk_transfer'. Using event module for keyboard component.
+13.1904 	INFO 	Loaded monitor calibration from ['2025_10_16 07:47']
+13.1927 	WARNING 	Requested an unavailable screen number - using first available.
+13.2854 	INFO 	Using renderer 'Apple M1' for graphics
+13.2855 	INFO 	OpenGL version supported by driver is 2..
+13.2947 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x164364490>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x164364430>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x165c98610>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(220.0), np.float64(-40.0)], screen=3, size=array([2000, 1960]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+13.2947 	EXP 	window1: backgroundImage = ''
+13.2947 	EXP 	window1: backgroundFit = 'none'
+13.5047 	EXP 	window1: Attempting to measure frame rate of screen (3) ...
+13.5047 	EXP 	window1: recordFrameIntervals = False
+13.6907 	EXP 	window1: recordFrameIntervals = True
+14.5367 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+16.1825 	INFO 	keyboard.Keyboard is using iohub backend.
+16.1825 	EXP 	TSST_fnirs_V6_FULL: status = STARTED
+16.2087 	EXP 	Created ctl1_instruction_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='ctl1_instruction_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.2278 	INFO 	saved data to /Users/Isaac/Documents/fNIRS_TSST_PsychoPy/data/909401_TSST_fnirs_V6_FULL_2026-01-29_11h16.47.417.psydat
+16.2280 	INFO 	saved data to '/Users/Isaac/Documents/fNIRS_TSST_PsychoPy/data/909401_TSST_fnirs_V6_FULL_2026-01-29_11h16.47.417.csv'
